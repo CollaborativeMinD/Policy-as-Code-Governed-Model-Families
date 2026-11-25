@@ -1,0 +1,17 @@
+version = "1.0.0"
+model_id = "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_timing_authority/recovery_hysteresis_margin"
+records = []
+
+[settings]
+
+[calls."symbolic_expression"]
+
+[calls."lambdified"]
+
+[calls."compute_recovery_hysteresis_margin"]
+current_temp_c = { "annotation" = "float" }
+rearm_temp_c = { "annotation" = "float" }
+
+[calls."lambdified.evaluate"]
+Tcurrent = { annotation = "float" }
+Trearm = { annotation = "float" }

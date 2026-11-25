@@ -1,0 +1,22 @@
+version = "1.0.0"
+model_id = "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_timing_authority/clock_derate_fraction"
+records = []
+
+[settings]
+
+[calls."symbolic_expression_unclipped"]
+
+[calls."lambdified_unclipped"]
+
+[calls."compute_clock_derate_fraction"]
+temp_c = { "annotation" = "float" }
+warning_temp_c = { "annotation" = "float" }
+critical_temp_c = { "annotation" = "float" }
+derate_gain = { "annotation" = "float", "gt" = 0 }
+clock_floor_fraction = { "annotation" = "float", "gt" = 0.0, "le" = 1.0 }
+
+[calls."lambdified_unclipped.evaluate"]
+T = { annotation = "float" }
+Tw = { annotation = "float" }
+Tc = { annotation = "float" }
+k = { annotation = "float" }

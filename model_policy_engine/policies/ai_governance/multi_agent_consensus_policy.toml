@@ -1,0 +1,10 @@
+version = "1.0.0"
+model_id = "ai_governance/multi_agent_consensus"
+records = []
+
+[settings]
+
+[calls."consensus_gate"]
+scores = { "annotation" = "Sequence[float]" }
+alpha = { "annotation" = "float" }
+score_fn = { "annotation" = "Callable[[Sequence[float]], float] | None", "none" = true }

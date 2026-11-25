@@ -1,0 +1,16 @@
+version = "1.0.0"
+model_id = "network-and-compute/network_execution_bounds/k_connectivity_survival"
+records = []
+
+[settings]
+
+[calls."symbolic_expression"]
+
+[calls."lambdified_margin"]
+
+[calls."has_two_independent_paths"]
+nodes = { "annotation" = "Iterable[str]" }
+edges = { "annotation" = "Iterable[tuple[str, str]]" }
+
+[calls."lambdified_margin.evaluate"]
+kappa = { annotation = "float" }

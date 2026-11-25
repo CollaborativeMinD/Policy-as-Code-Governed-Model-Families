@@ -1,0 +1,19 @@
+version = "1.0.0"
+model_id = "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_telemetry_governance/sampling_observability_margin"
+records = []
+
+[settings]
+
+[calls."symbolic_expression"]
+
+[calls."lambdified"]
+
+[calls."compute_sampling_observability_margin"]
+thermal_time_constant_s = { "annotation" = "float", "gt" = 0 }
+sample_period_s = { "annotation" = "float", "gt" = 0 }
+min_samples_per_time_constant = { "annotation" = "float", "gt" = 0 }
+
+[calls."lambdified.evaluate"]
+tau = { annotation = "float" }
+dt = { annotation = "float" }
+N = { annotation = "float" }

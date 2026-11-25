@@ -1,0 +1,21 @@
+version = "1.0.0"
+model_id = "network-and-compute/network_execution_bounds/quarantine_blast_radius"
+records = []
+
+[settings]
+
+[calls."symbolic_expression"]
+
+[calls."lambdified_distance_identity"]
+
+[calls."shortest_hop_distances"]
+source = { "annotation" = "str" }
+edges = { "annotation" = "Iterable[tuple[str, str]]" }
+
+[calls."compute_blast_radius"]
+source = { "annotation" = "str" }
+affected_nodes = { "annotation" = "Iterable[str]" }
+edges = { "annotation" = "Iterable[tuple[str, str]]" }
+
+[calls."lambdified_distance_identity.evaluate"]
+d = { annotation = "float" }

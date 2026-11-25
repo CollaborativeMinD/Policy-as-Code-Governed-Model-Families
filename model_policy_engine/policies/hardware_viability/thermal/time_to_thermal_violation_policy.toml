@@ -1,0 +1,10 @@
+version = "1.0.0"
+model_id = "hardware_viability/thermal/time_to_thermal_violation"
+records = []
+
+[settings]
+
+[calls."compute_time_to_thermal_violation"]
+current_temp_c = { "annotation" = "float" }
+t_crit_c = { "annotation" = "float" }
+dT_dt_c_per_s = { "annotation" = "float" }

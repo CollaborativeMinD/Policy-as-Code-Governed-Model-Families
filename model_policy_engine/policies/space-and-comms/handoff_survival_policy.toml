@@ -1,0 +1,9 @@
+version = "1.0.0"
+model_id = "space-and-comms/handoff_survival"
+records = []
+
+[settings]
+
+[calls."check_handoff_survival"]
+t_handoff = { "annotation" = "float" }
+t_coast_limit = { "annotation" = "float" }

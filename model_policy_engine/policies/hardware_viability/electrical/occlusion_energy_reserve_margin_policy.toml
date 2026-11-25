@@ -1,0 +1,12 @@
+version = "1.0.0"
+model_id = "hardware_viability/electrical/occlusion_energy_reserve_margin"
+records = []
+
+[settings]
+
+[calls."compute_occlusion_energy_reserve_margin"]
+E_available_wh = { "annotation" = "float" }
+P_dark_whph = { "annotation" = "float" }
+t_occ_h = { "annotation" = "float" }
+E_waveoff_wh = { "annotation" = "float" }
+E_keepalive_wh = { "annotation" = "float" }

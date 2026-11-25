@@ -1,0 +1,17 @@
+version = "1.0.0"
+model_id = "hardware_viability/time_control_enforcement/dead_mans_switch"
+records = []
+
+[settings]
+
+[calls."symbolic_margin_expression"]
+
+[calls."lambdified_margin"]
+
+[calls."verify_dead_mans_switch_trace"]
+trace = { "annotation" = "Sequence[dict[str, object]]" }
+tau_s = { "annotation" = "float", "ge" = 0.0 }
+
+[calls."lambdified_margin.evaluate"]
+tau = { annotation = "float" }
+response_time = { annotation = "float" }

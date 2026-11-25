@@ -1,0 +1,9 @@
+version = "1.0.0"
+model_id = "hardware_viability/thermal/thermal_margin"
+records = []
+
+[settings]
+
+[calls."compute_thermal_margin"]
+current_temp_c = { "annotation" = "float" }
+t_crit_c = { "annotation" = "float" }

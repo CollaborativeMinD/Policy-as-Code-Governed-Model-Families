@@ -1,0 +1,157 @@
+test_scalar_sequence_and_record_types (test_runtime_review.RuntimeReviewTests.test_scalar_sequence_and_record_types) ... 
+  test_scalar_sequence_and_record_types (test_runtime_review.RuntimeReviewTests.test_scalar_sequence_and_record_types) (bad=True) ... FAIL
+  test_scalar_sequence_and_record_types (test_runtime_review.RuntimeReviewTests.test_scalar_sequence_and_record_types) (bad=1.5) ... FAIL
+test_scalar_sequence_and_record_types (test_runtime_review.RuntimeReviewTests.test_scalar_sequence_and_record_types) ... FAIL
+test_generator_edges_reusable_within_one_call (test_runtime_review.RuntimeReviewTests.test_generator_edges_reusable_within_one_call) ... FAIL
+test_sensor_posterior_against_independent_scalar_fusion (test_runtime_review.RuntimeReviewTests.test_sensor_posterior_against_independent_scalar_fusion) ... FAIL
+test_thermal_crossings_against_decimal (test_runtime_review.RuntimeReviewTests.test_thermal_crossings_against_decimal) ... 
+  test_thermal_crossings_against_decimal (test_runtime_review.RuntimeReviewTests.test_thermal_crossings_against_decimal) (sign=1, change=1e-16, function='compute_time_to_temperature_threshold') ... ERROR
+  test_thermal_crossings_against_decimal (test_runtime_review.RuntimeReviewTests.test_thermal_crossings_against_decimal) (sign=1, change=1e-16, function='evaluate') ... FAIL
+  test_thermal_crossings_against_decimal (test_runtime_review.RuntimeReviewTests.test_thermal_crossings_against_decimal) (sign=1, change=0.25, function='compute_time_to_temperature_threshold') ... FAIL
+  test_thermal_crossings_against_decimal (test_runtime_review.RuntimeReviewTests.test_thermal_crossings_against_decimal) (sign=1, change=0.25, function='evaluate') ... FAIL
+  test_thermal_crossings_against_decimal (test_runtime_review.RuntimeReviewTests.test_thermal_crossings_against_decimal) (sign=-1, change=1e-16, function='compute_cooldown_time_to_rearm') ... ERROR
+  test_thermal_crossings_against_decimal (test_runtime_review.RuntimeReviewTests.test_thermal_crossings_against_decimal) (sign=-1, change=1e-16, function='evaluate') ... FAIL
+  test_thermal_crossings_against_decimal (test_runtime_review.RuntimeReviewTests.test_thermal_crossings_against_decimal) (sign=-1, change=0.25, function='compute_cooldown_time_to_rearm') ... FAIL
+  test_thermal_crossings_against_decimal (test_runtime_review.RuntimeReviewTests.test_thermal_crossings_against_decimal) (sign=-1, change=0.25, function='evaluate') ... FAIL
+
+======================================================================
+ERROR: test_thermal_crossings_against_decimal (test_runtime_review.RuntimeReviewTests.test_thermal_crossings_against_decimal) (sign=1, change=1e-16, function='compute_time_to_temperature_threshold')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<original-archive>\model_policy_engine\tests\test_runtime_review.py", line 60, in test_thermal_crossings_against_decimal
+    self.assertTrue(math.isclose(func(*args), expected, rel_tol=2e-14),
+                                 ~~~~^^^^^^^
+  File "<original-archive>\model_policy_engine\__init__.py", line 141, in governed
+    return function(*bound.args, **bound.kwargs)
+  File "<original-archive>\model_families\hardware_viability\thermal\thermal_truth\thermal_cross_domain_models\thermal_rc_envelope\time_to_temperature_threshold.py", line 34, in compute_time_to_temperature_threshold
+    raise ValueError("threshold crossing ratio must be in (0, 1)")
+ValueError: threshold crossing ratio must be in (0, 1)
+
+======================================================================
+ERROR: test_thermal_crossings_against_decimal (test_runtime_review.RuntimeReviewTests.test_thermal_crossings_against_decimal) (sign=-1, change=1e-16, function='compute_cooldown_time_to_rearm')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<original-archive>\model_policy_engine\tests\test_runtime_review.py", line 60, in test_thermal_crossings_against_decimal
+    self.assertTrue(math.isclose(func(*args), expected, rel_tol=2e-14),
+                                 ~~~~^^^^^^^
+  File "<original-archive>\model_policy_engine\__init__.py", line 141, in governed
+    return function(*bound.args, **bound.kwargs)
+  File "<original-archive>\model_families\hardware_viability\thermal\thermal_truth\thermal_cross_domain_models\thermal_rc_envelope\cooldown_time_to_rearm.py", line 34, in compute_cooldown_time_to_rearm
+    raise ValueError("rearm crossing ratio must be in (0, 1)")
+ValueError: rearm crossing ratio must be in (0, 1)
+
+======================================================================
+FAIL: test_scalar_sequence_and_record_types (test_runtime_review.RuntimeReviewTests.test_scalar_sequence_and_record_types) (bad=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<original-archive>\model_policy_engine\tests\test_runtime_review.py", line 25, in test_scalar_sequence_and_record_types
+    with self.subTest(bad=bad), self.assertRaisesRegex(ValueError, "conflict_count"):
+                                ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_scalar_sequence_and_record_types (test_runtime_review.RuntimeReviewTests.test_scalar_sequence_and_record_types) (bad=1.5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<original-archive>\model_policy_engine\tests\test_runtime_review.py", line 25, in test_scalar_sequence_and_record_types
+    with self.subTest(bad=bad), self.assertRaisesRegex(ValueError, "conflict_count"):
+                                ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_scalar_sequence_and_record_types (test_runtime_review.RuntimeReviewTests.test_scalar_sequence_and_record_types)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<original-archive>\model_policy_engine\tests\test_runtime_review.py", line 28, in test_scalar_sequence_and_record_types
+    with self.assertRaisesRegex(ValueError, "required_refs"):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_generator_edges_reusable_within_one_call (test_runtime_review.RuntimeReviewTests.test_generator_edges_reusable_within_one_call)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<original-archive>\model_policy_engine\tests\test_runtime_review.py", line 66, in test_generator_edges_reusable_within_one_call
+    self.assertTrue(graph.has_two_independent_paths(iter("abc"), iter(edges)))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_sensor_posterior_against_independent_scalar_fusion (test_runtime_review.RuntimeReviewTests.test_sensor_posterior_against_independent_scalar_fusion)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<original-archive>\model_policy_engine\tests\test_runtime_review.py", line 86, in test_sensor_posterior_against_independent_scalar_fusion
+    self.assertTrue(math.isclose(cov[0][0], float(posterior), rel_tol=1e-14), (prior, noise, cov))
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : (1000000000000000000, 1, [[0.0]])
+
+======================================================================
+FAIL: test_thermal_crossings_against_decimal (test_runtime_review.RuntimeReviewTests.test_thermal_crossings_against_decimal) (sign=1, change=1e-16, function='evaluate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<original-archive>\model_policy_engine\tests\test_runtime_review.py", line 60, in test_thermal_crossings_against_decimal
+    self.assertTrue(math.isclose(func(*args), expected, rel_tol=2e-14),
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                    (args, expected))
+                    ^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ((0, 1e-16, 100, 50), 5e-17)
+
+======================================================================
+FAIL: test_thermal_crossings_against_decimal (test_runtime_review.RuntimeReviewTests.test_thermal_crossings_against_decimal) (sign=1, change=0.25, function='compute_time_to_temperature_threshold')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<original-archive>\model_policy_engine\tests\test_runtime_review.py", line 60, in test_thermal_crossings_against_decimal
+    self.assertTrue(math.isclose(func(*args), expected, rel_tol=2e-14),
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                    (args, expected))
+                    ^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ((0, 0.25, 100, 50), 0.12515651090592653)
+
+======================================================================
+FAIL: test_thermal_crossings_against_decimal (test_runtime_review.RuntimeReviewTests.test_thermal_crossings_against_decimal) (sign=1, change=0.25, function='evaluate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<original-archive>\model_policy_engine\tests\test_runtime_review.py", line 60, in test_thermal_crossings_against_decimal
+    self.assertTrue(math.isclose(func(*args), expected, rel_tol=2e-14),
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                    (args, expected))
+                    ^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ((0, 0.25, 100, 50), 0.12515651090592653)
+
+======================================================================
+FAIL: test_thermal_crossings_against_decimal (test_runtime_review.RuntimeReviewTests.test_thermal_crossings_against_decimal) (sign=-1, change=1e-16, function='evaluate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<original-archive>\model_policy_engine\tests\test_runtime_review.py", line 60, in test_thermal_crossings_against_decimal
+    self.assertTrue(math.isclose(func(*args), expected, rel_tol=2e-14),
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                    (args, expected))
+                    ^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ((0, -1e-16, -100, 50), 5e-17)
+
+======================================================================
+FAIL: test_thermal_crossings_against_decimal (test_runtime_review.RuntimeReviewTests.test_thermal_crossings_against_decimal) (sign=-1, change=0.25, function='compute_cooldown_time_to_rearm')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<original-archive>\model_policy_engine\tests\test_runtime_review.py", line 60, in test_thermal_crossings_against_decimal
+    self.assertTrue(math.isclose(func(*args), expected, rel_tol=2e-14),
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                    (args, expected))
+                    ^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ((0, -0.25, -100, 50), 0.12515651090592653)
+
+======================================================================
+FAIL: test_thermal_crossings_against_decimal (test_runtime_review.RuntimeReviewTests.test_thermal_crossings_against_decimal) (sign=-1, change=0.25, function='evaluate')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "<original-archive>\model_policy_engine\tests\test_runtime_review.py", line 60, in test_thermal_crossings_against_decimal
+    self.assertTrue(math.isclose(func(*args), expected, rel_tol=2e-14),
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                    (args, expected))
+                    ^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : ((0, -0.25, -100, 50), 0.12515651090592653)
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.396s
+
+FAILED (failures=11, errors=2)

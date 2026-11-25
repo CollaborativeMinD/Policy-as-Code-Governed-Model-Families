@@ -1,0 +1,10 @@
+version = "1.0.0"
+model_id = "hardware_viability/time_control_enforcement/timing_validity/age_of_information"
+records = []
+
+[settings]
+
+[calls."compute_age_of_information_margin"]
+time_generated = { "annotation" = "float" }
+time_used = { "annotation" = "float" }
+freshness_limit = { "annotation" = "float" }

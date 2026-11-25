@@ -1,0 +1,14 @@
+version = "1.0.0"
+model_id = "hardware_viability/time_control_enforcement/timing_validity/sequence_replay_integrity"
+records = []
+
+[settings]
+
+[calls."compute_sequence_replay_integrity_score"]
+seq_prev = { "annotation" = "int" }
+seq_curr = { "annotation" = "int" }
+time_prev = { "annotation" = "float" }
+time_curr = { "annotation" = "float" }
+hash_prev = { "annotation" = "str" }
+hash_curr = { "annotation" = "str" }
+allow_duplicate_hash = { "annotation" = "bool", "default" = false }

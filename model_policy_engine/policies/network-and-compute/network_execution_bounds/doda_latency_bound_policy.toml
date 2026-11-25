@@ -1,0 +1,21 @@
+version = "1.0.0"
+model_id = "network-and-compute/network_execution_bounds/doda_latency_bound"
+records = []
+
+[settings]
+
+[calls."symbolic_expression"]
+
+[calls."lambdified_margin"]
+
+[calls."compute_latency_budget_margin"]
+hop_latencies_s = { "annotation" = "Sequence[float]" }
+time_budget_s = { "annotation" = "float", "ge" = 0.0 }
+
+[calls."within_latency_budget"]
+hop_latencies_s = { "annotation" = "Sequence[float]" }
+time_budget_s = { "annotation" = "float" }
+
+[calls."lambdified_margin.evaluate"]
+T_budget = { annotation = "float" }
+T_total = { annotation = "float" }

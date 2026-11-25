@@ -1,0 +1,21 @@
+version = "1.0.1"
+model_id = "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_rc_envelope/cooldown_time_to_rearm"
+records = []
+
+[settings]
+
+[calls."symbolic_expression"]
+
+[calls."lambdified"]
+
+[calls."compute_cooldown_time_to_rearm"]
+start_temp_c = { "annotation" = "float", finite = true }
+rearm_temp_c = { "annotation" = "float", finite = true }
+cool_equilibrium_temp_c = { "annotation" = "float", finite = true }
+cooldown_time_constant_s = { "annotation" = "float", finite = true, "gt" = 0 }
+
+[calls."lambdified.evaluate"]
+Tstart = { annotation = "float", finite = true }
+Trearm = { annotation = "float", finite = true }
+Teq = { annotation = "float", finite = true }
+tau = { annotation = "float", finite = true }

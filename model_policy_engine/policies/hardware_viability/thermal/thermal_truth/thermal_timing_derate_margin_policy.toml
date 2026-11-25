@@ -1,0 +1,14 @@
+version = "1.0.0"
+model_id = "hardware_viability/thermal/thermal_truth/thermal_timing_derate_margin"
+records = []
+
+[settings]
+
+[calls."compute_thermal_timing_derate_margin"]
+deadline = { "annotation" = "float" }
+base_exec_time = { "annotation" = "float" }
+core_temp = { "annotation" = "float" }
+temp_threshold = { "annotation" = "float" }
+derate_gain = { "annotation" = "float" }
+io_jitter = { "annotation" = "float", "default" = 0.0 }
+guard_band = { "annotation" = "float", "default" = 0.0 }

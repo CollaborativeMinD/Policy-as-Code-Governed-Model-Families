@@ -1,0 +1,14 @@
+version = "1.0.0"
+model_id = "plant_fidelity/Truth-conditioned-safe-velocity-margin"
+records = []
+
+[settings]
+
+[calls."compute_truth_conditioned_safe_velocity_margin"]
+distance_to_hazard = { "annotation" = "float" }
+current_speed = { "annotation" = "float" }
+effective_deceleration = { "annotation" = "float", "gt" = 0.0 }
+actuation_latency = { "annotation" = "float" }
+terrain_truth_sigma = { "annotation" = "float" }
+map_resolution = { "annotation" = "float" }
+localization_sigma = { "annotation" = "float" }

@@ -1,0 +1,35 @@
+COMMAND: python run_reachability_demo.py
+
+STDOUT:
+CLEAR_PATH_STATUS: REACHABILITY_WITNESS_FOUND
+CLEAR_PATH_SUCCESS: True
+CLEAR_PATH_ACCEPTED_NODES: 45
+CLEAR_PATH_REJECTED_NODES: 1
+CLEAR_PATH_LENGTH: 15.2
+BLOCKED_PATH_STATUS: COLLAPSE_PRESSURE_DOMINANT
+BLOCKED_PATH_SUCCESS: False
+BLOCKED_PATH_ACCEPTED_NODES: 1
+BLOCKED_PATH_REJECTED_NODES: 120
+BLOCKED_COLLAPSE_PRESSURE: 1.0
+CAMPAIGN_SUMMARY:
+{
+  "campaign_count": 12,
+  "collapse_dominant_count": 0,
+  "collapse_dominant_probability": 0.0,
+  "success_count": 12,
+  "success_probability": 1.0
+}
+
+STDERR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.vJDWZqkmKn/artifact_tool_v2-2.6.11/presentation_artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.vJDWZqkmKn/artifact_tool_v2-2.6.11/presentation_artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.vJDWZqkmKn/artifact_tool_v2-2.6.11/presentation_artifact_tool/spreadsheet_warmup.py", line 720, in _warm_feature_flows
+  File "/tmp/tmp.vJDWZqkmKn/artifact_tool_v2-2.6.11/presentation_artifact_tool/spreadsheet_warmup.py", line 704, in _warm_collaboration_flows
+  File "/tmp/tmp.vJDWZqkmKn/artifact_tool_v2-2.6.11/presentation_artifact_tool/generated/interface/models.py", line 35986, in hydrate_crdt_from_proto
+  File "/tmp/tmp.vJDWZqkmKn/artifact_tool_v2-2.6.11/presentation_artifact_tool/rpc/remote.py", line 747, in __call__
+  File "/tmp/tmp.vJDWZqkmKn/artifact_tool_v2-2.6.11/presentation_artifact_tool/rpc/client.py", line 150, in call
+presentation_artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.
+
+RETURN_CODE: 0

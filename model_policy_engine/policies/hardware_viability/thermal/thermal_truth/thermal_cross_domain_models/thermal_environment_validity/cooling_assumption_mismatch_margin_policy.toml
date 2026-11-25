@@ -1,0 +1,21 @@
+version = "1.0.0"
+model_id = "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_environment_validity/cooling_assumption_mismatch_margin"
+records = []
+
+[settings]
+
+[calls."symbolic_expression"]
+
+[calls."lambdified"]
+
+[calls."compute_cooling_assumption_mismatch_margin"]
+measured_steady_temp_c = { "annotation" = "float" }
+measured_ambient_c = { "annotation" = "float" }
+measured_power_w = { "annotation" = "float", "gt" = 0 }
+claimed_thermal_resistance_c_per_w = { "annotation" = "float", "gt" = 0 }
+allowed_resistance_error_c_per_w = { "annotation" = "float", "gt" = 0 }
+
+[calls."lambdified.evaluate"]
+allow = { annotation = "float" }
+measured = { annotation = "float" }
+claimed = { annotation = "float" }

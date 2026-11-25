@@ -1,0 +1,10 @@
+version = "1.0.0"
+model_id = "environment_geometry/terrain_truth/c6_1_los_terrain_mask_closure"
+records = []
+
+[settings]
+
+[calls."compute_los_terrain_mask_margin"]
+ray_elevation_angle = { "annotation" = "float" }
+horizon_mask_angle = { "annotation" = "float" }
+buffer_angle = { "annotation" = "float", "default" = 0.0 }

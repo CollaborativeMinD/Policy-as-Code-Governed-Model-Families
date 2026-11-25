@@ -1,0 +1,13 @@
+version = "1.0.0"
+model_id = "hardware_viability/thermal/thermal_truth/thermal_two_layer/surface_radiative_forcing_density"
+records = []
+
+[settings]
+
+[calls."compute_surface_radiative_forcing_density"]
+alpha = { "annotation" = "float" }
+area_m2 = { "annotation" = "float" }
+insolation_w_m2 = { "annotation" = "float" }
+epsilon = { "annotation" = "float" }
+T_skin_c = { "annotation" = "float" }
+T_env_c = { "annotation" = "float" }

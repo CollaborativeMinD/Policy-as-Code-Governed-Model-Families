@@ -1,0 +1,11 @@
+version = "1.0.0"
+model_id = "hardware_viability/actuator/specific_energy_reserve_to_go"
+records = []
+
+[settings]
+
+[calls."compute_specific_energy_reserve_margin"]
+energy_available = { "annotation" = "float" }
+energy_to_go = { "annotation" = "float" }
+abort_reserve = { "annotation" = "float" }
+uncertainty_buffer = { "annotation" = "float", "default" = 0.0 }

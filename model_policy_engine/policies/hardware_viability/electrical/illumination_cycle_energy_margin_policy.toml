@@ -1,0 +1,13 @@
+version = "1.0.0"
+model_id = "hardware_viability/electrical/illumination_cycle_energy_margin"
+records = []
+
+[settings]
+
+[calls."compute_illumination_duty_cycle_energy_margin"]
+E_available_wh = { "annotation" = "float" }
+gen_lit_wh_per_h = { "annotation" = "float" }
+load_lit_wh_per_h = { "annotation" = "float" }
+load_dark_wh_per_h = { "annotation" = "float" }
+t_lit_h = { "annotation" = "float" }
+t_dark_h = { "annotation" = "float" }

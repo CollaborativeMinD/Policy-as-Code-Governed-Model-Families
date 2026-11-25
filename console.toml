@@ -1,0 +1,20 @@
+version = 1
+host = "127.0.0.1"
+port = 8766
+protocol = "2026-07-28"
+poll_seconds = 3
+
+[roles]
+viewer = ["inventory.read"]
+admin = ["inventory.read", "policy.open", "policy.apply"]
+agent = ["inventory.read", "task.execute"]
+
+[tasks.queue_length]
+model = "network-and-compute/compute_queueing_limits/littles_law_queue"
+operation = "compute_little_law_queue_length"
+inputs = { arrival_rate_per_s = 12.0, processing_time_s = 0.25 }
+
+[tasks.evidence_decay]
+model = "ai_governance/genai_governance/stale_evidence_decay"
+operation = "compute_stale_evidence_decay"
+inputs = { age_s = 5.0, freshness_margin_s = 10.0 }

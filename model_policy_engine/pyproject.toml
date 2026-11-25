@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "model-policy-engine"
+version = "1.1.0"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.setuptools]
+packages = ["model_policy_engine"]
+package-dir = {model_policy_engine = "."}
+
+[tool.setuptools.package-data]
+model_policy_engine = ["protocol.toml", "policies/**/*.toml", "policies/*.toml"]
+

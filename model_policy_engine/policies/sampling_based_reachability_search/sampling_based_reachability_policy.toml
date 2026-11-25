@@ -1,0 +1,158 @@
+version = "1.0.0"
+model_id = "sampling_based_reachability_search/sampling_based_reachability"
+records = ["Bounds", "Obstacle", "SearchConfig", "Node", "SearchResult"]
+
+relations = [
+  { call = "Bounds", left = "lower", op = "lt", right = "upper" },
+  { call = "settings", left = "demo_blocked_path_config_start", op = "same_length", right = "demo_blocked_path_config_goal" },
+  { call = "settings", left = "demo_blocked_path_config_start", op = "same_length", right = "demo_blocked_path_config_bounds" },
+  { call = "settings", left = "demo_clear_path_config_start", op = "same_length", right = "demo_clear_path_config_goal" },
+  { call = "settings", left = "demo_clear_path_config_start", op = "same_length", right = "demo_clear_path_config_bounds" },
+]
+
+[settings]
+branch_risk_weights = { annotation = "tuple[float, float]", default = [0.6, 0.4], items_ge = 0, sum_eq = 1 }
+demo_clear_path_config_obstacles = { annotation = "tuple[Obstacle, ...]", default = [{center = [4.0, 4.0], radius = 0.75, label = "center obstacle"}], min_items = 1 }
+demo_clear_path_config_bounds = { annotation = "tuple[Bounds, ...]", default = [{lower = -1.0, upper = 10.0}, {lower = -1.0, upper = 10.0}], min_items = 1 }
+demo_clear_path_config_goal = { annotation = "Vector", default = [8.0, 8.0], min_items = 1 }
+demo_clear_path_config_start = { annotation = "Vector", default = [0.0, 0.0], min_items = 1 }
+demo_blocked_path_config_obstacles = { annotation = "tuple[Obstacle, ...]", default = [{center = [4.0, 4.0], radius = 8.0, label = "dominant exclusion zone"}], min_items = 1 }
+demo_blocked_path_config_bounds = { annotation = "tuple[Bounds, ...]", default = [{lower = -1.0, upper = 10.0}, {lower = -1.0, upper = 10.0}], min_items = 1 }
+demo_blocked_path_config_goal = { annotation = "Vector", default = [8.0, 8.0], min_items = 1 }
+demo_blocked_path_config_start = { annotation = "Vector", default = [0.0, 0.0], min_items = 1 }
+distance_epsilon = { "annotation" = "float", "default" = 1e-12, "gt" = 0 }
+demo_blocked_path_config_max_iterations = { "annotation" = "int", "default" = 120, "gt" = 0 }
+demo_blocked_path_config_step_size = { "annotation" = "float", "default" = 0.8, "gt" = 0 }
+demo_blocked_path_config_goal_radius = { "annotation" = "float", "default" = 0.65, "gt" = 0 }
+demo_blocked_path_config_speed = { "annotation" = "float", "default" = 1.0, "gt" = 0 }
+demo_blocked_path_config_deadline_s = { "annotation" = "float", "default" = 30.0, "gt" = 0 }
+demo_blocked_path_config_obstacle_clearance_m = { "annotation" = "float", "default" = 0.1 }
+demo_blocked_path_config_max_branch_risk = { "annotation" = "float", "default" = 1.0 }
+demo_blocked_path_config_collapse_pressure_threshold = { "annotation" = "float", "default" = 0.95, "ge" = 0, "le" = 1 }
+demo_clear_path_config_max_iterations = { "annotation" = "int", "default" = 500, "gt" = 0 }
+demo_clear_path_config_step_size = { "annotation" = "float", "default" = 0.8, "gt" = 0 }
+demo_clear_path_config_goal_radius = { "annotation" = "float", "default" = 0.65, "gt" = 0 }
+demo_clear_path_config_speed = { "annotation" = "float", "default" = 1.0, "gt" = 0 }
+demo_clear_path_config_deadline_s = { "annotation" = "float", "default" = 30.0, "gt" = 0 }
+demo_clear_path_config_obstacle_clearance_m = { "annotation" = "float", "default" = 0.15 }
+demo_clear_path_config_max_branch_risk = { "annotation" = "float", "default" = 1.0 }
+
+[calls."Bounds"]
+lower = { "annotation" = "float" }
+upper = { "annotation" = "float" }
+
+[calls."Bounds.validate"]
+
+[calls."Obstacle"]
+center = { "annotation" = "Vector" }
+radius = { "annotation" = "float" }
+label = { "annotation" = "str", "default" = "obstacle" }
+
+[calls."Obstacle.validate"]
+dim = { "annotation" = "int" }
+
+[calls."SearchConfig"]
+start = { "annotation" = "Vector" }
+goal = { "annotation" = "Vector" }
+bounds = { "annotation" = "tuple[Bounds, ...]" }
+obstacles = { "annotation" = "tuple[Obstacle, ...]", "default" = [], "tuple_default" = true }
+seed = { "annotation" = "int", "default" = 42 }
+max_iterations = { "annotation" = "int", "default" = 600, "gt" = 0 }
+step_size = { "annotation" = "float", "default" = 0.6, "gt" = 0, "finite" = true }
+goal_radius = { "annotation" = "float", "default" = 0.5, "gt" = 0, "finite" = true }
+goal_sample_rate = { "annotation" = "float", "default" = 0.12, "ge" = 0, "le" = 1, "finite" = true }
+speed = { "annotation" = "float", "default" = 1.0, "gt" = 0, "finite" = true }
+deadline_s = { "annotation" = "float", "default" = 120.0, "gt" = 0, "finite" = true }
+preparation_time_s = { "annotation" = "float", "default" = 0.0, "ge" = 0, "finite" = true }
+min_time_margin_s = { "annotation" = "float", "default" = 0.0, "ge" = 0, "finite" = true }
+obstacle_clearance_m = { "annotation" = "float", "default" = 0.0, "ge" = 0, "finite" = true }
+max_branch_risk = { "annotation" = "float", "default" = 1.0, "ge" = 0, "finite" = true }
+disturbance_scale = { "annotation" = "float", "default" = 0.0, "ge" = 0, "finite" = true }
+collapse_pressure_threshold = { "annotation" = "float", "default" = 0.95, "ge" = 0, "le" = 1, "finite" = true }
+
+[calls."SearchConfig.validate"]
+
+[calls."Node"]
+node_id = { "annotation" = "int" }
+parent_id = { "annotation" = "int | None" }
+state = { "annotation" = "Vector" }
+time_s = { "annotation" = "float" }
+path_length = { "annotation" = "float" }
+time_margin_s = { "annotation" = "float" }
+obstacle_margin_m = { "annotation" = "float" }
+branch_risk = { "annotation" = "float" }
+admitted = { "annotation" = "bool" }
+rejection_reason = { "annotation" = "str | None", "none" = true }
+
+[calls."SearchResult"]
+status = { "annotation" = "str" }
+success = { "annotation" = "bool" }
+goal_node_id = { "annotation" = "int | None" }
+accepted_nodes = { "annotation" = "tuple[Node, ...]" }
+rejected_nodes = { "annotation" = "tuple[Node, ...]" }
+path = { "annotation" = "tuple[Node, ...]" }
+telemetry = { "annotation" = "dict[str, float | int | str | None]" }
+
+[calls."SearchResult.to_dict"]
+
+[calls."SearchResult.to_json"]
+indent = { "annotation" = "int", "default" = 2 }
+
+[calls."distance"]
+a = { "annotation" = "Vector" }
+b = { "annotation" = "Vector" }
+
+[calls."clamp_to_bounds"]
+state = { "annotation" = "Vector" }
+bounds = { "annotation" = "tuple[Bounds, ...]" }
+
+[calls."interpolate_step"]
+origin = { "annotation" = "Vector" }
+target = { "annotation" = "Vector" }
+step_size = { "annotation" = "float" }
+
+[calls."min_obstacle_margin"]
+state = { "annotation" = "Vector" }
+obstacles = { "annotation" = "Iterable[Obstacle]" }
+clearance = { "annotation" = "float" }
+
+[calls."compute_time_margin"]
+config = { "annotation" = "SearchConfig" }
+state = { "annotation" = "Vector" }
+elapsed_s = { "annotation" = "float" }
+
+[calls."compute_branch_risk"]
+config = { "annotation" = "SearchConfig" }
+obstacle_margin_m = { "annotation" = "float" }
+time_margin_s = { "annotation" = "float" }
+parent_risk = { "annotation" = "float" }
+
+[calls."rejection_reason"]
+config = { "annotation" = "SearchConfig" }
+obstacle_margin_m = { "annotation" = "float" }
+time_margin_s = { "annotation" = "float" }
+branch_risk = { "annotation" = "float" }
+
+[calls."SamplingReachabilitySearch.__init__"]
+config = { "annotation" = "SearchConfig" }
+
+[calls."SamplingReachabilitySearch.sample_state"]
+
+[calls."SamplingReachabilitySearch.nearest"]
+nodes = { "annotation" = "list[Node]" }
+sample = { "annotation" = "Vector" }
+
+[calls."SamplingReachabilitySearch.propagate"]
+near = { "annotation" = "Node" }
+sample = { "annotation" = "Vector" }
+
+[calls."SamplingReachabilitySearch.run"]
+
+[calls."run_campaign"]
+configs = { "annotation" = "Iterable[SearchConfig]" }
+
+[calls."demo_clear_path_config"]
+seed = { "annotation" = "int", "default" = 7 }
+
+[calls."demo_blocked_path_config"]
+seed = { "annotation" = "int", "default" = 7 }

@@ -1,0 +1,15 @@
+version = "1.0.0"
+model_id = "space-and-comms/authority_lease_closure_margin"
+records = []
+
+[settings]
+
+[calls."compute_authority_lease_closure_margin"]
+t_lease = { "annotation" = "float" }
+t_sensor = { "annotation" = "float" }
+t_transport = { "annotation" = "float" }
+t_queue = { "annotation" = "float" }
+t_compute = { "annotation" = "float" }
+t_actuate = { "annotation" = "float" }
+j_total = { "annotation" = "float" }
+t_reconfig = { "annotation" = "float" }

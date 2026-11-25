@@ -1,0 +1,12 @@
+version = "1.0.0"
+model_id = "hardware_viability/thermal/thermal_truth/cycle_energy_reserve_margin"
+records = []
+
+[settings]
+
+[calls."compute_duty_cycle_energy_reserve_margin"]
+energy_stored = { "annotation" = "float" }
+power_segments = { "annotation" = "Sequence[float]" }
+duration_segments = { "annotation" = "Sequence[float]" }
+thermal_hold_energy = { "annotation" = "float", "default" = 0.0 }
+contingency_energy = { "annotation" = "float", "default" = 0.0 }

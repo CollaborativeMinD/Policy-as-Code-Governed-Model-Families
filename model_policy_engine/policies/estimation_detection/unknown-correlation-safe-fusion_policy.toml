@@ -1,0 +1,12 @@
+version = "1.0.0"
+model_id = "estimation_detection/unknown-correlation-safe-fusion"
+records = []
+
+[settings]
+
+[calls."compute_covariance_intersection"]
+x_a = { "annotation" = "Iterable[float]" }
+p_a = { "annotation" = "Iterable[Iterable[float]]" }
+x_b = { "annotation" = "Iterable[float]" }
+p_b = { "annotation" = "Iterable[Iterable[float]]" }
+omega = { "annotation" = "float", "default" = 0.5, "ge" = 0, "le" = 1 }

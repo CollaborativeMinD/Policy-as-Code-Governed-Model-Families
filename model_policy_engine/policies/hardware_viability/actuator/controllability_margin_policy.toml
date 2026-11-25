@@ -1,0 +1,13 @@
+version = "1.0.0"
+model_id = "hardware_viability/actuator/controllability_margin"
+records = []
+
+[settings]
+singular_tolerance = { "annotation" = "float", "default" = 1e-15, "gt" = 0 }
+min_sweeps = { "annotation" = "int", "default" = 30, "ge" = 1 }
+sweeps_per_column = { "annotation" = "int", "default" = 5, "ge" = 1 }
+
+[calls."compute_authority_weighted_controllability_margin"]
+effectiveness_matrix = { "annotation" = "Sequence[Sequence[float]]" }
+authority_weights = { "annotation" = "Sequence[float]" }
+required_min_singular_value = { "annotation" = "float", "ge" = 0 }

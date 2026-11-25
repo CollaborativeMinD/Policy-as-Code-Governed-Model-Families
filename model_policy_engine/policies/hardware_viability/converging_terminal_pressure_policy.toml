@@ -1,0 +1,12 @@
+version = "1.0.0"
+model_id = "hardware_viability/converging_terminal_pressure"
+records = []
+
+[settings]
+
+[calls."compute_converging_terminal_pressure"]
+thermal_pressure_ratio = { "annotation" = "float" }
+memory_pressure_ratio = { "annotation" = "float" }
+queue_pressure_ratio = { "annotation" = "float" }
+horizon_pressure_ratio = { "annotation" = "float" }
+weights = { "annotation" = "Tuple[float, float, float, float]", "default" = [0.3, 0.2, 0.2, 0.3], "tuple_default" = true }

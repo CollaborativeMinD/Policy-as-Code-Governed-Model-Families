@@ -1,0 +1,10 @@
+version = "1.0.0"
+model_id = "estimation_detection/weighted_divergence"
+records = []
+
+[settings]
+
+[calls."compute_weighted_divergence"]
+x_real = { "annotation" = "Sequence[float]" }
+x_twin = { "annotation" = "Sequence[float]" }
+W = { "annotation" = "Sequence[Sequence[float]]" }

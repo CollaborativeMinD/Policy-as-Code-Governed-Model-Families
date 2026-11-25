@@ -1,0 +1,10 @@
+version = "1.0.0"
+model_id = "environment_geometry/terrain_truth/roughness_alias_margin"
+records = []
+
+[settings]
+
+[calls."compute_roughness_alias_margin"]
+relief_local_p95 = { "annotation" = "float" }
+relief_regional_p95 = { "annotation" = "float" }
+r_alias_limit = { "annotation" = "float", "default" = 0.35 }

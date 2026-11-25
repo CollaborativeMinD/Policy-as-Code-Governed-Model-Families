@@ -1,0 +1,113 @@
+version = "1.0.0"
+model_id = "hardware_viability/electrical/electrical_survivability_margins"
+records = []
+
+[settings]
+denominator_floor = { "annotation" = "float", "default" = 1e-09, "gt" = 0 }
+
+[calls."compute_effective_brownout_margin"]
+v_min_measured_v = { "annotation" = "float" }
+v_uvlo_v = { "annotation" = "float" }
+v_ripple_pk_v = { "annotation" = "float" }
+v_predicted_droop_v = { "annotation" = "float" }
+v_reference_uncertainty_v = { "annotation" = "float" }
+
+[calls."compute_thermal_derated_power_margin"]
+p_nominal_w = { "annotation" = "float", "ge" = 0 }
+t_junction_c = { "annotation" = "float" }
+t_warn_c = { "annotation" = "float" }
+t_shutdown_c = { "annotation" = "float" }
+aging_factor = { "annotation" = "float", "gt" = 0.0, "le" = 1.0 }
+p_load_w = { "annotation" = "float", "ge" = 0 }
+p_transient_reserve_w = { "annotation" = "float", "ge" = 0 }
+
+[calls."compute_recovery_energy_margin"]
+e_available_j = { "annotation" = "float" }
+e_restart_j = { "annotation" = "float" }
+e_reacquire_j = { "annotation" = "float" }
+e_isolate_j = { "annotation" = "float" }
+e_safe_reserve_j = { "annotation" = "float" }
+
+[calls."compute_bus_clear_time_margin"]
+tau_clear_s = { "annotation" = "float", "gt" = 0 }
+n_clock_pulses = { "annotation" = "int", "ge" = 0 }
+f_clear_hz = { "annotation" = "float", "gt" = 0 }
+t_buffer_s = { "annotation" = "float" }
+t_slave_release_s = { "annotation" = "float" }
+t_reprobe_s = { "annotation" = "float" }
+
+[calls."compute_segment_isolation_margin"]
+t_fault_spread_s = { "annotation" = "float", "ge" = 0 }
+t_detect_s = { "annotation" = "float" }
+t_gate_s = { "annotation" = "float" }
+t_switch_s = { "annotation" = "float" }
+t_quarantine_confirm_s = { "annotation" = "float" }
+
+[calls."compute_post_recovery_reacquisition_margin"]
+tau_data_valid_s = { "annotation" = "float", "gt" = 0 }
+t_sample_age_s = { "annotation" = "float" }
+t_recovery_s = { "annotation" = "float" }
+t_reacquire_s = { "annotation" = "float" }
+t_skew_s = { "annotation" = "float" }
+
+[calls."compute_telemetry_use_freshness_margin"]
+tau_use_s = { "annotation" = "float", "gt" = 0 }
+t_now_s = { "annotation" = "float" }
+t_sample_s = { "annotation" = "float" }
+t_transport_s = { "annotation" = "float", "ge" = 0 }
+t_clock_uncertainty_s = { "annotation" = "float", "ge" = 0 }
+
+[calls."compute_mixed_stream_coherence_margin"]
+tau_align_s = { "annotation" = "float", "gt" = 0 }
+timestamps_s = { "annotation" = "Sequence[float]" }
+path_delays_s = { "annotation" = "Sequence[float] | None", "none" = true }
+
+[calls."compute_boot_epoch_sequence_gate"]
+boot_epoch_id = { "annotation" = "str" }
+attested_boot_epoch_id = { "annotation" = "str" }
+seq_prev = { "annotation" = "int", "ge" = 0 }
+seq_curr = { "annotation" = "int", "ge" = 0 }
+t_prev_s = { "annotation" = "float" }
+t_curr_s = { "annotation" = "float" }
+rollback_tolerance_s = { "annotation" = "float", "ge" = 0 }
+
+[calls."compute_substrate_evidence_completeness_ratio"]
+field_validity = { "annotation" = "Mapping[str, bool]" }
+field_weights = { "annotation" = "Mapping[str, float] | None", "none" = true }
+
+[calls."compute_trust_root_attestation_freshness_margin"]
+tau_attest_s = { "annotation" = "float", "gt" = 0 }
+t_now_s = { "annotation" = "float" }
+t_last_attest_s = { "annotation" = "float" }
+
+[calls."compute_authority_to_act_gate"]
+attestation_margin_s = { "annotation" = "float" }
+evidence_completeness_ratio = { "annotation" = "float", "ge" = 0.0, "le" = 1.0 }
+evidence_threshold = { "annotation" = "float", "ge" = 0.0, "le" = 1.0 }
+electrical_valid = { "annotation" = "bool" }
+timing_valid = { "annotation" = "bool" }
+role_allowed = { "annotation" = "bool" }
+recovery_blocked = { "annotation" = "bool" }
+
+[calls."compute_hardware_timing_closure_margin"]
+tau_deadline_s = { "annotation" = "float", "gt" = 0 }
+wcet_s = { "annotation" = "float" }
+isr_jitter_s = { "annotation" = "float" }
+bus_block_s = { "annotation" = "float" }
+clock_skew_s = { "annotation" = "float" }
+recovery_guard_s = { "annotation" = "float" }
+
+[calls."compute_thermal_timing_derate_margin"]
+tau_deadline_s = { "annotation" = "float", "gt" = 0 }
+wcet_nominal_s = { "annotation" = "float", "gt" = 0 }
+clock_fraction = { "annotation" = "float", "gt" = 0 }
+thermal_jitter_s = { "annotation" = "float" }
+bus_service_s = { "annotation" = "float" }
+clock_error_s = { "annotation" = "float" }
+
+[calls."compute_hardware_closed_command_seam_gate"]
+brownout_margin_v = { "annotation" = "float" }
+freshness_margin_s = { "annotation" = "float" }
+coherence_margin_s = { "annotation" = "float" }
+timing_closure_margin_s = { "annotation" = "float" }
+authority_gate = { "annotation" = "bool" }

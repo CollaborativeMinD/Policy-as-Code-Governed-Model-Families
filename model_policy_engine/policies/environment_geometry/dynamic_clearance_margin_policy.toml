@@ -1,0 +1,12 @@
+version = "1.0.0"
+model_id = "environment_geometry/dynamic_clearance_margin"
+records = []
+
+[settings]
+
+[calls."compute_dynamic_clearance_margin"]
+measured_clearance_m = { "annotation" = "float" }
+required_clearance_m = { "annotation" = "float" }
+closure_speed_m_s = { "annotation" = "float" }
+environment_age_s = { "annotation" = "float" }
+environment_uncertainty_m = { "annotation" = "float" }

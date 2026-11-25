@@ -1,0 +1,11 @@
+version = "1.0.0"
+model_id = "consensus_coordination/Byzantine trust-weighted agreement"
+records = []
+
+[settings]
+
+[calls."compute_byzantine_trust_weighted_agreement"]
+values = { "annotation" = "Sequence[float]" }
+trust_weights = { "annotation" = "Sequence[float]" }
+tolerance = { "annotation" = "float", "gt" = 0 }
+eps = { "annotation" = "float", "default" = 1e-09 }

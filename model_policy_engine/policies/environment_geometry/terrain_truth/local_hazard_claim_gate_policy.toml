@@ -1,0 +1,14 @@
+version = "1.0.0"
+model_id = "environment_geometry/terrain_truth/local_hazard_claim_gate"
+records = []
+
+[settings]
+local_lane = { "annotation" = "str", "default" = "local_nac" }
+required_status = { "annotation" = "str", "default" = "PAD_TILE_INGESTED" }
+
+[calls."compute_local_hazard_claim_gate"]
+lane = { "annotation" = "str" }
+provenance_complete = { "annotation" = "bool" }
+status = { "annotation" = "str" }
+c_lane = { "annotation" = "float" }
+tau_claim = { "annotation" = "float", "default" = 0.5 }

@@ -1,0 +1,19 @@
+version = "1.0.0"
+model_id = "estimation_detection/z_score_universal_stress_metric"
+records = []
+
+[settings]
+
+[calls."symbolic_expression"]
+
+[calls."lambdified"]
+
+[calls."compute_z_score"]
+x_live = { "annotation" = "float" }
+mu_baseline = { "annotation" = "float" }
+sigma_baseline = { "annotation" = "float", "gt" = 0.0 }
+
+[calls."lambdified.evaluate"]
+x_live = { annotation = "float" }
+mu_baseline = { annotation = "float" }
+sigma_baseline = { annotation = "float" }

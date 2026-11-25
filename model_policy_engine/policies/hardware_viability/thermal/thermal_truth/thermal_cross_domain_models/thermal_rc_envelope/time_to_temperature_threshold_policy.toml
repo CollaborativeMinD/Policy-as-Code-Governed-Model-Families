@@ -1,0 +1,21 @@
+version = "1.0.1"
+model_id = "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_rc_envelope/time_to_temperature_threshold"
+records = []
+
+[settings]
+
+[calls."symbolic_expression"]
+
+[calls."lambdified"]
+
+[calls."compute_time_to_temperature_threshold"]
+initial_temp_c = { "annotation" = "float", finite = true }
+threshold_temp_c = { "annotation" = "float", finite = true }
+equilibrium_temp_c = { "annotation" = "float", finite = true }
+thermal_time_constant_s = { "annotation" = "float", finite = true, "gt" = 0 }
+
+[calls."lambdified.evaluate"]
+T0 = { annotation = "float", finite = true }
+Tthr = { annotation = "float", finite = true }
+Teq = { annotation = "float", finite = true }
+tau = { annotation = "float", finite = true }

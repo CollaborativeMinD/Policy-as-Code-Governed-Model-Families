@@ -1,0 +1,28 @@
+version = "1.0.0"
+model_id = "ai_governance/ai_candidate_admission"
+records = ["CandidateObjectiveResult"]
+
+[settings]
+
+[calls."CandidateObjectiveResult"]
+accepted = { "annotation" = "bool" }
+score = { "annotation" = "float | None" }
+reason_code = { "annotation" = "str" }
+hard_gate_failures = { "annotation" = "Tuple[str, ...]" }
+utility = { "annotation" = "float" }
+penalties = { "annotation" = "Dict[str, float]" }
+
+[calls."compute_governed_candidate_objective"]
+utility = { "annotation" = "float" }
+hallucination_penalty = { "annotation" = "float" }
+physics_penalty = { "annotation" = "float" }
+schema_penalty = { "annotation" = "float" }
+timing_penalty = { "annotation" = "float" }
+authority_penalty = { "annotation" = "float" }
+provenance_penalty = { "annotation" = "float" }
+penalty_weights = { "annotation" = "Tuple[float, float, float, float, float, float]" }
+schema_valid = { "annotation" = "bool" }
+physics_valid = { "annotation" = "bool" }
+timing_valid = { "annotation" = "bool" }
+authority_valid = { "annotation" = "bool" }
+provenance_valid = { "annotation" = "bool" }

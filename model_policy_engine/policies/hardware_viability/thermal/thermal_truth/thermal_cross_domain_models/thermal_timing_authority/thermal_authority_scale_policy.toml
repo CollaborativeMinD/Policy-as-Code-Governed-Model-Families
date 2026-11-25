@@ -1,0 +1,15 @@
+version = "1.0.0"
+model_id = "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_timing_authority/thermal_authority_scale"
+records = []
+
+[settings]
+
+[calls."symbolic_expression_min_unclipped"]
+
+[calls."compute_thermal_authority_scale"]
+temp_c = { "annotation" = "float" }
+warning_temp_c = { "annotation" = "float" }
+critical_temp_c = { "annotation" = "float" }
+deadline_margin_ms = { "annotation" = "float" }
+deadline_budget_ms = { "annotation" = "float", "gt" = 0 }
+authority_floor = { "annotation" = "float", "ge" = 0.0, "le" = 1.0 }

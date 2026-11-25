@@ -1,0 +1,9 @@
+version = "1.0.0"
+model_id = "hardware_viability/electrical/bus_anchor_consistency_margin"
+records = []
+
+[settings]
+
+[calls."compute_bus_anchor_consistency_margin"]
+m_bus = { "annotation" = "float" }
+m_reg = { "annotation" = "float" }

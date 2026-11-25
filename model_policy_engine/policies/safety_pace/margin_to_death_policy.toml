@@ -1,0 +1,9 @@
+version = "1.0.0"
+model_id = "safety_pace/margin_to_death"
+records = []
+
+[settings]
+
+[calls."compute_margin_to_death"]
+phi_value = { "annotation" = "float" }
+c_max = { "annotation" = "float", "gt" = 0 }

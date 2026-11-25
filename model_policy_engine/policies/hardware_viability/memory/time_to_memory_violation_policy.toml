@@ -1,0 +1,10 @@
+version = "1.0.0"
+model_id = "hardware_viability/memory/time_to_memory_violation"
+records = []
+
+[settings]
+
+[calls."compute_time_to_memory_violation"]
+current_mem_pct = { "annotation" = "float" }
+mem_crit_pct = { "annotation" = "float" }
+dM_dt_pct_per_s = { "annotation" = "float" }

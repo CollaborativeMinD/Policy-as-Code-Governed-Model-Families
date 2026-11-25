@@ -1,0 +1,21 @@
+version = "1.0.0"
+model_id = "space-and-comms/communications_and_radar"
+records = []
+
+[settings]
+
+[calls."compute_received_power_db"]
+P_t_db = { "annotation" = "float" }
+G_t_db = { "annotation" = "float" }
+G_r_db = { "annotation" = "float" }
+L_p_db = { "annotation" = "float" }
+L_a_db = { "annotation" = "float" }
+L_s_db = { "annotation" = "float" }
+
+[calls."compute_radar_range"]
+P_t = { "annotation" = "float" }
+G = { "annotation" = "float" }
+lambda_ = { "annotation" = "float" }
+sigma = { "annotation" = "float" }
+S_min = { "annotation" = "float" }
+L = { "annotation" = "float" }

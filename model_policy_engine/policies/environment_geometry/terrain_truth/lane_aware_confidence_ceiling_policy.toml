@@ -1,0 +1,18 @@
+version = "1.0.0"
+model_id = "environment_geometry/terrain_truth/lane_aware_confidence_ceiling"
+records = []
+
+[settings]
+local_cap = { "annotation" = "float", "default" = 1.0, "ge" = 0, "le" = 1 }
+local_lane = { "annotation" = "str", "default" = "local_nac" }
+other_cap = { "annotation" = "float", "default" = 0.25, "ge" = 0, "le" = 1 }
+ingested_factor = { "annotation" = "float", "default" = 1.0, "ge" = 0, "le" = 1 }
+ingested_status = { "annotation" = "str", "default" = "PAD_TILE_INGESTED" }
+other_factor = { "annotation" = "float", "default" = 0.7, "ge" = 0, "le" = 1 }
+
+[calls."compute_lane_aware_confidence_ceiling"]
+c_model = { "annotation" = "float", "ge" = 0.0, "le" = 1.0 }
+lane = { "annotation" = "str" }
+status = { "annotation" = "str" }
+m_ms = { "annotation" = "float" }
+tau = { "annotation" = "float", "default" = 6.0 }

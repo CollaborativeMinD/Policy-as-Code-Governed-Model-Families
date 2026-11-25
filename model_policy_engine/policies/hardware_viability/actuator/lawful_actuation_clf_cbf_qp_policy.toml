@@ -1,0 +1,56 @@
+version = "1.0.0"
+model_id = "hardware_viability/actuator/lawful_actuation_clf_cbf_qp"
+records = []
+
+[settings]
+basis_tolerance = { "annotation" = "float", "default" = 2e-14, "gt" = 0 }
+projection_tolerance = { "annotation" = "float", "default" = 2e-12, "gt" = 0 }
+movement_tolerance = { "annotation" = "float", "default" = 1e-10, "gt" = 0 }
+slack_tolerance = { "annotation" = "float", "default" = 1e-07, "ge" = 0 }
+outer_iterations = { "annotation" = "int", "default" = 200, "ge" = 1 }
+min_projection_iterations = { "annotation" = "int", "default" = 120, "ge" = 1 }
+projection_iteration_factor = { "annotation" = "int", "default" = 12, "ge" = 1 }
+probe_fractions = { "annotation" = "list[float]", "default" = [1.0, 0.25, 0.0625, 0.015625], "min_items" = 1, items_gt = 0 }
+
+[calls."require_positive"]
+name = { "annotation" = "str" }
+value = { "annotation" = "float", "gt" = 0 }
+
+[calls."cbf_margin"]
+x = { "annotation" = "list[float]" }
+u = { "annotation" = "list[float]" }
+hazard = { "annotation" = "list[float]" }
+r_safe = { "annotation" = "float", "gt" = 0 }
+dt = { "annotation" = "float", "gt" = 0 }
+
+[calls."clf_value"]
+x = { "annotation" = "list[float]" }
+x_ref = { "annotation" = "list[float]" }
+
+[calls."clf_vdot"]
+x = { "annotation" = "list[float]" }
+u = { "annotation" = "list[float]" }
+x_ref = { "annotation" = "list[float]" }
+
+[calls."clf_margin"]
+x = { "annotation" = "list[float]" }
+u = { "annotation" = "list[float]" }
+x_ref = { "annotation" = "list[float]" }
+alpha = { "annotation" = "float", "gt" = 0 }
+
+[calls."lawful_control_qp"]
+x = { "annotation" = "list[float]" }
+u_nom = { "annotation" = "list[float]" }
+hazards = { "annotation" = "list[float] | list[list[float]]" }
+r_safe = { "annotation" = "float", "gt" = 0 }
+dt = { "annotation" = "float", "gt" = 0 }
+u_bounds = { "annotation" = "list[tuple[float, float]]" }
+Gamma = { "annotation" = "float", "default" = 1000000.0, "gt" = 0 }
+x_ref = { "annotation" = "list[float] | None", "none" = true }
+alpha = { "annotation" = "float", "default" = 1.0, "gt" = 0 }
+Gamma_cbf = { "annotation" = "float | None", "none" = true, "gt" = 0 }
+Gamma_clf = { "annotation" = "float | None", "none" = true, "gt" = 0 }
+clf_required = { "annotation" = "bool", "default" = true }
+
+[calls."null_set_trigger"]
+safe_without_slack = { "annotation" = "bool" }

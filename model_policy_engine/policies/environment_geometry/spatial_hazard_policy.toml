@@ -1,0 +1,15 @@
+version = "1.0.0"
+model_id = "environment_geometry/spatial_hazard"
+records = []
+
+[settings]
+
+[calls."compute_hazard_function"]
+p = { "annotation" = "Sequence[float]" }
+c = { "annotation" = "Sequence[float]" }
+r = { "annotation" = "float", "ge" = 0 }
+
+[calls."is_point_in_hazard"]
+p = { "annotation" = "Sequence[float]" }
+c = { "annotation" = "Sequence[float]" }
+r = { "annotation" = "float" }

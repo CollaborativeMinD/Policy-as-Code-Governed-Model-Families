@@ -1,0 +1,40 @@
+test_bidirectional_inventory (test_catalog_bindings.CatalogBindingTests.test_bidirectional_inventory) ... ok
+test_bound_source_and_policy_match (test_catalog_bindings.CatalogBindingTests.test_bound_source_and_policy_match) ... ok
+test_admissible_inputs_and_default_for_previously_required_argument (test_model_policies.ModelAdmissionTests.test_admissible_inputs_and_default_for_previously_required_argument) ... ok
+test_internal_weights_rejected_or_applied (test_model_policies.ModelAdmissionTests.test_internal_weights_rejected_or_applied) ... ok
+test_live_edit_changes_one_model (test_model_policies.ModelAdmissionTests.test_live_edit_changes_one_model) ... ok
+test_nested_record_defaults_rejected_before_publication (test_model_policies.ModelAdmissionTests.test_nested_record_defaults_rejected_before_publication) ... ok
+test_rejects_wrong_id_invalid_schema_and_rollback_before_next_call (test_model_policies.ModelAdmissionTests.test_rejects_wrong_id_invalid_schema_and_rollback_before_next_call) ... ok
+test_restart_fallback_and_missing_first_admission (test_model_policies.ModelAdmissionTests.test_restart_fallback_and_missing_first_admission) ... ok
+test_returned_evaluator_uses_current_policy (test_model_policies.ModelAdmissionTests.test_returned_evaluator_uses_current_policy) ... ok
+test_toml_transition_mapping (test_model_policies.ModelAdmissionTests.test_toml_transition_mapping) ... ok
+test_version_binding_and_same_digest_epoch_on_reload (test_model_policies.ModelAdmissionTests.test_version_binding_and_same_digest_epoch_on_reload) ... ok
+test_load_and_key_rotation_cold_boot (test_policy_loader.TestPolicyLoader.test_load_and_key_rotation_cold_boot)
+Loads v1.2.0 under k1, then cold-boots under k2 and re-seals LKG. ... ok
+test_rollback_blocked_and_break_glass_single_use (test_policy_loader.TestPolicyLoader.test_rollback_blocked_and_break_glass_single_use)
+Blocks unapproved downgrade, allows signed override once, blocks replay. ... Active policy load failed for C:\Users\charl\AppData\Local\Temp\tmpr3vd41qc\policy.toml: Rollback blocked (candidate=1.5.0@1500, LKG=2.0.0@2000) and no override token provided.
+Quarantined suspect policy artifacts to C:\Users\charl\AppData\Local\Temp\tmpr3vd41qc\quarantine\20261125T193616Z_policy_fxv5px4j
+Falling back to LKG policy (version=2.0.0, epoch=2000, sha256=5f16849f80d1...)
+BREAK-GLASS OVERRIDE ACCEPTED: Downgrading policy.toml from 2.0.0 to 1.5.0 (token_id=breakglass-0001, operator=ops-lead, reason='Emergency regression mitigation')
+Active policy load failed for C:\Users\charl\AppData\Local\Temp\tmpr3vd41qc\policy.toml: Break-glass override token 'breakglass-0001' has already been consumed.
+Quarantined suspect policy artifacts to C:\Users\charl\AppData\Local\Temp\tmpr3vd41qc\quarantine\20261125T193616Z_policy_qpi59b6p
+ok
+test_admitted_mapping_values_reach_lookup (test_runtime_review.RuntimeReviewTests.test_admitted_mapping_values_reach_lookup) ... ok
+test_alias_observes_published_policy (test_runtime_review.RuntimeReviewTests.test_alias_observes_published_policy) ... ok
+test_exact_scaling_laws (test_runtime_review.RuntimeReviewTests.test_exact_scaling_laws) ... ok
+test_generator_edges_reusable_within_one_call (test_runtime_review.RuntimeReviewTests.test_generator_edges_reusable_within_one_call) ... ok
+test_length_ceiling_stops_a_stream_early (test_runtime_review.RuntimeReviewTests.test_length_ceiling_stops_a_stream_early) ... ok
+test_radio_power_budget_in_linear_units (test_runtime_review.RuntimeReviewTests.test_radio_power_budget_in_linear_units) ... ok
+test_scalar_sequence_and_record_types (test_runtime_review.RuntimeReviewTests.test_scalar_sequence_and_record_types) ... ok
+test_sensor_posterior_against_independent_scalar_fusion (test_runtime_review.RuntimeReviewTests.test_sensor_posterior_against_independent_scalar_fusion) ... ok
+test_shared_sensor_observation (test_runtime_review.RuntimeReviewTests.test_shared_sensor_observation) ... ok
+test_source_drift_fails_at_binding (test_runtime_review.RuntimeReviewTests.test_source_drift_fails_at_binding) ... ok
+test_thermal_crossings_against_decimal (test_runtime_review.RuntimeReviewTests.test_thermal_crossings_against_decimal) ... ok
+test_thermal_crossings_at_binary64_extremes (test_runtime_review.RuntimeReviewTests.test_thermal_crossings_at_binary64_extremes) ... ok
+test_two_layer_heat_balance (test_runtime_review.RuntimeReviewTests.test_two_layer_heat_balance) ... ok
+test_vertex_connectivity_by_enumerating_vertex_cuts (test_runtime_review.RuntimeReviewTests.test_vertex_connectivity_by_enumerating_vertex_cuts) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 2.389s
+
+OK

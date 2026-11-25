@@ -1,0 +1,11 @@
+version = "1.0.0"
+model_id = "environment_geometry/terrain_truth/slope_uncertainty_guarded_margin"
+records = []
+
+[settings]
+
+[calls."compute_slope_uncertainty_guarded_margin"]
+slope_limit_deg = { "annotation" = "float" }
+slope_local_deg = { "annotation" = "float" }
+slope_sigma_deg = { "annotation" = "float", "ge" = 0 }
+k_sigma = { "annotation" = "float", "default" = 2.0, "ge" = 0 }

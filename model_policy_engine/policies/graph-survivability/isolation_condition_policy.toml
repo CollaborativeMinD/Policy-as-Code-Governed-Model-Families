@@ -1,0 +1,9 @@
+version = "1.0.0"
+model_id = "graph-survivability/isolation_condition"
+records = []
+
+[settings]
+
+[calls."check_isolation_condition"]
+time_to_isolate = { "annotation" = "float" }
+tau_isolate = { "annotation" = "float" }

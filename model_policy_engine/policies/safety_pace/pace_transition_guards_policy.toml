@@ -1,0 +1,12 @@
+version = "1.0.0"
+model_id = "safety_pace/pace_transition_guards"
+records = []
+
+[settings]
+primary_margin = { "annotation" = "float", "default" = 0.2 }
+alternate_margin = { "annotation" = "float", "default" = 0.1 }
+contingency_margin = { "annotation" = "float", "default" = 0.0 }
+
+[calls."compute_pace_transition"]
+margins = { "annotation" = "Sequence[float]" }
+current_state = { "annotation" = "str", "allowed" = ["P", "A", "C", "E"] }

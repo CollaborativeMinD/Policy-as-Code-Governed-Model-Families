@@ -1,0 +1,21 @@
+version = "1.0.0"
+model_id = "ai_governance/genai_safety_governance/heuristic_rejection_gate"
+records = []
+
+[settings]
+
+[calls."compute_heuristic_rejection_gate"]
+active_margins = { "annotation" = "Mapping[str, float]" }
+active_death_states = { "annotation" = "Sequence[str]" }
+evidence_coverage_ratio_value = { "annotation" = "float" }
+parse_yield = { "annotation" = "float" }
+freshness_score = { "annotation" = "float" }
+contradiction_score = { "annotation" = "float" }
+semantic_alias_drift_score = { "annotation" = "float" }
+unbound_truth_penalty = { "annotation" = "float" }
+min_ecr = { "annotation" = "float", "default" = 1.0 }
+min_parse_yield = { "annotation" = "float", "default" = 1.0 }
+min_freshness = { "annotation" = "float", "default" = 0.5 }
+max_contradiction = { "annotation" = "float", "default" = 0.0 }
+max_semantic_alias = { "annotation" = "float", "default" = 0.0 }
+max_unbound_truth = { "annotation" = "float", "default" = 0.0 }

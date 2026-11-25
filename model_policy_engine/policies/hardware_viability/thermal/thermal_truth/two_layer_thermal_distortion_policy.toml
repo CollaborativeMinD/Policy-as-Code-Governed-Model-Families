@@ -1,0 +1,18 @@
+version = "1.0.0"
+model_id = "hardware_viability/thermal/thermal_truth/two_layer_thermal_distortion"
+records = []
+
+[settings]
+
+[calls."compute_two_layer_thermal_dynamics"]
+core_temp = { "annotation" = "float" }
+surface_temp = { "annotation" = "float" }
+ambient_temp = { "annotation" = "float" }
+heat_generation = { "annotation" = "float" }
+core_heat_capacity = { "annotation" = "float" }
+surface_heat_capacity = { "annotation" = "float" }
+core_surface_resistance = { "annotation" = "float" }
+surface_ambient_resistance = { "annotation" = "float" }
+alpha = { "annotation" = "float", "default" = 1.0 }
+beta = { "annotation" = "float", "default" = 1.0 }
+nominal_temp = { "annotation" = "float", "default" = 298.15 }

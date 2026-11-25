@@ -1,0 +1,9 @@
+version = "1.0.0"
+model_id = "hardware_viability/memory/memory_margin"
+records = []
+
+[settings]
+
+[calls."compute_memory_margin"]
+current_mem_pct = { "annotation" = "float" }
+mem_crit_pct = { "annotation" = "float" }

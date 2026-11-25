@@ -1,0 +1,81 @@
+version = "1.0.0"
+model_id = "hardware_viability/recovery_time_inflation"
+records = ["RecoveryTimeInflationConfig", "RecoveryTraceConfig", "RecoveryTimeInflationSymbolicContract", "RecoveryTimeInflationResult"]
+relations = [{ "call" = "RecoveryTraceConfig", "left" = "threshold_abs", "op" = "lt", "right" = "amplitude" }]
+
+[settings]
+
+[calls."RecoveryTimeInflationConfig"]
+epsilon_s = { "annotation" = "float", "default" = 1e-09, "gt" = 0, "le" = 1 }
+rti_warning_threshold = { "annotation" = "float", "default" = 1.25, "ge" = 1, "le" = 20 }
+recovery_ratio_pressure_threshold = { "annotation" = "float", "default" = 0.8, "ge" = 0, "le" = 1 }
+rti_growth_warning_per_s = { "annotation" = "float", "default" = 0.0, "ge" = -100, "le" = 100 }
+divergence_growth_weight = { "annotation" = "float", "default" = 0.1, "ge" = 0, "le" = 100 }
+
+[calls."RecoveryTraceConfig"]
+amplitude = { "annotation" = "float", "default" = 1.0, "gt" = 0, "le" = 1000000.0 }
+threshold_abs = { "annotation" = "float", "default" = 0.05, "gt" = 0, "le" = 1000000.0 }
+dt_s = { "annotation" = "float", "default" = 0.01, "gt" = 0, "le" = 10 }
+horizon_s = { "annotation" = "float", "default" = 30.0, "gt" = 0, "le" = 1000000.0 }
+dwell_samples = { "annotation" = "int", "default" = 5, "ge" = 1, "le" = 10000 }
+
+[calls."RecoveryTimeInflationSymbolicContract"]
+latex = { "annotation" = "dict[str, str]" }
+symbols = { "annotation" = "dict[str, str]" }
+expressions = { "annotation" = "dict[str, str]" }
+functions = { "annotation" = "dict[str, Any]" }
+
+[calls."RecoveryTimeInflationResult"]
+recovery_time_s = { "annotation" = "float" }
+baseline_recovery_time_s = { "annotation" = "float" }
+ttv_s = { "annotation" = "float" }
+rti = { "annotation" = "float" }
+recovery_margin_s = { "annotation" = "float" }
+recovery_ratio = { "annotation" = "float" }
+rti_growth_per_s = { "annotation" = "float" }
+divergence_pressure = { "annotation" = "float" }
+phase_code = { "annotation" = "int" }
+phase_label = { "annotation" = "str" }
+terminal_required = { "annotation" = "bool" }
+
+[calls."RecoveryTimeInflationResult.as_dict"]
+
+[calls."build_symbolic_contract"]
+
+[calls."evaluate_recovery_state"]
+recovery_time_s = { "annotation" = "float" }
+baseline_recovery_time_s = { "annotation" = "float" }
+ttv_s = { "annotation" = "float" }
+previous_rti = { "annotation" = "float", "default" = 1.0 }
+dt_s = { "annotation" = "float", "default" = 1.0 }
+config = { "annotation" = "RecoveryTimeInflationConfig | None", "none" = true }
+
+[calls."deterministic_exponential_recovery_trace"]
+time_s = { "annotation" = "list[float]" }
+amplitude = { "annotation" = "float" }
+tau_s = { "annotation" = "float", "gt" = 0 }
+
+[calls."theoretical_exponential_recovery_time_s"]
+amplitude = { "annotation" = "float" }
+threshold_abs = { "annotation" = "float" }
+tau_s = { "annotation" = "float", "gt" = 0 }
+
+[calls."estimate_recovery_time_s"]
+time_s = { "annotation" = "list[float]" }
+signal = { "annotation" = "list[float]" }
+threshold_abs = { "annotation" = "float" }
+dwell_samples = { "annotation" = "int", "default" = 5, "ge" = 1 }
+
+[calls."symbolic_contract"]
+
+[calls."build_symbolic_contract.evaluate"]
+T_rec = { annotation = "float" }
+T_rec_0 = { annotation = "float" }
+TTV_s = { annotation = "float" }
+RTI_prev = { annotation = "float" }
+dt = { annotation = "float" }
+eps = { annotation = "float" }
+eta = { annotation = "float" }
+RTI_warn = { annotation = "float" }
+growth_warn = { annotation = "float" }
+ratio_press = { annotation = "float" }

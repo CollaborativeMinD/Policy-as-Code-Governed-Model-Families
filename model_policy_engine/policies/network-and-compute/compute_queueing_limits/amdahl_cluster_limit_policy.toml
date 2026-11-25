@@ -1,0 +1,17 @@
+version = "1.0.0"
+model_id = "network-and-compute/compute_queueing_limits/amdahl_cluster_limit"
+records = []
+
+[settings]
+
+[calls."symbolic_expression"]
+
+[calls."lambdified"]
+
+[calls."compute_amdahl_speedup"]
+parallel_fraction = { "annotation" = "float", "ge" = 0.0, "le" = 1.0 }
+workers = { "annotation" = "float", "gt" = 0.0 }
+
+[calls."lambdified.evaluate"]
+p = { annotation = "float" }
+s = { annotation = "float" }

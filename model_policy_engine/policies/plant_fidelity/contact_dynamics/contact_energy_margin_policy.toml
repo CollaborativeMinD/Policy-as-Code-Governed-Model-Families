@@ -1,0 +1,14 @@
+version = "1.0.0"
+model_id = "plant_fidelity/contact_dynamics/contact_energy_margin"
+records = []
+
+[settings]
+
+[calls."compute_contact_energy_margin"]
+mass_kg = { "annotation" = "float" }
+relative_speed_m_s = { "annotation" = "float" }
+drop_height_m = { "annotation" = "float" }
+inertia_diag_kg_m2 = { "annotation" = "Sequence[float]" }
+omega_body_rad_s = { "annotation" = "Sequence[float]" }
+max_dissipatable_energy_j = { "annotation" = "float" }
+gravity_m_s2 = { "annotation" = "float", "default" = 9.80665 }

@@ -1,0 +1,26 @@
+version = "1.0.0"
+model_id = "estimation_detection/truth_sensor_fusion/ground_truth_arbitrator"
+records = []
+
+[settings]
+
+[calls."symbolic_expression_update"]
+
+[calls."lambdified_update"]
+
+[calls."compute_scalar_kalman_update"]
+x_previous = { "annotation" = "float" }
+p_previous = { "annotation" = "float", "ge" = 0.0 }
+control = { "annotation" = "float" }
+sensor = { "annotation" = "float" }
+F = { "annotation" = "float", "default" = 1.0 }
+B = { "annotation" = "float", "default" = 0.0 }
+H = { "annotation" = "float", "default" = 1.0 }
+Q = { "annotation" = "float", "default" = 0.0, "ge" = 0.0 }
+R = { "annotation" = "float", "default" = 1.0, "gt" = 0.0 }
+
+[calls."lambdified_update.evaluate"]
+x_pred = { annotation = "float" }
+K = { annotation = "float" }
+z = { annotation = "float" }
+H = { annotation = "float" }

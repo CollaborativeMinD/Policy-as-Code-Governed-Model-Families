@@ -1,0 +1,916 @@
+{
+  "python": "3.13.17",
+  "excluded_from_full_fixture_replay": [
+    "space-and-comms/communications_and_radar",
+    "wargame_harness_dev/starter_wargame_harness"
+  ],
+  "catalog_entries": 132,
+  "models_replayed": 131,
+  "model_and_policy_inputs": {
+    "ai_governance/ai_candidate_admission": {
+      "model_sha256": "2be86addd452f186d4f26d845ae2bbf4b9b2627478afc5dcd3f5bcae2edf4659",
+      "policy_sha256": "a0b5665e7ae269e313828c4dbe619b34376f6d5ad5709bc2f4a075518d56339c"
+    },
+    "ai_governance/genai_governance/contradiction_exposure_score": {
+      "model_sha256": "ee48b1d0e2422788e0f04aa97f169598d0d3667c089825c272b130830f03e3f7",
+      "policy_sha256": "5fb9fcc9b28de3589c41dfbdd2164a9cf3f1f4ec8a82bffa09cf0a0bab79851e"
+    },
+    "ai_governance/genai_governance/deterministic_parse_yield": {
+      "model_sha256": "48dbc2c9cdb4d28d233938a9096cb80bf65c4aed6de7d494429e0271615532b7",
+      "policy_sha256": "c6605d128c5ad07bd79067bb5e553f4212bac8d2405bf8b63982e642635c9d7c"
+    },
+    "ai_governance/genai_governance/evidence_coverage_ratio": {
+      "model_sha256": "6fc25970e4d6877bf50fa649c82cbffa2408c9a91e0d6d400bfcc4618340f298",
+      "policy_sha256": "9b8b5b4fd16b9c11a3024b75f1ad615f0bfc8dedf16ef59ff10f29120fca1377"
+    },
+    "ai_governance/genai_governance/stale_evidence_decay": {
+      "model_sha256": "76ba097afa8ece488bb141d581e9bfe558db1b18c246e4212fff23aa019a5ffb",
+      "policy_sha256": "66e459ab0deba8513cb9006c6ca07836abe7d35ee5f8f6507c760baf53e589e9"
+    },
+    "ai_governance/genai_safety_governance/heuristic_rejection_gate": {
+      "model_sha256": "46227e4b532e95d89ab49c32aa2dc6e6893aee72ee096b192a917d824f9f52db",
+      "policy_sha256": "86823ab37c555cabc4e502bdb7e04a8ec38e6e3ad902778da433a7f62658219e"
+    },
+    "ai_governance/genai_trust_governance/context_saturation_index": {
+      "model_sha256": "9e1efd045083efc6c182cdfe9b590a973a4507d5a737d41bd4a734d5364d4be5",
+      "policy_sha256": "62b81c60f76c7b3f4f4a0be78c3b8cb88730c01d1d64352ba66c89f4d8fbd2b1"
+    },
+    "ai_governance/genai_truth_governance/generative_divergence_margin": {
+      "model_sha256": "25b12d9e1d23e232c514057650686e785507e61a6c75c26234065f514076d2e9",
+      "policy_sha256": "969b49e61ce52bdd8e201f5d415f0cb9d57214bddcadf8f3ce5056b903b9ac54"
+    },
+    "ai_governance/multi_agent_consensus": {
+      "model_sha256": "cfdb382edce822d52cf7477b94077e23ef476b1ee6e0f0b7f9691481ee7e2f5f",
+      "policy_sha256": "a115c3d58fbb84a549f9429d763e3e7540fdff9b8373f6ad39abdb7f508d9d88"
+    },
+    "ai_governance/penalized_prompt": {
+      "model_sha256": "eaa8e33008889ba97209b21801e707e54c01c9d79047c3a02b752acbe9c70436",
+      "policy_sha256": "16174ac5df193ac636b8d0a2835bf3b7d0dd535433794206c1b937e1705f75a8"
+    },
+    "ai_governance/volley_successor": {
+      "model_sha256": "c2496154a1d86e64e8a8272410f5fba88a72aad43c1d82b66dbebc2b950d10f6",
+      "policy_sha256": "489706dab151fc9de0983df0b6ed33d407c12a3c232055b9b833089558c428d1"
+    },
+    "base": {
+      "model_sha256": "52b3228d3f84ebe8b4efac7195f90d2ab98e53fa5e65967f573bee9522002dcd",
+      "policy_sha256": "d37c9ebada1dfeef6116e69098f0fd981564a91a431035d12f9f37893d3a37e1"
+    },
+    "bounded_disturbance_admission": {
+      "model_sha256": "ac839d5c4989159aa842a01fd38217929556d0d22ce6d614feeef9bdce489798",
+      "policy_sha256": "ad866848c4e7090469a27e8e427194e46dad41b569e0d9cf5c0b646182c0e889"
+    },
+    "consensus_coordination/Byzantine trust-weighted agreement": {
+      "model_sha256": "07f246271b1bfcca42e102c1a8560351db3851ea176f7aaa435e9dd98a195db6",
+      "policy_sha256": "ff29de43d9a5142eb4a9e6278b9409881a2451b25cc6bc95d4748a4b0c3a3f5a"
+    },
+    "consensus_coordination/Delay-loss consensus stability": {
+      "model_sha256": "d690c76c640f547596766554f71744d67cb0d6bb330f8440cad7b741b9f69e31",
+      "policy_sha256": "82cdfdfd64750fc4df4bf75183c1c5a8434d236dc1a96d53fd978dc57437e7cd"
+    },
+    "consensus_coordination/Partitioned quorum survival": {
+      "model_sha256": "75cbba627a9b766f4eecb26ffe24ab9370c54aa517c937ee36100c962a16422d",
+      "policy_sha256": "f3fdda6ec1433be23d8129f0a6a447cb9955d67448003b030b95cae2800496e9"
+    },
+    "environment_geometry/dynamic_clearance_margin": {
+      "model_sha256": "7814a13ae5311de64b4589b4b9605dea6fc84ecb34545e4c26e45c0a0235a6e0",
+      "policy_sha256": "a484f4e5dd56cbf20d696b06b357e1a098f8ec28c80cf3183ba54946ea5429ec"
+    },
+    "environment_geometry/horizon_geometry/horizon_sampling_margin": {
+      "model_sha256": "e4725bb0f00b3bc27b42e23e3ef501bc970fb8e3d45df0e3ce1b00ec1f03d81f",
+      "policy_sha256": "c34e3eddfc53da927703fc60aa842cac93e4f7bb63f952f1cb92737b8f700091"
+    },
+    "environment_geometry/horizon_geometry/solar_disk_clearance_margin": {
+      "model_sha256": "9e466486980ebae2718f641e6ad0257ca981a4ce9a5e7ca1ee486a9ba9f22b11",
+      "policy_sha256": "82c05ebf8177dc67d4f69c3a1f9f9022089e19009fe4d0ab318c884f8003a32f"
+    },
+    "environment_geometry/spatial_hazard": {
+      "model_sha256": "7c309cfeb00a40ca8c34aafaabb637b2aad021b413b5653fc8cdfffc8aa6a6f7",
+      "policy_sha256": "f5dd804c601db18a77f73bb26214295f6323c3c263518602529919d40e41c294"
+    },
+    "environment_geometry/terrain_truth/c6_1_los_terrain_mask_closure": {
+      "model_sha256": "9d47e37ee5d30609ecbf113ef867eb0b63114d0517aeb15ca9a989155f9e00e9",
+      "policy_sha256": "b329c6e432aaedbeee5abf962353a82e6da0355008f5b34fcdf2c30e743706a5"
+    },
+    "environment_geometry/terrain_truth/lane_aware_confidence_ceiling": {
+      "model_sha256": "1ffd15911b6b4a12e7814d3e9a56768449b4e0025ed10a227e80e12e058c8dff",
+      "policy_sha256": "8ac9e78bddb4b2987b31bee37ce9a7a7afbb51a06d4b1acf74b5ed17f782dc55"
+    },
+    "environment_geometry/terrain_truth/local_hazard_claim_gate": {
+      "model_sha256": "e4c2fb6580f37733963e013579d954435ab774a4fbb2cb53eae62dcf24ad4fb1",
+      "policy_sha256": "c5f31996a47feb2931a45b68318310fa15c9a5560d01c488c855a4170da28795"
+    },
+    "environment_geometry/terrain_truth/multiscale_disagreement_margin": {
+      "model_sha256": "850ffe8b2232c96161aaa9c2523cd467cf05480391097206c4db162131579299",
+      "policy_sha256": "9078435b73ea4e6cf2042517b21061e9a6cfd228a6d399ad531cf74bf2d40d79"
+    },
+    "environment_geometry/terrain_truth/roughness_alias_margin": {
+      "model_sha256": "6ae72fab2c72582c6611a583b467fb537cf43557b5d18f80e9543b205cc552c2",
+      "policy_sha256": "bddb6f1450dfcc3ae35f24113f1d6760a6b4a002f5d11e6d33d164936a3cfa53"
+    },
+    "environment_geometry/terrain_truth/slope_uncertainty_guarded_margin": {
+      "model_sha256": "3f82715d6f96f27ed4779325c8aeb62e13fca1ee81f5f07b7b84d5a663ddcbd6",
+      "policy_sha256": "9b1c76b5828f722f1b4b1cff60d314d031428ed82476202c3ae4cba4786b7c59"
+    },
+    "environment_geometry/terrain_truth/terrain_commit_closure": {
+      "model_sha256": "a6463ccbd4767cd9124962a2c25409564f76416049e42f02cbfcf4b87f850d3d",
+      "policy_sha256": "f071ec1de718928e21a7103cb470d665283eeaf626a42849940f52653707806d"
+    },
+    "environment_geometry/terrain_truth/terrain_truth_disagreement": {
+      "model_sha256": "4adab3c3b2d1c1d8604fb07a875bb4aa46fe8e52f22217afc0f9ae017ca05b06",
+      "policy_sha256": "17f643b544033923904b05a8229c670c514a6be0420cb2d354ae3ca53f9be302"
+    },
+    "environment_geometry/terrain_truth/terrain_vertical_uncertainty_margin": {
+      "model_sha256": "65d70721bd22ba3000abae41cfa970d0b4e02c2cb31b722eeba0ed8df8eee39b",
+      "policy_sha256": "0f78a9381bb44113f2f67deb8e80eaad0b0c059db47685d6eaf7be5ff36e6cd3"
+    },
+    "environment_geometry/terrain_truth/truth_cell_outrun_margin": {
+      "model_sha256": "1fca14619df3d7515adfb3a69a6c673c5717fb7369b3187c9223821838d716df",
+      "policy_sha256": "8220adf81426aa6ccf920d78c45a31d4105109693a5273ab88cb534c87abf44a"
+    },
+    "estimation_detection/chi_hardware_coefficient": {
+      "model_sha256": "a8a028bae56b9dbbacfd98a31dd019e8b50cd219e3a1d0245c45de4a5c9f1638",
+      "policy_sha256": "41e439d72b6d412b5568e6f0b6fac3692878d609b5dda2573f0035a6e401929f"
+    },
+    "estimation_detection/chi_squared_reality_gap_monitor": {
+      "model_sha256": "720b36c227d2db4dcac11efff9998c7377ac1bc1f62e005f5ab96d69f7327b3f",
+      "policy_sha256": "b1145aabd027050388f67eb523012566f177a9138d9895d666acdeb71d57c1da"
+    },
+    "estimation_detection/delay-adjusted-innovation-consistency": {
+      "model_sha256": "5016b03007fc1294dc62511a010ef64670b75a6a1e6759d83c0c89323133f92f",
+      "policy_sha256": "dd6ee2ffb68d45772324a288971877d9be83d09cd1f8ac7d0008d1bf440afa4e"
+    },
+    "estimation_detection/IMM-mode-probability-update": {
+      "model_sha256": "c1de8c51a111c1e5dcc9225e6d8fa0e7f1a824ffbbb6611c2133577e7a86438b",
+      "policy_sha256": "d5d914954e266728eaf48959c718daab86920281b35d1787f9b8ff3cea72bcdf"
+    },
+    "estimation_detection/kalman_filter": {
+      "model_sha256": "a3b2f15dff5c6aea01dcdef9bfc1d386f0ed230e49b19f02c11099eb61329ef0",
+      "policy_sha256": "b880020027a1bb1149589b882a1d9be772a085cbe0aaa9a0ba38d5375c415bf7"
+    },
+    "estimation_detection/mahalanobis": {
+      "model_sha256": "f9edbf0957cb2a2ea59c62b1d15d6199f3214083d2efcc110fdc94a8d8a69267",
+      "policy_sha256": "94a380486cb632a90095edc90a08b0098fe46711e67efbb95d97a126acb2bc94"
+    },
+    "estimation_detection/streaming_deviation": {
+      "model_sha256": "cf3c21bd0dd6aab4e49d6197466f579904750aa7f8668511dd5720a9b83b9f81",
+      "policy_sha256": "2a368f38b0448a31255d7bda77b18ca5755b099251c1a3a9234f8d80cb6d1d4c"
+    },
+    "estimation_detection/truth_sensor_fusion/ground_truth_arbitrator": {
+      "model_sha256": "57e7863e8991811b0040681434b6eb12fc19f1419a7b2a1069277e8efa457faf",
+      "policy_sha256": "dda2ce00a3f8b6042089eca1069b0cf106ce4087f47f70952b1014957d5ad5ca"
+    },
+    "estimation_detection/truth_sensor_fusion/intelligence_update": {
+      "model_sha256": "5c150a9279177e295ace92845d20f2660476b39039d0eedeae7966cdac664944",
+      "policy_sha256": "00becc88bd2e6680d0347324a19ccadc1c1574a39a8e3200cc1c5b6450bc3d98"
+    },
+    "estimation_detection/unknown-correlation-safe-fusion": {
+      "model_sha256": "b77b643cfa67f7573855b117848052f034422f3c48fc21de01aaa2f73a751e73",
+      "policy_sha256": "889ca4b283513f8396bbb7c9a961c43a85e23ef24d9a6695d8fefc66851ed7c0"
+    },
+    "estimation_detection/weighted_divergence": {
+      "model_sha256": "3f0aacdff64320d8e9add44f96fcfb938653196580c3cb5dbf27480a5798e21d",
+      "policy_sha256": "313622540f4103067f4868f5b90ceee55eddfd5d3cc906657cd4e12b31953b48"
+    },
+    "estimation_detection/z_score_universal_stress_metric": {
+      "model_sha256": "18ba17bb9426c78ad92295543607a005cc6cf23d84518d018087d872d36dc420",
+      "policy_sha256": "8eb7029e0d37c40e516ed630742819c3bea877358698c277a77354bd9cf26dc0"
+    },
+    "graph-survivability/blast_radius": {
+      "model_sha256": "f5cce453131c6fbc0dc58e3de94aced71e8161451d29206e0653cd6d40234746",
+      "policy_sha256": "50eabbd2245bd82e718ee68596de33e1bbefc22c8e19c34aebe731a99b2df713"
+    },
+    "graph-survivability/consensus_dynamics": {
+      "model_sha256": "e4364199df2f77135bacb74bf3256de7a9dbe44404c0bbaff433a68a5f70b95a",
+      "policy_sha256": "8582a8266748cda03929a6d271eb043481befac8ae75a44f084b407997ccfc6c"
+    },
+    "graph-survivability/graph_survivability": {
+      "model_sha256": "3f3d671c50cc70cc965eed0f4755a58a5250c1ae8a9468be8089695b9749c137",
+      "policy_sha256": "3f8611f2fc657c25d7a38575254950d7bc64b98ca74ce3e30ac7948bad086907"
+    },
+    "graph-survivability/isolation_condition": {
+      "model_sha256": "43605dae45d068da3ba05a98c9ba6984143ecbb0bcba4261be01c868d54184a8",
+      "policy_sha256": "c9c1b51299ede279e01965e928a03c36dd0a1c33d662d3eb67a1c77785265908"
+    },
+    "hardware_viability/actuator/abort_closure_margin": {
+      "model_sha256": "9ffc5933231543fa8374544f2cd9324c92557c59b139a0a3b6699bb9d963fcd6",
+      "policy_sha256": "d5f388ef420ecbdb9b93c2c562dba7139b4d20282723b984ab0e7f23677ef185"
+    },
+    "hardware_viability/actuator/actuator_saturation": {
+      "model_sha256": "25edc14862a13c317556c2e71bd7bd2e7cd4660b03d5877513954910953886df",
+      "policy_sha256": "a22345f09ed478d57470200170f5a403aef587677a5545518e3c8564e47b1ddb"
+    },
+    "hardware_viability/actuator/actuator_slew_rate": {
+      "model_sha256": "a5c2d3a973dfcd1a664035d24740a2ad12f368ae2202545fbb263308ef52be79",
+      "policy_sha256": "f9894b72a7170e8fe5cdc570f5cadd88db446cc7d3fc6dc64244722be6d528ec"
+    },
+    "hardware_viability/actuator/attainable_wrench_residual": {
+      "model_sha256": "21e5078fde9d800334495684e62187316fa8bed3629cf1e7b2f3f72ec5faa3ff",
+      "policy_sha256": "85cfc02f785f21fe1dbeb5a67de01c5eb212da286bb913c93413ced06d0055b5"
+    },
+    "hardware_viability/actuator/control_allocation_residual": {
+      "model_sha256": "65d8e255b07c82b77b445084b8c3a34c4017d018d126f1f394217e8dbe5500c5",
+      "policy_sha256": "4c67e6a81184359f727f3bfbd84b7c5905574984262c7b6efdf97d5a8c0af1cd"
+    },
+    "hardware_viability/actuator/controllability_margin": {
+      "model_sha256": "2bca28719bd3c7d938d250a7e0b07605baaa6a1a8e91cf65cb9bce2b1273d4bd",
+      "policy_sha256": "b728fc819ed1a0c954c22403ab76c45ec3c327e912b504d54cf76009e003af1b"
+    },
+    "hardware_viability/actuator/lawful_actuation_clf_cbf_qp": {
+      "model_sha256": "ca289bf0ec79a85bd3e3124b50eb5457e1afede34a43742f5fe0c27670c8adc8",
+      "policy_sha256": "51392a119f9a5c9dd4f2531d1eb12796501af88a154bf91289632a5a15eca727"
+    },
+    "hardware_viability/actuator/lease_validity_margin": {
+      "model_sha256": "003404382328c398d03d61a7e7fadc29e8076d31dd5203afabe9e163302aa8bc",
+      "policy_sha256": "10c476386d2d001e4a2597f0cdd95bccf10aa4c2a8d76c1c3f489703866aae8e"
+    },
+    "hardware_viability/actuator/mechatronics_power_roundup": {
+      "model_sha256": "af1f723512eb46dada076299420388070c06f06218ba4f20791f983fe292c7db",
+      "policy_sha256": "000d0a5b8c781d118e74f72939f37b57e16b0a5687b644a09c679e0dc8ef70d1"
+    },
+    "hardware_viability/actuator/safe_velocity_margin": {
+      "model_sha256": "bd6487053544de39fb1b9c415409bc2435254e55de72fae88f3b6d3029951412",
+      "policy_sha256": "a467e7598ca0cdb9b116887427b3bb0e22f0167e12e0b2930ada4bee92802003"
+    },
+    "hardware_viability/actuator/specific_energy_reserve_to_go": {
+      "model_sha256": "a736d00c1e57da67850e245e36f24ddf88ec6b2f65cf2278171cb2ccbd609df9",
+      "policy_sha256": "33ff696f7baa71c8d2a8c1e8a15f74cdec9bbd381f53bc93e474e015485e75f1"
+    },
+    "hardware_viability/converging_terminal_pressure": {
+      "model_sha256": "52a30a2bf06944c38844a2c63efc140734f303f339c9787fb99f0a600d66b401",
+      "policy_sha256": "129b3e10a481e39325de04618459f4da6579eee4647e82edc430360ded4e3d87"
+    },
+    "hardware_viability/electrical/bus_anchor_consistency_margin": {
+      "model_sha256": "a9fa2053086bc1dbf780df187e8097f4b4e64b04f507909ea1febe347921ea5e",
+      "policy_sha256": "c1631c87bca73a83efa7db0fcccbab9375efe89c536089ce8bb0d099b2736653"
+    },
+    "hardware_viability/electrical/electrical_survivability_margins": {
+      "model_sha256": "f77876b2e0664a29e96df39b55bbfee27e175da96fff7adbe81b132ce58f38e7",
+      "policy_sha256": "15f79e086df05768c53ea53743522c4a949f0e21bd1c08841ff4b8a5f248d02c"
+    },
+    "hardware_viability/electrical/illumination_cycle_energy_margin": {
+      "model_sha256": "f5e202c621bc30c9ae3fefecf17ff018886ed8b798d8bff05a70f50fea588fd5",
+      "policy_sha256": "1b2658a9e88e4cb403467cbf5d2715e74cbc69cde4425be6300cb982cb33d7aa"
+    },
+    "hardware_viability/electrical/occlusion_energy_reserve_margin": {
+      "model_sha256": "3eacd709fbcdb527742ef8441f909f77b0e1c449bf42203fb29a732fe7a2f858",
+      "policy_sha256": "4d8ab1bfdcb1d20d38688476b01b335caafc2839d32d2b469c9eb35a3d09e3ac"
+    },
+    "hardware_viability/electrical/regulation_chain_disparity_margin": {
+      "model_sha256": "84c2edca373a5928692213495694a580610aae418abf33edf982ba3d2cb61797",
+      "policy_sha256": "25c56621fbfca7851d50aef2e29034b2edf432b133f47a185545a1a165ed2ce6"
+    },
+    "hardware_viability/memory/memory_margin": {
+      "model_sha256": "1f494ca73f2d99070071fe081fd0b2f28b5e25f22ea2fbea93ce07bbd0001cf0",
+      "policy_sha256": "0352a6840a405c7cdba86108d0e05c0bc7d2ae211c6ee902d72672fe52d380d4"
+    },
+    "hardware_viability/memory/time_to_memory_violation": {
+      "model_sha256": "38a77ee99d738111274609eda2ddbf5d3c2f3105f61e2f98150b231672dd8865",
+      "policy_sha256": "2cdc465606e6ee95efc3731b4c949fe3ba2bb1862c8448090d757c675547528c"
+    },
+    "hardware_viability/minimum terminal horizon": {
+      "model_sha256": "e040f4184a3ff7854db5801218f32a018e20d93135e741c7b222235464807497",
+      "policy_sha256": "492ef0c601c83c83007ca771b8e6358342dc68e8786472474b5f53aec7bce539"
+    },
+    "hardware_viability/predictive_hardware_viability_state": {
+      "model_sha256": "3b3812e128bdb03d2af405d8ce510016e93bf3cabe91fd0bdb1824cba03ec283",
+      "policy_sha256": "549fc4a4536eac3a2ee46cdcb8d6c6fbb214e54a073e1ee7c64510e7d4e760b8"
+    },
+    "hardware_viability/queue/queue_margin": {
+      "model_sha256": "a8ff8f922c365726b5ea406c2d4eb9f75e28749cfffd296c4162a666a18a0ede",
+      "policy_sha256": "3f5ba03d09466188f3fa841f7aacf688745a06665647d004fcffaf67d72db59c"
+    },
+    "hardware_viability/queue/time_to_queue_violation": {
+      "model_sha256": "04c397771ab3e6b659c50674ed724588776eaf5a4a290153040d15d340334807",
+      "policy_sha256": "e0dbd70cdf8c23dd625e61822d7f1160f10c629e217297699615ffa3e1c430e1"
+    },
+    "hardware_viability/recovery_time_inflation": {
+      "model_sha256": "402146604aa9eb5ef34c6d36db87e6eed63fdcbc3856e4d65a58d4ae72fedf84",
+      "policy_sha256": "f95175ce924862f26124aa25708a4c717300d92a93c56cb8c569ba073ee60eb2"
+    },
+    "hardware_viability/resonance/Base-excitation-transmissibility": {
+      "model_sha256": "514e0369cc3254be9621d5e845ce4aa541ec9039b2b5bd9e673b41b1aea9b932",
+      "policy_sha256": "5d408df3098002a306a31102b6b2dc5d104f2e1d5f8f15e262f9a580aac45240"
+    },
+    "hardware_viability/resonance/Fastener-preload-retention-margin": {
+      "model_sha256": "3d543dc9573060a3a6ba88b0017800b44bfd490ca342cddc63649e5f1c0d2255",
+      "policy_sha256": "a1019fa838dbf10950603ec3acefe845759ce49d0c36adf35ba1dbf68ae2f36c"
+    },
+    "hardware_viability/resonance/Resonance-separation-margin": {
+      "model_sha256": "5dcae5b9c2b32bd5ce3ed1babef3cf14564133594f9f6cd91ae102eea229c086",
+      "policy_sha256": "9603a29e5c1a310cd5dfe88c01dc8218579e5b300283ca0b014eda287c35efd4"
+    },
+    "hardware_viability/thermal/thermal_margin": {
+      "model_sha256": "faa732f49e8c9f9d77b5766fdbb32c5091b8a23a6dcf5dd573709d3bb237f392",
+      "policy_sha256": "dc064d091239efc6b2248b58803924324a3e1a4daaa49f521d143d5baff361c5"
+    },
+    "hardware_viability/thermal/thermal_truth/cycle_energy_reserve_margin": {
+      "model_sha256": "65beaa0139f6d479df44bd1d15af58be3a8cf13420f25fc22fad5e84a17c1115",
+      "policy_sha256": "ae32494121bc81f544d3163387567be72133811d4cf9bb559b6e58cb746b5b11"
+    },
+    "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/power_thermal_coupling/conversion_loss_temperature_margin": {
+      "model_sha256": "6eb48ee6a7126d22da0c076f5290a917d5f08eecf6f01f63a70fa273fb58a917",
+      "policy_sha256": "18adace49a569a5da757541d33ace57c65aef4f163d4a4163deb893139c11e2e"
+    },
+    "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/power_thermal_coupling/duty_cycle_temperature_margin": {
+      "model_sha256": "0d2f2a410b00e81892d137340c02494adfacf94f737f4332ae01850650591ed3",
+      "policy_sha256": "58e81373dc158ad391a896bb6f71142137501f5a897541977da8decca637cbc9"
+    },
+    "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/power_thermal_coupling/effective_duty_cycle_power": {
+      "model_sha256": "30ad129d8585076ea780f65d6c26afe5ebe9fe3ed7ed0a8107d2704418a75d3a",
+      "policy_sha256": "866b6d757839ad54ec1eeb19ab4e2278ef891b40c88faa0f7cca43e2b9fb262c"
+    },
+    "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_environment_validity/cooling_assumption_mismatch_margin": {
+      "model_sha256": "c9bc6799c869c8508fb48b9e16cc767409a17c2e20c58d4adfb7239d9b5833bb",
+      "policy_sha256": "28d54499a41b1b9dc0efaeaae9d43847645561b4dfb0aedf490e89f0f70a8e06"
+    },
+    "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_rc_envelope/cooldown_time_to_rearm": {
+      "model_sha256": "5bcd97506bdaf4667602fcdb29815dd6830e87de3a4d1b3d5eb1806ec8006eb9",
+      "policy_sha256": "cc53fa2c3386a858c87a7f2d8a94006e907e7bc4ecac33d441aa1f08d8a9659e"
+    },
+    "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_rc_envelope/equilibrium_temperature_under_load": {
+      "model_sha256": "331d19b977a7af3b4ffe12bd9f9f819a14ab7cd5095850278221e43db84b57e3",
+      "policy_sha256": "ae57b5e920c271efaf06484b50abe4d1941c16da2a2f1a6bdce1da94cbbd1aea"
+    },
+    "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_rc_envelope/time_to_temperature_threshold": {
+      "model_sha256": "9a9bbb334a0af6d5bace15bda5512c7ec7eaaaa23704c2405fd402e9dceaa5c0",
+      "policy_sha256": "ce3acaa90ecf991b02ff3549554c1157d429ea1cc7fb06d9cddadfc31f87419f"
+    },
+    "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_telemetry_governance/freshness_at_use_margin": {
+      "model_sha256": "44bc8e1f280c3ad72346cb7bd761ea74d66b61739796d96dceb2fa057e248421",
+      "policy_sha256": "d69d0610bcee7d25bc76ed95faa55e1d12b3988f3ebcf51d4939e6c9a7b5a4a5"
+    },
+    "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_telemetry_governance/multisensor_consistency_margin": {
+      "model_sha256": "7f2a83a14a86579572fbd4d0dcb80f44ac0ca95f0c63b5bdf820b37ef81bd0fa",
+      "policy_sha256": "becac7e317cdac8a6568b274878d5870659cfa445b402f791dd21c53b2bff968"
+    },
+    "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_telemetry_governance/sampling_observability_margin": {
+      "model_sha256": "ff71154279054d3ab0d6f02365a477d9601dd1fd80ce55f10988ceca8b843088",
+      "policy_sha256": "558185c6aac0fc640ce20b3597f33ac2e6c909181b15d7391d18f6e1fce94170"
+    },
+    "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_telemetry_governance/slew_rate_plausibility_margin": {
+      "model_sha256": "0f3956038ff72649af8632792de893433252e8affcddb802f15fd95ceba44197",
+      "policy_sha256": "41d3d220ff6a1a1935b514ef9bcefc60e149bd1792f7ad5c05ac50f195185f83"
+    },
+    "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_timing_authority/clock_derate_fraction": {
+      "model_sha256": "27eae84e0acfd5afb177b00f93f065923f46fc5b7d7b8d308200bc49271a0f8d",
+      "policy_sha256": "28cde83da260116e51ad1f3a2577d7020ac6b05740a67775ca614f7700cbff0a"
+    },
+    "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_timing_authority/deadline_margin_under_derate": {
+      "model_sha256": "ad0229404361df30d32bc213830a9e17bb8b7d48d93946c1ce3fdb5a0fab015b",
+      "policy_sha256": "1be339016f7167d6bc838beedbfd0ab82061de51322cd2d4edd707c8511698e9"
+    },
+    "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_timing_authority/recovery_hysteresis_margin": {
+      "model_sha256": "a7d57bc0ade39978d475333b2328691db4354ea38bf89a48c5fe92565c4db9d6",
+      "policy_sha256": "20055e8f083344f5ed0bd89c3f5f08f637066ca38371d147122380c40b20031c"
+    },
+    "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_timing_authority/thermal_authority_scale": {
+      "model_sha256": "5611d1f5cb916ab3f0a6942af24974fcd99fca5b26bf98a3f232558c37fe67ed",
+      "policy_sha256": "c840121fa9859641da72f167efaf25cdb24e3c1679e7fd3474e4976f94a633d6"
+    },
+    "hardware_viability/thermal/thermal_truth/thermal_distortion/thermal_distortion_index": {
+      "model_sha256": "890338f6860e0a0225f7a1b8256b98c2749a7b585e23e22d78524f76ab720a1c",
+      "policy_sha256": "2f2cfb17ec8879a4fc3ccbfe76edcf9fdee33439c15ba0a4db5feea0f9b71f16"
+    },
+    "hardware_viability/thermal/thermal_truth/thermal_qualification/darkness_hold_margin_hours": {
+      "model_sha256": "9711031efb5427ff785448f26c5efe3193b7f29663a431568a5c2def323362de",
+      "policy_sha256": "f57f04cce6537cf37249bde51c45201fcf27a653ffed8ef578570123ad9dd3c6"
+    },
+    "hardware_viability/thermal/thermal_truth/thermal_timing_derate_margin": {
+      "model_sha256": "561749ed1a7a99ced41e064c65d6aa1cc3397cea25190750cbe8ab54be32a71a",
+      "policy_sha256": "5ddee98b78b867e69acc69bad3f36d2fe80c82e4ed245d6ffc3bdc06b9329297"
+    },
+    "hardware_viability/thermal/thermal_truth/thermal_two_layer/surface_radiative_forcing_density": {
+      "model_sha256": "85f4567bdcc36dea92dd41932b24fcb66c3b97d18f317ae1d5e16a9282a87327",
+      "policy_sha256": "35d574c201ab57a6be9673cbe1bb6e7f1e50ab6494ae1e8bbdb12e9ced780140"
+    },
+    "hardware_viability/thermal/thermal_truth/thermal_two_layer/two_layer_temperature_step": {
+      "model_sha256": "6df60fa471f6ba743877652c4bc9f499b6df76efae9a9950262b17027755c381",
+      "policy_sha256": "35689d3af351d570f5f0cf74fbb11f0a00102d14f65a014dd1c80229533c158d"
+    },
+    "hardware_viability/thermal/thermal_truth/two_layer_thermal_distortion": {
+      "model_sha256": "7f8b436645268c9b79d27d77357383bb69d7f49dfa79e2976b26a3980e1c174b",
+      "policy_sha256": "586f016801d3800cfdbc96f3d14d3008e86d802263b7c8ea743c64709fae83ff"
+    },
+    "hardware_viability/thermal/time_to_thermal_violation": {
+      "model_sha256": "ff6987cd05897b37c6b5d866dbbfab04e946af93cf51a05c5a9bcf422e81b5d3",
+      "policy_sha256": "6322a1b5ef9939b3e6b65920992d56ba50fefdf0fe859b0f6bafd470cc849caf"
+    },
+    "hardware_viability/time_control_enforcement/dead_mans_switch": {
+      "model_sha256": "80b1211e6650316c91bc00c6096b638807482127aadd370c2ce7d82559f89ebe",
+      "policy_sha256": "bcfd8eda82918465726367fe1607d8d3cf29c4156c13c94916ffda9e57dc6d1c"
+    },
+    "hardware_viability/time_control_enforcement/monte_carlo_failure_predictor": {
+      "model_sha256": "21f4de2bab81f5a1d9b3693a848980571d71cdf8bc40bdba86de19cc6322b9ab",
+      "policy_sha256": "490268b73112b1a39fbf5a6b7c783d7320b85f5f2442302ceee73ba278d0caaf"
+    },
+    "hardware_viability/time_control_enforcement/pavlovian_reflex_state_machine": {
+      "model_sha256": "1d7f913c28d507b94f0058d61ac5158fc36516bf05b48ed786f5af55f5cf61b0",
+      "policy_sha256": "f8d5c63d3b6e34fa8add6fe90e8b2c6ec00c1a9404e66f5da66dc911e19fd223"
+    },
+    "hardware_viability/time_control_enforcement/pid_control": {
+      "model_sha256": "5e4e6f6f7d06c7965d71a6e1547b14422173024ca3e5f71ca33c800ce88c1d77",
+      "policy_sha256": "24dc145ffc60fb480a3d55a40edba8b734af217641d0bf20b97895f2adee5976"
+    },
+    "hardware_viability/time_control_enforcement/timing_validity/age_of_information": {
+      "model_sha256": "327e97c0034b8f42a405a3fe89d23e09efe8772a04e06ba9980a17441e65e167",
+      "policy_sha256": "633c602a70cdae5ee764e1a9f6b9aa8949af0213f8941105af20b6db8c0e4ad9"
+    },
+    "hardware_viability/time_control_enforcement/timing_validity/ephemeris_horizon_coherence_margin": {
+      "model_sha256": "2f5407c32fff055fc240d0fa34b5ff16f78c7b71d535c3497d918b1256b9540c",
+      "policy_sha256": "a4eabae401f9fed598e6f86c0bb6786ae25ad7620134400600799065a8d9a35d"
+    },
+    "hardware_viability/time_control_enforcement/timing_validity/mixed_stream_temporal_coherence": {
+      "model_sha256": "b0b9358be0dc7bc130a91223cec24e5099c4e1014981866a533570100e382da3",
+      "policy_sha256": "c79a668ba6199934b6f98bbecef646f1c50b6512451fc9b3eb78be6309386598"
+    },
+    "hardware_viability/time_control_enforcement/timing_validity/sequence_replay_integrity": {
+      "model_sha256": "e0445b6d16192a546db1bbdf6aa39b68462671f17b4a6b339c5600a32f15cab9",
+      "policy_sha256": "b07e37b0ab8edaec3ebfb370bc652f329d3f1f2d1986154c0fc968a50797b7b1"
+    },
+    "network-and-compute/compute_queueing_limits/amdahl_cluster_limit": {
+      "model_sha256": "be7ba14ca15ecc1c1dd337bc41e628d21cabde7c4e1d0f75ba15a7b00f3df917",
+      "policy_sha256": "74cfea8db7a4443ab3fd81049294667e2cfb2dd603756a6c48cfdbe63767b113"
+    },
+    "network-and-compute/compute_queueing_limits/littles_law_queue": {
+      "model_sha256": "12d5d3911efca31840fbbd0f0baaa583916d072dadb6928d27a925293afa7fdf",
+      "policy_sha256": "cc193647cd1c4432ec7ee2965b075f060c660917fa7e2726913a0ed628dcfa09"
+    },
+    "network-and-compute/network_execution_bounds/doda_latency_bound": {
+      "model_sha256": "5279ff112a14f654c14f2c6a263e5af09acb33c19a9184c2db643f413b5ec4da",
+      "policy_sha256": "700bbc63ba71086cd1b9e725cc682fb6576b08d581c72eb2204b6272608ae535"
+    },
+    "network-and-compute/network_execution_bounds/k_connectivity_survival": {
+      "model_sha256": "22fe1b70f171ada7343dc4d1486d4c4d2d704b933b8668aeb32d4944b2285d33",
+      "policy_sha256": "7d97a2d542f3828d488d569b3bf238c3ba25a8991fd13315244b59b142acf770"
+    },
+    "network-and-compute/network_execution_bounds/quarantine_blast_radius": {
+      "model_sha256": "01de370f508b3b4944f78f3979253e92a0517a6824f88b979d53a22ca26df6b1",
+      "policy_sha256": "31b60f594eacab0fbf2f114ce5d0a8174220342a3ff9876c4411262c7aaccbf2"
+    },
+    "network-and-compute/network_execution_bounds/shannon_hartley_capacity": {
+      "model_sha256": "156da6a60fc87dcc4e76d7d2ba36c8afdfe451167b90ed028bedd0939045d774",
+      "policy_sha256": "0782dbace11eefff19ede183632378af63a451cbc3a1e5a5a3f3faf85cdc511c"
+    },
+    "plant_fidelity/contact_dynamics/contact_energy_margin": {
+      "model_sha256": "cf018b3b112164b68fb674573602dd16173c61703affd516f5633c6543ab7dcb",
+      "policy_sha256": "7f7ca60f540eb669a30f475959a581223cc653793e7afd2e9d22b44f8573ba86"
+    },
+    "plant_fidelity/Control-allocation-residual": {
+      "model_sha256": "a6fd85b269b24559595fa66bf5d4b0e909236e8bee690dd1217d47d88fdb6076",
+      "policy_sha256": "84db30125d7f51d44570cb07608787ad3081fc4295e4368704c012492d70c042"
+    },
+    "plant_fidelity/Coupled rigid-body 6-DOF propagation": {
+      "model_sha256": "339a875240568f2ddb86cca630e8143c801c58acc664aaae339f2597e5e2f4f8",
+      "policy_sha256": "0eff365441f1713d01331375331c31c7a2c93b5545cb7ccfc8e98cb57297770a"
+    },
+    "plant_fidelity/curvature_feasibility_margin": {
+      "model_sha256": "5e159e53e51107d303e7a1c91bb1deb25febef33a75398ae606940f36418aa99",
+      "policy_sha256": "ceddf517f8a07feb085d94e154b53c6ce5673bdd0d53852e3342e79bd04da893"
+    },
+    "plant_fidelity/newton_euler_translational": {
+      "model_sha256": "4a29401c08febd05a4621d52be504afb34b22df8d9a6c54dd14899d875156722",
+      "policy_sha256": "0b080114a53ac9b3501b9f2625bcc9dc1c35d43ba60ce4d656d886b41a217232"
+    },
+    "plant_fidelity/plant_abortability/waveoff_closure_margin": {
+      "model_sha256": "5a1d2685dea8b3755a4d1be9695a076cfca39eda0b8fd71a110c341b17355483",
+      "policy_sha256": "03e1104a2bdf915d5220a89cf257c4f57b9a24607458dfe29a6c5a280959e4d4"
+    },
+    "plant_fidelity/Truth-conditioned-safe-velocity-margin": {
+      "model_sha256": "b78dc5921a85754d1ac548f8ebdf0dfe4c3a254a5971331fc611dc4ed0f7e02f",
+      "policy_sha256": "c3334d297d8e8c1f7fa874c2ac60e2c567781b1a67873549c17475a88a7ef72e"
+    },
+    "provenance_governance/lineage_completeness_margin": {
+      "model_sha256": "8f69efdcce22f1fee346ab80d9a5d756fa7dbf76b4396100e9fe1388b44714a7",
+      "policy_sha256": "3f80f166652a2bbea5dcb8ef763b895b4285fa9f6e8f81a539061e7ebbaa573a"
+    },
+    "provenance_governance/provenance_completeness_margin": {
+      "model_sha256": "14a67c7e66a428d4a2d7ce3d8f78b68c400cefeecda4eb954711b57a3ae5c6fd",
+      "policy_sha256": "8036be2bd5a939c294be8b30f48978027b6e13cae962d177d04496851d7deced"
+    },
+    "provenance_governance/provenance_truth_ceiling": {
+      "model_sha256": "29b5478fa9595f0c58bd900cb15364f5577a1a53f87a57c46d8820abb9b1bb72",
+      "policy_sha256": "7ddfcf374a21bb26364955d9cfeb8ed16bf06d6917040fb7637266da24aac94c"
+    },
+    "safety_pace/margin_to_death": {
+      "model_sha256": "cfa614c85efd18a7ccb40828b79fcfe53bf369085cb107d346a24d85e482ab4e",
+      "policy_sha256": "c03379015cb01a63e0fa18763c482bf023b9e1fe835aec072c36a099aa21d16f"
+    },
+    "safety_pace/pace_transition_guards": {
+      "model_sha256": "bbba1ea995412da93950426bc1020d342a8177bb8b55a331a4e21c858998137b",
+      "policy_sha256": "68fdb24b98d9932b5abf3178ae4131b8c8b40b6228361e022f67f0fecf4f1ca2"
+    },
+    "safety_pace/safe_operational_space": {
+      "model_sha256": "f032472a11617e21771f056f41594338a00306c82223bb2d6fd7e8d8752e6c47",
+      "policy_sha256": "b39e2e19404a1ad36d683bd85f7479861f51e2c89b26d6907f0787632f4e8ea6"
+    },
+    "sampling_based_reachability_search/sampling_based_reachability": {
+      "model_sha256": "0b3a0d99b8e73f1a3ebff6de964748a32323aee3d4430d3ab56a292f3c0c10c5",
+      "policy_sha256": "d05f2a94b2349abb260519c6df8ff314c98c607feecc627db7c0920b0e986a78"
+    },
+    "space-and-comms/authority_lease_closure_margin": {
+      "model_sha256": "1633f2731cf4423ea6151ec0a93631f3cbd2562dc27a776729dd82fb4094f117",
+      "policy_sha256": "2cd480b272dc302d2952eb42cb47828d244255447dee961ffca517891f31c0d1"
+    },
+    "space-and-comms/covariance_weighted_fusion": {
+      "model_sha256": "844638553819d17c85e69c7f4d924255dad3e6889417d7fe9536a2d4b7332f3a",
+      "policy_sha256": "04cb7c44709620b98afb9f62dd42a0e46a4384b8c4d35deb5a56179b522ce195"
+    },
+    "space-and-comms/handoff_survival": {
+      "model_sha256": "ab4d6d88845a86337d495b5a1c9ad6dfeddbd42492862670365d6c088cb78ff4",
+      "policy_sha256": "938de63642c6f0c1cfaa775437013c3ae3dcae6b35d0ea539061778cf03b28b5"
+    },
+    "space-and-comms/orbital_dynamics": {
+      "model_sha256": "a5b0c0a55856d3c1e4ca2afa6b4499b66413c376f53d7783a09fbb132bc327fc",
+      "policy_sha256": "367c0da2995530cb4f9d0b7da6fc6ea34b1591d1eff217f18ae4140b5d80a13e"
+    },
+    "space-and-comms/sensor_actuator_delay_budget": {
+      "model_sha256": "eb36f6fe4f7021ce7eb989a29b920dc6bd9d667f5b976d0019dc28bb1a8f74eb",
+      "policy_sha256": "63de1670f4dd1defd0c182c549617ef2b5714d726922bbc3c3408cba32d27344"
+    },
+    "space-and-comms/volley_successor": {
+      "model_sha256": "1750298646c7ba4932f8d538960e2fc9bbdb784ebee7187be070f276596837f6",
+      "policy_sha256": "5040c974bb78e7c9a3b57372054ef1db3b0d5fda601e28a673fe2bb6cb41da84"
+    }
+  },
+  "failed_groups": 0,
+  "results": [
+    {
+      "scope": ".",
+      "exit": 0,
+      "stdout": "base.py\nbase.py\n  FormulaMetadata = {\"assumptions\": \"finite\", \"deployment_class\": \"note\", \"evidence_hooks\": null, \"formula_id\": \"sample\", \"name\": \"Sample\", \"rtm_link\": null, \"runtime_class\": \"helper\", \"ssot_gate\": null, \"symbolic_form\": \"x\", \"tests\": \"sample\", \"typed_inputs\": {\"x\": \"float\"}, \"units\": {\"x\": \"m\"}}\n  FormulaMetadata = {\"assumptions\": \"finite\", \"deployment_class\": \"note\", \"evidence_hooks\": null, \"formula_id\": \"sample\", \"name\": \"Sample\", \"rtm_link\": null, \"runtime_class\": \"helper\", \"ssot_gate\": null, \"symbolic_form\": \"x\", \"tests\": \"sample\", \"typed_inputs\": {\"x\": \"float\"}, \"units\": {\"x\": \"m\"}}\nREVISION base 1.0.0 1.0.1 1924a877a5f4e0bc9220da6d56cb66e4cb356564e74fa5b1e2089c974e71b87a\nCHECKED base.py\nbounded_disturbance_admission.py\nbounded_disturbance_admission.py\n  compute_bounded_disturbance = [9.1, 5.2]\n  compute_bounded_disturbance rejected invalid input\n  compute_bounded_disturbance = [9.1, 5.2]\n  compute_bounded_disturbance rejected invalid input\nREVISION bounded_disturbance_admission 1.0.0 1.0.1 53d1277dc44c73783d7b7e215f71f0819a2b301794619ab94dc62919b4c13af1\nCHECKED bounded_disturbance_admission.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\base_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\base_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\base_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\bounded_disturbance_admission_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\bounded_disturbance_admission_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\bounded_disturbance_admission_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "ai_governance",
+      "exit": 0,
+      "stdout": "ai_candidate_admission.py\nai_candidate_admission.py\n  compute_governed_candidate_objective = {\"accepted\": true, \"hard_gate_failures\": [], \"penalties\": {\"authority_penalty\": 0.0, \"hallucination_penalty\": 1.0, \"physics_penalty\": 0.0, \"provenance_penalty\": 0.0, \"schema_penalty\": 0.0, \"timing_penalty\": 0.0}, \"reason_code\": \"ACCEPT_RANKED_SURVIVOR\", \"score\": 4.5, \"utility\": 5.0}\n  compute_governed_candidate_objective = {\"accepted\": true, \"hard_gate_failures\": [], \"penalties\": {\"authority_penalty\": 0.0, \"hallucination_penalty\": 1.0, \"physics_penalty\": 0.0, \"provenance_penalty\": 0.0, \"schema_penalty\": 0.0, \"timing_penalty\": 0.0}, \"reason_code\": \"ACCEPT_RANKED_SURVIVOR\", \"score\": 4.5, \"utility\": 5.0}\nREVISION ai_governance/ai_candidate_admission 1.0.0 1.0.1 51d9224e6af46e604057c5e4eaabc5ea4d047e75f7899d04271643808edf6fcf\nCHECKED ai_candidate_admission.py\nmulti_agent_consensus.py\nmulti_agent_consensus.py\n  consensus_gate = true\n  consensus_gate = true\nREVISION ai_governance/multi_agent_consensus 1.0.0 1.0.1 34fbdc430f2a98b2db2d93ec76d3de059c9e116bd62b702dca03833f8a67a208\nCHECKED multi_agent_consensus.py\npenalized_prompt.py\npenalized_prompt.py\n  compute_penalized_objective = 8.0\n  compute_penalized_objective = 8.0\nREVISION ai_governance/penalized_prompt 1.0.0 1.0.1 f0823ee6d471e997048d8719d8ab6b8af888c80874feb06d5564501d17710147\nCHECKED penalized_prompt.py\nvolley_successor.py\nvolley_successor.py\n  update_volley_successor = 0.30000000000000004\n  update_volley_successor = 0.30000000000000004\nREVISION ai_governance/volley_successor 1.0.0 1.0.1 bbff8385177815843bc995315982dff8e254d3deb2afeb727afb7be8aea7f426\nCHECKED volley_successor.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\ai_candidate_admission_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\ai_candidate_admission_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\ai_candidate_admission_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\multi_agent_consensus_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\multi_agent_consensus_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\multi_agent_consensus_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\penalized_prompt_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\penalized_prompt_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\penalized_prompt_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\volley_successor_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\volley_successor_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\volley_successor_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "ai_governance/genai_governance",
+      "exit": 0,
+      "stdout": "contradiction_exposure_score.py\ncontradiction_exposure_score.py\n  compute_contradiction_exposure_score = 0.75\n  compute_contradiction_exposure_score = 0.75\nREVISION ai_governance/genai_governance/contradiction_exposure_score 1.0.0 1.0.1 08739f2931ba616b05b8f7668ff9ee027dfff5c4d8c1de88417d3277aa7ba359\nCHECKED contradiction_exposure_score.py\ndeterministic_parse_yield.py\ndeterministic_parse_yield.py\n  compute_deterministic_parse_yield = 0.8\n  compute_deterministic_parse_yield = 0.8\nREVISION ai_governance/genai_governance/deterministic_parse_yield 1.0.0 1.0.1 54829a0eadfef5d4bbdad2c9cc48dbac9dfea9fe2ef54bb67757b1bdd760016b\nCHECKED deterministic_parse_yield.py\nevidence_coverage_ratio.py\nevidence_coverage_ratio.py\n  compute_evidence_coverage_ratio = 0.5\n  compute_evidence_coverage_ratio = 0.5\nREVISION ai_governance/genai_governance/evidence_coverage_ratio 1.0.0 1.0.1 48c1213bebb6a9981e5cff683396f0db5491e9ec61224a59496d4f6d3dc20b14\nCHECKED evidence_coverage_ratio.py\nstale_evidence_decay.py\nstale_evidence_decay.py\n  compute_stale_evidence_decay = 0.6400000000000001\n  compute_stale_evidence_decay = 0.6400000000000001\nREVISION ai_governance/genai_governance/stale_evidence_decay 1.0.0 1.0.1 9460d676bbd20ddb35bdb7c8f35593f579776a75a5aec58a3e5aa2d828fc8073\nCHECKED stale_evidence_decay.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\genai_governance\\contradiction_exposure_score_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\genai_governance\\contradiction_exposure_score_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\genai_governance\\contradiction_exposure_score_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\genai_governance\\deterministic_parse_yield_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\genai_governance\\deterministic_parse_yield_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\genai_governance\\deterministic_parse_yield_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\genai_governance\\evidence_coverage_ratio_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\genai_governance\\evidence_coverage_ratio_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\genai_governance\\evidence_coverage_ratio_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\genai_governance\\stale_evidence_decay_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\genai_governance\\stale_evidence_decay_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\genai_governance\\stale_evidence_decay_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "ai_governance/genai_safety_governance",
+      "exit": 0,
+      "stdout": "heuristic_rejection_gate.py\nheuristic_rejection_gate.py\n  compute_heuristic_rejection_gate = [true, []]\n  compute_heuristic_rejection_gate = [true, []]\nREVISION ai_governance/genai_safety_governance/heuristic_rejection_gate 1.0.0 1.0.1 5543a17b73d2a5c9846fea67ea6a0ab232486f6d035c131d781ff086a8650616\nCHECKED heuristic_rejection_gate.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\genai_safety_governance\\heuristic_rejection_gate_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\genai_safety_governance\\heuristic_rejection_gate_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\genai_safety_governance\\heuristic_rejection_gate_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "ai_governance/genai_trust_governance",
+      "exit": 0,
+      "stdout": "context_saturation_index.py\ncontext_saturation_index.py\n  compute_context_saturation_index = 0.65\n  compute_context_saturation_index = 0.65\nREVISION ai_governance/genai_trust_governance/context_saturation_index 1.0.0 1.0.1 4d51645487e173857c447f0d083edc2490b20f97b5c1dae26ba7be870547d76c\nCHECKED context_saturation_index.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\genai_trust_governance\\context_saturation_index_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\genai_trust_governance\\context_saturation_index_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\genai_trust_governance\\context_saturation_index_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "ai_governance/genai_truth_governance",
+      "exit": 0,
+      "stdout": "generative_divergence_margin.py\ngenerative_divergence_margin.py\n  compute_generative_divergence_margin = 1.0\n  compute_generative_divergence_margin = 1.0\nREVISION ai_governance/genai_truth_governance/generative_divergence_margin 1.0.0 1.0.1 e6989518e6003009f5473e9333ed42f875d311d66d530b9c4c8c496c8684a346\nCHECKED generative_divergence_margin.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\genai_truth_governance\\generative_divergence_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\genai_truth_governance\\generative_divergence_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\ai_governance\\genai_truth_governance\\generative_divergence_margin_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "consensus_coordination",
+      "exit": 0,
+      "stdout": "Byzantine trust-weighted agreement.py\nByzantine trust-weighted agreement.py\n  compute_byzantine_trust_weighted_agreement = [0.7777777777777778, 0.8]\n  compute_byzantine_trust_weighted_agreement rejected invalid input\n  compute_byzantine_trust_weighted_agreement = [0.7777777777777778, 0.8]\n  compute_byzantine_trust_weighted_agreement rejected invalid input\nREVISION consensus_coordination/Byzantine trust-weighted agreement 1.0.0 1.0.1 fe4db541217f1f9835250bdee8fc24cd6289ac9e950fe98fada2dd09ad981007\nCHECKED Byzantine trust-weighted agreement.py\nDelay-loss consensus stability.py\nDelay-loss consensus stability.py\n  compute_delay_loss_consensus_stability = 0.005794642780094374\n  compute_delay_loss_consensus_stability = 0.005794642780094374\nREVISION consensus_coordination/Delay-loss consensus stability 1.0.0 1.0.1 0e3e4a243b1c0b62b45b258b8fef8f3d2884e3b96e7768f836fe4cabb58d6957\nCHECKED Delay-loss consensus stability.py\nPartitioned quorum survival.py\nPartitioned quorum survival.py\n  compute_partitioned_quorum_survival = 0.6000000000000001\n  compute_partitioned_quorum_survival = 0.6000000000000001\nREVISION consensus_coordination/Partitioned quorum survival 1.0.0 1.0.1 066f2a99eae48867669e242d2fe899c749d08c48097cd3b4c50e28f9a79433f4\nCHECKED Partitioned quorum survival.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\consensus_coordination\\Byzantine trust-weighted agreement_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\consensus_coordination\\Byzantine trust-weighted agreement_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\consensus_coordination\\Byzantine trust-weighted agreement_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\consensus_coordination\\Delay-loss consensus stability_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\consensus_coordination\\Delay-loss consensus stability_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\consensus_coordination\\Delay-loss consensus stability_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\consensus_coordination\\Partitioned quorum survival_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\consensus_coordination\\Partitioned quorum survival_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\consensus_coordination\\Partitioned quorum survival_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "environment_geometry",
+      "exit": 0,
+      "stdout": "dynamic_clearance_margin.py\ndynamic_clearance_margin.py\n  compute_dynamic_clearance_margin = -1.3199999999999998\n  compute_dynamic_clearance_margin = -1.3199999999999998\nREVISION environment_geometry/dynamic_clearance_margin 1.0.0 1.0.1 30de0c8d5bad214098708cb5815e1272924a92f87d8484d54ed853683700f9c5\nCHECKED dynamic_clearance_margin.py\nspatial_hazard.py\nspatial_hazard.py\n  compute_hazard_function = -0.36\n  is_point_in_hazard = true\n  compute_hazard_function = -0.36\n  is_point_in_hazard = true\nREVISION environment_geometry/spatial_hazard 1.0.0 1.0.1 702e6094847c299eaac181207f8eb09fd371f2ca6c426c8503d43830bfe225c4\nCHECKED spatial_hazard.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\dynamic_clearance_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\dynamic_clearance_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\dynamic_clearance_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\spatial_hazard_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\spatial_hazard_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\spatial_hazard_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "environment_geometry/horizon_geometry",
+      "exit": 0,
+      "stdout": "horizon_sampling_margin.py\nhorizon_sampling_margin.py\n  compute_horizon_sampling_margin = -35.0\n  compute_horizon_sampling_margin = -35.0\nREVISION environment_geometry/horizon_geometry/horizon_sampling_margin 1.0.0 1.0.1 b6c6e56ac20af1f1f9a3a80cf9781feca1eeb0e9a614cb66ec26410d4fd59816\nCHECKED horizon_sampling_margin.py\nsolar_disk_clearance_margin.py\nsolar_disk_clearance_margin.py\n  compute_solar_disk_guarded_clearance_margin = 3.4339999999999997\n  compute_solar_disk_guarded_clearance_margin = 3.4339999999999997\nREVISION environment_geometry/horizon_geometry/solar_disk_clearance_margin 1.0.0 1.0.1 572568c8cc220af08f6aa2985f86d081819f6ce8b0e585da1ba6da6162d89adf\nCHECKED solar_disk_clearance_margin.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\horizon_geometry\\horizon_sampling_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\horizon_geometry\\horizon_sampling_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\horizon_geometry\\horizon_sampling_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\horizon_geometry\\solar_disk_clearance_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\horizon_geometry\\solar_disk_clearance_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\horizon_geometry\\solar_disk_clearance_margin_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "environment_geometry/terrain_truth",
+      "exit": 0,
+      "stdout": "c6_1_los_terrain_mask_closure.py\nc6_1_los_terrain_mask_closure.py\n  compute_los_terrain_mask_margin = -0.09999999999999998\n  compute_los_terrain_mask_margin = -0.09999999999999998\nREVISION environment_geometry/terrain_truth/c6_1_los_terrain_mask_closure 1.0.0 1.0.1 0310c27e8eff30c1d1fba7efc4d8fd516f8c98b785c8a6d01f51f5e3d09f113d\nCHECKED c6_1_los_terrain_mask_closure.py\nlane_aware_confidence_ceiling.py\nlane_aware_confidence_ceiling.py\n  compute_lane_aware_confidence_ceiling = [0.9, 1.0]\n  compute_lane_aware_confidence_ceiling = [0.9, 1.0]\nREVISION environment_geometry/terrain_truth/lane_aware_confidence_ceiling 1.0.0 1.0.1 3fb60645cdd98506ef027d3ffa2cb04324ad6adba87433eb717783c302b6da8b\nCHECKED lane_aware_confidence_ceiling.py\nlocal_hazard_claim_gate.py\nlocal_hazard_claim_gate.py\n  compute_local_hazard_claim_gate = true\n  compute_local_hazard_claim_gate = true\nREVISION environment_geometry/terrain_truth/local_hazard_claim_gate 1.0.0 1.0.1 4a061596a75a0e0ac68fa0352b9f046f97c7a8dcfc7390328a01fedc7056b935\nCHECKED local_hazard_claim_gate.py\nmultiscale_disagreement_margin.py\nmultiscale_disagreement_margin.py\n  compute_multiscale_disagreement_margin = 6.0\n  compute_multiscale_disagreement_margin = 6.0\nREVISION environment_geometry/terrain_truth/multiscale_disagreement_margin 1.0.0 1.0.1 56af7fdbc397da01dba6dc42a0cfb2f4ec46f5a6a79cc6bae120ada54955ae30\nCHECKED multiscale_disagreement_margin.py\nroughness_alias_margin.py\nroughness_alias_margin.py\n  compute_roughness_alias_margin = 0.14999999999999997\n  compute_roughness_alias_margin = 0.14999999999999997\nREVISION environment_geometry/terrain_truth/roughness_alias_margin 1.0.0 1.0.1 34502e698cdc9bc681e7695b588ff4ef6d5fdc8516188068bd8dc41a0af38f7c\nCHECKED roughness_alias_margin.py\nslope_uncertainty_guarded_margin.py\nslope_uncertainty_guarded_margin.py\n  compute_slope_uncertainty_guarded_margin = 3.0\n  compute_slope_uncertainty_guarded_margin = 3.0\nREVISION environment_geometry/terrain_truth/slope_uncertainty_guarded_margin 1.0.0 1.0.1 c4d27c728f03acd67f70e5f70ad7a1eb2ecb099646dedb5d76dd8663f3400a7f\nCHECKED slope_uncertainty_guarded_margin.py\nterrain_commit_closure.py\nterrain_commit_closure.py\n  geospatial_status_ceiling_gate = true\n  compute_terrain_commit_closure_gate = true\n  geospatial_status_ceiling_gate = true\n  compute_terrain_commit_closure_gate = true\nREVISION environment_geometry/terrain_truth/terrain_commit_closure 1.0.0 1.0.1 ad5942f2084e0979bf990a27ec6cb1a38c2963ea04c918b24ef7d46555474985\nCHECKED terrain_commit_closure.py\nterrain_truth_disagreement.py\nterrain_truth_disagreement.py\n  compute_terrain_truth_disagreement_index = 0.508888888888889\n  compute_terrain_truth_disagreement_index = 0.508888888888889\nREVISION environment_geometry/terrain_truth/terrain_truth_disagreement 1.0.0 1.0.1 a663c6c59b005fe35f682d020552f0d85fee493cc867a573f540a311602dd514\nCHECKED terrain_truth_disagreement.py\nterrain_vertical_uncertainty_margin.py\nterrain_vertical_uncertainty_margin.py\n  compute_terrain_vertical_uncertainty_margin = 0.3\n  compute_terrain_vertical_uncertainty_margin = 0.3\nREVISION environment_geometry/terrain_truth/terrain_vertical_uncertainty_margin 1.0.0 1.0.1 acae823353e527d0f7783bf9f33f0503ad441d4cd9e203d13a5376880deb8de4\nCHECKED terrain_vertical_uncertainty_margin.py\ntruth_cell_outrun_margin.py\ntruth_cell_outrun_margin.py\n  compute_truth_cell_outrun_margin = 0.10000000000000003\n  compute_truth_cell_outrun_margin = 0.10000000000000003\nREVISION environment_geometry/terrain_truth/truth_cell_outrun_margin 1.0.0 1.0.1 1f692671de5374cba0a7335405f908b7e4114823a153b542efa43d117a4bcd6d\nCHECKED truth_cell_outrun_margin.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\c6_1_los_terrain_mask_closure_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\c6_1_los_terrain_mask_closure_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\c6_1_los_terrain_mask_closure_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\lane_aware_confidence_ceiling_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\lane_aware_confidence_ceiling_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\lane_aware_confidence_ceiling_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\local_hazard_claim_gate_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\local_hazard_claim_gate_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\local_hazard_claim_gate_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\multiscale_disagreement_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\multiscale_disagreement_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\multiscale_disagreement_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\roughness_alias_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\roughness_alias_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\roughness_alias_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\slope_uncertainty_guarded_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\slope_uncertainty_guarded_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\slope_uncertainty_guarded_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\terrain_commit_closure_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\terrain_commit_closure_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\terrain_commit_closure_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\terrain_truth_disagreement_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\terrain_truth_disagreement_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\terrain_truth_disagreement_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\terrain_vertical_uncertainty_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\terrain_vertical_uncertainty_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\terrain_vertical_uncertainty_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\truth_cell_outrun_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\truth_cell_outrun_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\environment_geometry\\terrain_truth\\truth_cell_outrun_margin_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "estimation_detection",
+      "exit": 0,
+      "stdout": "IMM-mode-probability-update.py\nIMM-mode-probability-update.py\n  compute_imm_mode_probability_update = [0.7913043478260869, 0.20869565217391306]\n  compute_imm_mode_probability_update = [0.5, 0.5]\n  compute_imm_mode_probability_update rejected invalid input\n  compute_imm_mode_probability_update = [0.7913043478260869, 0.20869565217391306]\n  compute_imm_mode_probability_update = [0.5, 0.5]\n  compute_imm_mode_probability_update rejected invalid input\nREVISION estimation_detection/IMM-mode-probability-update 1.0.0 1.0.1 84e9ba579a86fbf57894b2409efa3ecda2253336c179555ec9a4915d27072cd2\nCHECKED IMM-mode-probability-update.py\nchi_hardware_coefficient.py\nchi_hardware_coefficient.py\n  compute_hardware_coefficient = 0.44559760983162217\n  lambdified = 0.4569895542260725\n  compute_hardware_coefficient = 0.44559760983162217\n  lambdified = 0.4569895542260725\nREVISION estimation_detection/chi_hardware_coefficient 1.0.0 1.0.1 bdf9a401b7b1939162fff3355bb14045817a08413c3b5b692d0252584780c12a\nCHECKED chi_hardware_coefficient.py\nchi_squared_reality_gap_monitor.py\nchi_squared_reality_gap_monitor.py\n  compute_chi_squared_gap = 0.0\n  lambdified = 0.3333333333333333\n  compute_chi_squared_gap = 0.0\n  lambdified = 0.3333333333333333\nREVISION estimation_detection/chi_squared_reality_gap_monitor 1.0.0 1.0.1 027558f3c70cc2674c8b532b13ab407442efa88d0ac3c55f4e2d71bbee2c7da4\nCHECKED chi_squared_reality_gap_monitor.py\ndelay-adjusted-innovation-consistency.py\ndelay-adjusted-innovation-consistency.py\n  compute_delay_adjusted_innovation_consistency = 5.27027027027027\n  compute_delay_adjusted_innovation_consistency = 5.27027027027027\nREVISION estimation_detection/delay-adjusted-innovation-consistency 1.0.0 1.0.1 6e20250c1b73fbff20fb96c1e211c73215ac0940522d70ac4b1690b5638641af\nCHECKED delay-adjusted-innovation-consistency.py\nkalman_filter.py\nkalman_filter.py\n  kalman_predict_update = [[3.861111111111111, 2.7777777777777777], [[0.4305555555555556, 0.1388888888888889], [0.1388888888888889, 0.8222222222222224]]]\n  kalman_predict_update rejected invalid input\n  kalman_predict_update = [[3.861111111111111, 2.7777777777777777], [[0.4305555555555556, 0.1388888888888889], [0.1388888888888889, 0.8222222222222224]]]\n  kalman_predict_update rejected invalid input\nREVISION estimation_detection/kalman_filter 1.0.0 1.0.1 55d2c72d0487434a77104b4913355f3aa7ce5907f712b0d5b256f1fd8ec122d9\nCHECKED kalman_filter.py\nmahalanobis.py\nmahalanobis.py\n  compute_mahalanobis_distance = 2.078847767442581\n  compute_mahalanobis_distance rejected invalid input\n  compute_mahalanobis_distance = 2.078847767442581\n  compute_mahalanobis_distance rejected invalid input\nREVISION estimation_detection/mahalanobis 1.0.0 1.0.1 590fa8330656941536078ddec95387ba07d32afb92c0f5cc9e702746b4be6ba7\nCHECKED mahalanobis.py\nstreaming_deviation.py\nstreaming_deviation.py\n  update_streaming_deviation = [0.475, 0.6074999999999999, -0.16666666666666657]\n  update_streaming_deviation = [0.475, 0.6074999999999999, -0.16666666666666657]\nREVISION estimation_detection/streaming_deviation 1.0.0 1.0.1 c84c8d8451397119acb99380c7fbca1aa4874badd30643fa3a7f9d48e7705858\nCHECKED streaming_deviation.py\nunknown-correlation-safe-fusion.py\nunknown-correlation-safe-fusion.py\n  compute_covariance_intersection = [[1.985672049124403, 1.19103934500796], [[2.498294291562429, 0.02274277916761428], [0.022742779167614285, 1.3634296110984763]]]\n  compute_covariance_intersection rejected invalid input\n  compute_covariance_intersection = [[1.985672049124403, 1.19103934500796], [[2.498294291562429, 0.02274277916761428], [0.022742779167614285, 1.3634296110984763]]]\n  compute_covariance_intersection rejected invalid input\nREVISION estimation_detection/unknown-correlation-safe-fusion 1.0.0 1.0.1 3ac5d3b04db91d7810bd6cbe889b39740b9937c516aff7edcac3da6579d06fbe\nCHECKED unknown-correlation-safe-fusion.py\nweighted_divergence.py\nweighted_divergence.py\n  compute_weighted_divergence = 2.5298221281347035\n  compute_weighted_divergence = 2.5298221281347035\nREVISION estimation_detection/weighted_divergence 1.0.0 1.0.1 ebf7e6c6f8bdfb6f7864b911db282e4b84d8810304066539f0093701a41e42d7\nCHECKED weighted_divergence.py\nz_score_universal_stress_metric.py\nz_score_universal_stress_metric.py\n  compute_z_score = -0.04999999999999999\n  lambdified = -0.25\n  compute_z_score = -0.04999999999999999\n  lambdified = -0.25\nREVISION estimation_detection/z_score_universal_stress_metric 1.0.0 1.0.1 aefb18f6086581c5506a60e5ebd3a0c452a9e115cf19c0e0f635c86d948c6fd4\nCHECKED z_score_universal_stress_metric.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\IMM-mode-probability-update_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\IMM-mode-probability-update_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\IMM-mode-probability-update_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\chi_hardware_coefficient_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\chi_hardware_coefficient_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\chi_hardware_coefficient_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\chi_squared_reality_gap_monitor_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\chi_squared_reality_gap_monitor_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\chi_squared_reality_gap_monitor_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\delay-adjusted-innovation-consistency_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\delay-adjusted-innovation-consistency_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\delay-adjusted-innovation-consistency_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\kalman_filter_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\kalman_filter_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\kalman_filter_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\mahalanobis_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\mahalanobis_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\mahalanobis_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\streaming_deviation_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\streaming_deviation_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\streaming_deviation_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\unknown-correlation-safe-fusion_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\unknown-correlation-safe-fusion_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\unknown-correlation-safe-fusion_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\weighted_divergence_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\weighted_divergence_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\weighted_divergence_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\z_score_universal_stress_metric_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\z_score_universal_stress_metric_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\z_score_universal_stress_metric_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "estimation_detection/truth_sensor_fusion",
+      "exit": 0,
+      "stdout": "ground_truth_arbitrator.py\nground_truth_arbitrator.py\n  compute_scalar_kalman_update = {\"innovation\": 2.0, \"kalman_gain\": 0.5, \"p_new\": 1.0, \"p_predict\": 2.0, \"x_new\": 11.0, \"x_predict\": 10.0}\n  lambdified_update = -16.0\n  compute_scalar_kalman_update = {\"innovation\": 2.0, \"kalman_gain\": 0.5, \"p_new\": 1.0, \"p_predict\": 2.0, \"x_new\": 11.0, \"x_predict\": 10.0}\n  lambdified_update = -16.0\nREVISION estimation_detection/truth_sensor_fusion/ground_truth_arbitrator 1.0.0 1.0.1 3df9743a96697f3ebfc4240a72cf0fcfa33d64434affe167555faaa0c34cb385\nCHECKED ground_truth_arbitrator.py\nintelligence_update.py\nintelligence_update.py\n  compute_bayes_posterior = 0.30000000000000004\n  lambdified = 1.5\n  compute_bayes_posterior = 0.30000000000000004\n  lambdified = 1.5\nREVISION estimation_detection/truth_sensor_fusion/intelligence_update 1.0.0 1.0.1 10f2f8bd3cc67a4907bd201f14a48deec58ef726ba4b7c6d26644d7637689acf\nCHECKED intelligence_update.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\truth_sensor_fusion\\ground_truth_arbitrator_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\truth_sensor_fusion\\ground_truth_arbitrator_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\truth_sensor_fusion\\ground_truth_arbitrator_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\truth_sensor_fusion\\intelligence_update_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\truth_sensor_fusion\\intelligence_update_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\estimation_detection\\truth_sensor_fusion\\intelligence_update_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "graph-survivability",
+      "exit": 0,
+      "stdout": "blast_radius.py\nblast_radius.py\n  compute_blast_radius = 2\n  compute_blast_radius = 2\nREVISION graph-survivability/blast_radius 1.0.0 1.0.1 1c31af9a2d62bb3151e94092c8549738b1e4e5161dab3a6176d9992f61d0e84c\nCHECKED blast_radius.py\nconsensus_dynamics.py\nconsensus_dynamics.py\n  compute_consensus_update = [1.5, 2.5]\n  compute_consensus_update = [1.5, 2.5]\nREVISION graph-survivability/consensus_dynamics 1.0.0 1.0.1 3505e6117a90b8052d4f771b9ace28219d2fa3087795c1274714f26111a4a701\nCHECKED consensus_dynamics.py\ngraph_survivability.py\ngraph_survivability.py\n  compute_vertex_connectivity = 2\n  is_graph_survivable = true\n  compute_vertex_connectivity = 0\n  compute_vertex_connectivity = 2\n  is_graph_survivable = true\n  compute_vertex_connectivity = 0\nREVISION graph-survivability/graph_survivability 1.0.0 1.0.1 a75251c7d31fc02cbec648fe7ea8b0703a0cc0f62ad5d5d9041c451471cbd2a5\nCHECKED graph_survivability.py\nisolation_condition.py\nisolation_condition.py\n  check_isolation_condition = true\n  check_isolation_condition = true\nREVISION graph-survivability/isolation_condition 1.0.0 1.0.1 9036e4fd2de27cdf9219ff3187117157346763e2388b5178194bd3bedc7ef93f\nCHECKED isolation_condition.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\graph-survivability\\blast_radius_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\graph-survivability\\blast_radius_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\graph-survivability\\blast_radius_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\graph-survivability\\consensus_dynamics_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\graph-survivability\\consensus_dynamics_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\graph-survivability\\consensus_dynamics_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\graph-survivability\\graph_survivability_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\graph-survivability\\graph_survivability_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\graph-survivability\\graph_survivability_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\graph-survivability\\isolation_condition_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\graph-survivability\\isolation_condition_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\graph-survivability\\isolation_condition_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "hardware_viability",
+      "exit": 0,
+      "stdout": "converging_terminal_pressure.py\nconverging_terminal_pressure.py\n  compute_converging_terminal_pressure = 0.31\n  compute_converging_terminal_pressure = 0.31\nREVISION hardware_viability/converging_terminal_pressure 1.0.0 1.0.1 6a73cafd5c07fcceca2b9b023ec3aff860ffeb8846fad5d7563bc234e774736c\nCHECKED converging_terminal_pressure.py\nminimum terminal horizon.py\nminimum terminal horizon.py\n  compute_minimum_terminal_horizon = {\"dominant_driver\": \"THERMAL\", \"minimum_terminal_horizon_s\": 0.4}\n  compute_minimum_terminal_horizon = {\"dominant_driver\": \"THERMAL\", \"minimum_terminal_horizon_s\": 0.4}\nREVISION hardware_viability/minimum terminal horizon 1.0.0 1.0.1 1d4d5f3b3434aa182ddf28ef56ce4b2a7daf707d720311f2cee8888ee87768f1\nCHECKED minimum terminal horizon.py\npredictive_hardware_viability_state.py\npredictive_hardware_viability_state.py\n  compute_predictive_hardware_viability_state = {\"converging_terminal_pressure\": 0.3, \"dominant_driver\": \"thermal\", \"memory_margin_pct\": 20.0, \"minimum_terminal_horizon_s\": 10.0, \"queue_margin_items\": 300.0, \"status\": \"NOMINAL\", \"thermal_margin_c\": 15.0}\n  compute_predictive_hardware_viability_state = {\"converging_terminal_pressure\": 0.3, \"dominant_driver\": \"thermal\", \"memory_margin_pct\": 20.0, \"minimum_terminal_horizon_s\": 10.0, \"queue_margin_items\": 300.0, \"status\": \"NOMINAL\", \"thermal_margin_c\": 15.0}\nREVISION hardware_viability/predictive_hardware_viability_state 1.0.0 1.0.1 4c4cfe7a09ca0d9c0a87a44d46cff307f8af14162e49ad1e46e426dd20f2931b\nCHECKED predictive_hardware_viability_state.py\nrecovery_time_inflation.py\nrecovery_time_inflation.py\n  evaluate_recovery_state = {\"baseline_recovery_time_s\": 2.0, \"divergence_pressure\": 0.35, \"phase_code\": 1, \"phase_label\": \"GRACEFUL_DEGRADATION\", \"recovery_margin_s\": 4.0, \"recovery_ratio\": 0.5, \"recovery_time_s\": 4.0, \"rti\": 2.0, \"rti_growth_per_s\": 1.0, \"terminal_required\": false, \"ttv_s\": 8.0}\n  deterministic_exponential_recovery_trace = [1.0, 0.36787944117144233, 0.1353352832366127]\n  theoretical_exponential_recovery_time_s = 4.605170185988092\n  estimate_recovery_time_s = 2.0\n  evaluate_recovery_state = \"NOMINAL_RECOVERY\"\n  evaluate_recovery_state = \"LAWFUL_RECOVERY_PRESSURE\"\n  evaluate_recovery_state = \"ESCROW_OR_TERMINAL_REQUIRED\"\n  RecoveryTraceConfig rejected invalid input\n  RecoveryTimeInflationConfig rejected invalid input\n  evaluate_recovery_state = {\"baseline_recovery_time_s\": 2.0, \"divergence_pressure\": 0.35, \"phase_code\": 1, \"phase_label\": \"GRACEFUL_DEGRADATION\", \"recovery_margin_s\": 4.0, \"recovery_ratio\": 0.5, \"recovery_time_s\": 4.0, \"rti\": 2.0, \"rti_growth_per_s\": 1.0, \"terminal_required\": false, \"ttv_s\": 8.0}\n  deterministic_exponential_recovery_trace = [1.0, 0.36787944117144233, 0.1353352832366127]\n  theoretical_exponential_recovery_time_s = 4.605170185988092\n  estimate_recovery_time_s = 2.0\n  evaluate_recovery_state = \"NOMINAL_RECOVERY\"\n  evaluate_recovery_state = \"LAWFUL_RECOVERY_PRESSURE\"\n  evaluate_recovery_state = \"ESCROW_OR_TERMINAL_REQUIRED\"\n  RecoveryTraceConfig rejected invalid input\n  RecoveryTimeInflationConfig rejected invalid input\nREVISION hardware_viability/recovery_time_inflation 1.0.0 1.0.1 e80e5657fcf4eb2c43101d5491d975e0f57ec4522d040c82ba19c0ec5a222589\nCHECKED recovery_time_inflation.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\converging_terminal_pressure_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\converging_terminal_pressure_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\converging_terminal_pressure_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\minimum terminal horizon_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\minimum terminal horizon_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\minimum terminal horizon_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\predictive_hardware_viability_state_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\predictive_hardware_viability_state_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\predictive_hardware_viability_state_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\recovery_time_inflation_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\recovery_time_inflation_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\recovery_time_inflation_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "hardware_viability/actuator",
+      "exit": 0,
+      "stdout": "abort_closure_margin.py\nabort_closure_margin.py\n  compute_abort_closure_margin = -0.9583333333333334\n  compute_abort_closure_margin = -0.9583333333333334\nREVISION hardware_viability/actuator/abort_closure_margin 1.0.0 1.0.1 9eff0b58873fd56951927da99fd60efa5e78daa5c52cab412eeecec28fefa761\nCHECKED abort_closure_margin.py\nactuator_saturation.py\nactuator_saturation.py\n  compute_actuator_saturation = 0.4\n  compute_actuator_saturation = 2\n  compute_actuator_saturation = 0.4\n  compute_actuator_saturation = 2\nREVISION hardware_viability/actuator/actuator_saturation 1.0.0 1.0.1 ea3a6407149e6afe9d5fb32fcf7f2fae26883ecce1de1bc17ecac329709b4259\nCHECKED actuator_saturation.py\nactuator_slew_rate.py\nactuator_slew_rate.py\n  compute_slew_limited_command = 0.5\n  compute_slew_limited_command = 0.5\nREVISION hardware_viability/actuator/actuator_slew_rate 1.0.0 1.0.1 d7bae51a49007c8e74118a29f935a209f33520dcc24bb9d203e1d5fe2b98410c\nCHECKED actuator_slew_rate.py\nattainable_wrench_residual.py\nattainable_wrench_residual.py\n  compute_attainable_wrench_residual = 2.0\n  compute_attainable_wrench_residual = 2.0\nREVISION hardware_viability/actuator/attainable_wrench_residual 1.0.0 1.0.1 da64861dd3ed27532d9d0e9bd09f1e38524736eb006bc66f5be7b474705e7191\nCHECKED attainable_wrench_residual.py\ncontrol_allocation_residual.py\ncontrol_allocation_residual.py\n  compute_control_allocation_residual = 2.23606797749979\n  compute_control_allocation_residual = 2.23606797749979\n  compute_control_allocation_residual rejected invalid input\n  compute_control_allocation_residual = 2.23606797749979\n  compute_control_allocation_residual = 2.23606797749979\n  compute_control_allocation_residual rejected invalid input\nREVISION hardware_viability/actuator/control_allocation_residual 1.0.0 1.0.1 7b2366b557ae49809c836191179785635b5ea82e94c674a76909e354d60da427\nCHECKED control_allocation_residual.py\ncontrollability_margin.py\ncontrollability_margin.py\n  compute_authority_weighted_controllability_margin = 0.6000000000000001\n  compute_authority_weighted_controllability_margin = -0.1\n  compute_authority_weighted_controllability_margin rejected invalid input\n  compute_authority_weighted_controllability_margin = 0.6000000000000001\n  compute_authority_weighted_controllability_margin = -0.1\n  compute_authority_weighted_controllability_margin rejected invalid input\nREVISION hardware_viability/actuator/controllability_margin 1.0.0 1.0.1 a6730037592bcc39ba4bd9ffaf89a0a1f45798bcd7c22fd9ff52de7c3fe76721\nCHECKED controllability_margin.py\nlawful_actuation_clf_cbf_qp.py\nlawful_actuation_clf_cbf_qp.py\n  cbf_margin = 1.25\n  clf_value = 0.5\n  clf_vdot = -0.4\n  clf_margin = -0.09999999999999998\n  null_set_trigger = true\n  active CLF [control, slack, null_set] = [-0.4000000000000001, 0.09999999999999992, true]\n  clear [success, safe_without_slack, null_set] = [true, true, false]\n  cbf_margin = 1.25\n  clf_value = 0.5\n  clf_vdot = -0.4\n  clf_margin = -0.09999999999999998\n  null_set_trigger = true\n  active CLF [control, slack, null_set] = [-0.4000000000000001, 0.09999999999999992, true]\n  clear [success, safe_without_slack, null_set] = [true, true, false]\nREVISION hardware_viability/actuator/lawful_actuation_clf_cbf_qp 1.0.0 1.0.1 520eaf7b794cc51829f3d55daff75c7cf5cacbf9a2066e64eb0770b2e33498c5\nCHECKED lawful_actuation_clf_cbf_qp.py\nlease_validity_margin.py\nlease_validity_margin.py\n  compute_authority_lease_validity_margin = -1.4\n  compute_authority_lease_validity_margin = -1.4\nREVISION hardware_viability/actuator/lease_validity_margin 1.0.0 1.0.1 364823a5be25248a8ddf65587c465920ba584cb0dfd750cc3fb62dce91aa26b4\nCHECKED lease_validity_margin.py\nmechatronics_power_roundup.py\nmechatronics_power_roundup.py\n  pbr001_min_hold_up_time_closure = {\"passed\": true, \"value\": 0.065}\n  pbr002_brownout_entry_guard = false\n  pbr003_stable_restart_gate = false\n  pbr004_rail_coherence_index = {\"passed\": true, \"value\": 0.03333333333333333}\n  ptt001_tau_valid = 0.282258064516129\n  ptt001_power_telemetry_freshness_at_use_gate = {\"passed\": true, \"value\": -0.5256756756756756}\n  paa001_actuation_enable_authority_gate = false\n  paa002_actuator_induced_bus_sag_closure = {\"passed\": false, \"value\": -0.72}\n  paa003_thermal_voltage_derated_actuator_envelope = 0.75\n  paa004_safe_reenable_delay = 0.8\n  tpd001_two_node_thermal_rc_step = [0.8999999999999999, 0.494949494949495]\n  tpd002_thermal_timing_derate = {\"passed\": true, \"value\": 0.4}\n  tpd003_thermal_distortion_confidence_ceiling = 0.4\n  ecl001_energy_continuity_margin = -0.8\n  ecl002_regulation_chain_delivery_margin = {\"passed\": false, \"value\": -1.6742857142857144}\n  ecl003_priority_load_shed_optimization = [[], 0]\n  pbr001_min_hold_up_time_closure = {\"passed\": true, \"value\": 0.065}\n  pbr002_brownout_entry_guard = false\n  pbr003_stable_restart_gate = false\n  pbr004_rail_coherence_index = {\"passed\": true, \"value\": 0.03333333333333333}\n  ptt001_tau_valid = 0.282258064516129\n  ptt001_power_telemetry_freshness_at_use_gate = {\"passed\": true, \"value\": -0.5256756756756756}\n  paa001_actuation_enable_authority_gate = false\n  paa002_actuator_induced_bus_sag_closure = {\"passed\": false, \"value\": -0.72}\n  paa003_thermal_voltage_derated_actuator_envelope = 0.75\n  paa004_safe_reenable_delay = 0.8\n  tpd001_two_node_thermal_rc_step = [0.8999999999999999, 0.494949494949495]\n  tpd002_thermal_timing_derate = {\"passed\": true, \"value\": 0.4}\n  tpd003_thermal_distortion_confidence_ceiling = 0.4\n  ecl001_energy_continuity_margin = -0.8\n  ecl002_regulation_chain_delivery_margin = {\"passed\": false, \"value\": -1.6742857142857144}\n  ecl003_priority_load_shed_optimization = [[], 0]\nREVISION hardware_viability/actuator/mechatronics_power_roundup 1.0.0 1.0.1 e4894ff74ddf640b66507c007bbdf17179381c99899968489a559ae092fb7344\nCHECKED mechatronics_power_roundup.py\nsafe_velocity_margin.py\nsafe_velocity_margin.py\n  compute_truth_conditioned_safe_velocity_margin = -0.5\n  compute_truth_conditioned_safe_velocity_margin = -0.5\nREVISION hardware_viability/actuator/safe_velocity_margin 1.0.0 1.0.1 f6c65706dbdda19e1eb1eb99dc7b399c746d1d98d5105feaa58d2dd568258acf\nCHECKED safe_velocity_margin.py\nspecific_energy_reserve_to_go.py\nspecific_energy_reserve_to_go.py\n  compute_specific_energy_reserve_margin = -0.7000000000000001\n  compute_specific_energy_reserve_margin = -0.7000000000000001\nREVISION hardware_viability/actuator/specific_energy_reserve_to_go 1.0.0 1.0.1 4359015dbcc33b15d65961b731177f4d0e02ce139465359f2191700a2d61b320\nCHECKED specific_energy_reserve_to_go.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\abort_closure_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\abort_closure_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\abort_closure_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\actuator_saturation_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\actuator_saturation_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\actuator_saturation_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\actuator_slew_rate_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\actuator_slew_rate_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\actuator_slew_rate_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\attainable_wrench_residual_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\attainable_wrench_residual_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\attainable_wrench_residual_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\control_allocation_residual_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\control_allocation_residual_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\control_allocation_residual_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\controllability_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\controllability_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\controllability_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\lawful_actuation_clf_cbf_qp_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\lawful_actuation_clf_cbf_qp_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\lawful_actuation_clf_cbf_qp_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\lease_validity_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\lease_validity_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\lease_validity_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\mechatronics_power_roundup_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\mechatronics_power_roundup_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\mechatronics_power_roundup_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\safe_velocity_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\safe_velocity_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\safe_velocity_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\specific_energy_reserve_to_go_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\specific_energy_reserve_to_go_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\actuator\\specific_energy_reserve_to_go_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "hardware_viability/electrical",
+      "exit": 0,
+      "stdout": "bus_anchor_consistency_margin.py\nbus_anchor_consistency_margin.py\n  compute_bus_anchor_consistency_margin = 0.4\n  compute_bus_anchor_consistency_margin = 0.4\nREVISION hardware_viability/electrical/bus_anchor_consistency_margin 1.0.0 1.0.1 cc0dc4bf2f2b596e955a6784402288f0a0a0b6f21bfef213c59406cf75f4f9e8\nCHECKED bus_anchor_consistency_margin.py\nelectrical_survivability_margins.py\nelectrical_survivability_margins.py\n  compute_effective_brownout_margin = -2.2\n  compute_thermal_derated_power_margin = 21.625\n  compute_recovery_energy_margin = -2.2\n  compute_bus_clear_time_margin = -5.333333333333333\n  compute_segment_isolation_margin = -2.2\n  compute_post_recovery_reacquisition_margin = -2.2\n  compute_telemetry_use_freshness_margin = 0.7\n  compute_mixed_stream_coherence_margin = 0.0\n  compute_boot_epoch_sequence_gate = true\n  compute_substrate_evidence_completeness_ratio = 0.5\n  compute_trust_root_attestation_freshness_margin = 4.0\n  compute_authority_to_act_gate = false\n  compute_hardware_timing_closure_margin = -3.1\n  compute_thermal_timing_derate_margin = -2.625\n  compute_hardware_closed_command_seam_gate = true\n  compute_effective_brownout_margin = -2.2\n  compute_thermal_derated_power_margin = 21.625\n  compute_recovery_energy_margin = -2.2\n  compute_bus_clear_time_margin = -5.333333333333333\n  compute_segment_isolation_margin = -2.2\n  compute_post_recovery_reacquisition_margin = -2.2\n  compute_telemetry_use_freshness_margin = 0.7\n  compute_mixed_stream_coherence_margin = 0.0\n  compute_boot_epoch_sequence_gate = true\n  compute_substrate_evidence_completeness_ratio = 0.5\n  compute_trust_root_attestation_freshness_margin = 4.0\n  compute_authority_to_act_gate = false\n  compute_hardware_timing_closure_margin = -3.1\n  compute_thermal_timing_derate_margin = -2.625\n  compute_hardware_closed_command_seam_gate = true\nREVISION hardware_viability/electrical/electrical_survivability_margins 1.0.0 1.0.1 f62497877bc48e44b2652fb3f561bc6159481c62b6258ebfedf79cb13b89fe6c\nCHECKED electrical_survivability_margins.py\nillumination_cycle_energy_margin.py\nillumination_cycle_energy_margin.py\n  compute_illumination_duty_cycle_energy_margin = 100.0\n  compute_illumination_duty_cycle_energy_margin = 100.0\nREVISION hardware_viability/electrical/illumination_cycle_energy_margin 1.0.0 1.0.1 380c1ecaf55e39941c8d3fbd0e59fdb80755b6e5a3b91e75b07c7726b5699361\nCHECKED illumination_cycle_energy_margin.py\nocclusion_energy_reserve_margin.py\nocclusion_energy_reserve_margin.py\n  compute_occlusion_energy_reserve_margin = 60.0\n  compute_occlusion_energy_reserve_margin = 60.0\nREVISION hardware_viability/electrical/occlusion_energy_reserve_margin 1.0.0 1.0.1 1b81fe519e9e1bdf5ccd272e41c11c7c66180269bf2ad524694e122108c432fc\nCHECKED occlusion_energy_reserve_margin.py\nregulation_chain_disparity_margin.py\nregulation_chain_disparity_margin.py\n  compute_regulation_chain_disparity_margin = 0.5\n  compute_regulation_chain_disparity_margin = 0.5\nREVISION hardware_viability/electrical/regulation_chain_disparity_margin 1.0.0 1.0.1 43ceda773e49e7c86590535d675e53164b42b01b5c65825d6001361091f407a3\nCHECKED regulation_chain_disparity_margin.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\electrical\\bus_anchor_consistency_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\electrical\\bus_anchor_consistency_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\electrical\\bus_anchor_consistency_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\electrical\\electrical_survivability_margins_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\electrical\\electrical_survivability_margins_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\electrical\\electrical_survivability_margins_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\electrical\\illumination_cycle_energy_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\electrical\\illumination_cycle_energy_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\electrical\\illumination_cycle_energy_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\electrical\\occlusion_energy_reserve_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\electrical\\occlusion_energy_reserve_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\electrical\\occlusion_energy_reserve_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\electrical\\regulation_chain_disparity_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\electrical\\regulation_chain_disparity_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\electrical\\regulation_chain_disparity_margin_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "hardware_viability/memory",
+      "exit": 0,
+      "stdout": "memory_margin.py\nmemory_margin.py\n  compute_memory_margin = 35.0\n  compute_memory_margin = 35.0\nREVISION hardware_viability/memory/memory_margin 1.0.0 1.0.1 ed4019d2b248a7e26f940356e948c3a028c515f159f9c127ca6f9f5ae2f4e796\nCHECKED memory_margin.py\ntime_to_memory_violation.py\ntime_to_memory_violation.py\n  compute_time_to_memory_violation = 58.333333333333336\n  compute_time_to_memory_violation = 58.333333333333336\nREVISION hardware_viability/memory/time_to_memory_violation 1.0.0 1.0.1 e1fe8edb9d91a2cebbfc5d7bae388a2079f0fb4745385ecab1c2d1a3a950c6a4\nCHECKED time_to_memory_violation.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\memory\\memory_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\memory\\memory_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\memory\\memory_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\memory\\time_to_memory_violation_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\memory\\time_to_memory_violation_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\memory\\time_to_memory_violation_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "hardware_viability/queue",
+      "exit": 0,
+      "stdout": "queue_margin.py\nqueue_margin.py\n  compute_queue_margin = 7\n  compute_queue_margin = 7\nREVISION hardware_viability/queue/queue_margin 1.0.0 1.0.1 7b42d6eaf4af1e7a82fbb9a1c17c95bc2c34b8c29827d8d0c901c7784c9046fa\nCHECKED queue_margin.py\ntime_to_queue_violation.py\ntime_to_queue_violation.py\n  compute_time_to_queue_violation = 11.666666666666668\n  compute_time_to_queue_violation = 11.666666666666668\nREVISION hardware_viability/queue/time_to_queue_violation 1.0.0 1.0.1 5b5f57bfa790326a6128f427ecf4dd5b10dbf42172156bb9573d54cd8f63218c\nCHECKED time_to_queue_violation.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\queue\\queue_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\queue\\queue_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\queue\\queue_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\queue\\time_to_queue_violation_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\queue\\time_to_queue_violation_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\queue\\time_to_queue_violation_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "hardware_viability/resonance",
+      "exit": 0,
+      "stdout": "Base-excitation-transmissibility.py\nBase-excitation-transmissibility.py\n  compute_base_excitation_transmissibility = {\"frequency_ratio\": 0.8, \"transmissibility\": 1.3520377540143105, \"transmitted_acceleration\": 0.9464264278100173}\n  compute_base_excitation_transmissibility = {\"frequency_ratio\": 0.8, \"transmissibility\": 1.3520377540143105, \"transmitted_acceleration\": 0.9464264278100173}\nREVISION hardware_viability/resonance/Base-excitation-transmissibility 1.0.0 1.0.1 9e9cd1f1125beae9c2fe5e116b8d34396117365211399509f16c64cef278025c\nCHECKED Base-excitation-transmissibility.py\nFastener-preload-retention-margin.py\nFastener-preload-retention-margin.py\n  compute_fastener_preload_retention_margin = {\"joint_secure\": false, \"mechanical_loss\": 1.1, \"retained_preload\": -0.6640000000000001, \"retention_margin\": -1.5533333333333335, \"thermal_loss\": -0.036}\n  compute_fastener_preload_retention_margin = {\"joint_secure\": false, \"mechanical_loss\": 1.1, \"retained_preload\": -0.6640000000000001, \"retention_margin\": -1.5533333333333335, \"thermal_loss\": -0.036}\nREVISION hardware_viability/resonance/Fastener-preload-retention-margin 1.0.0 1.0.1 b5e1024b1449ebda83dc03e6161a3e5664ff5ab1b0110f1f237b8a22f9d43bb9\nCHECKED Fastener-preload-retention-margin.py\nResonance-separation-margin.py\nResonance-separation-margin.py\n  compute_resonance_separation_margin = {\"critical_forcing_frequency_hz\": 12.0, \"critical_natural_frequency_hz\": 10.0, \"minimum_separation_ratio\": 0.16666666666666666, \"required_exclusion_ratio\": 0.2, \"resonance_clear\": false, \"signed_margin\": -0.033333333333333354}\n  compute_resonance_separation_margin = {\"critical_forcing_frequency_hz\": 10.0, \"critical_natural_frequency_hz\": 8.0, \"minimum_separation_ratio\": 0.2, \"required_exclusion_ratio\": 0.2, \"resonance_clear\": true, \"signed_margin\": 0.0}\n  compute_resonance_separation_margin = {\"critical_forcing_frequency_hz\": 12.0, \"critical_natural_frequency_hz\": 10.0, \"minimum_separation_ratio\": 0.16666666666666666, \"required_exclusion_ratio\": 0.2, \"resonance_clear\": false, \"signed_margin\": -0.033333333333333354}\n  compute_resonance_separation_margin = {\"critical_forcing_frequency_hz\": 10.0, \"critical_natural_frequency_hz\": 8.0, \"minimum_separation_ratio\": 0.2, \"required_exclusion_ratio\": 0.2, \"resonance_clear\": true, \"signed_margin\": 0.0}\nREVISION hardware_viability/resonance/Resonance-separation-margin 1.0.0 1.0.1 14cb7e5ebf643f8d30114118d7fc8a6de8ba8f2f5d997295c0beacb60108c486\nCHECKED Resonance-separation-margin.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\resonance\\Base-excitation-transmissibility_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\resonance\\Base-excitation-transmissibility_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\resonance\\Base-excitation-transmissibility_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\resonance\\Fastener-preload-retention-margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\resonance\\Fastener-preload-retention-margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\resonance\\Fastener-preload-retention-margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\resonance\\Resonance-separation-margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\resonance\\Resonance-separation-margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\resonance\\Resonance-separation-margin_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "hardware_viability/thermal",
+      "exit": 0,
+      "stdout": "thermal_margin.py\nthermal_margin.py\n  compute_thermal_margin = 30.0\n  compute_thermal_margin = 30.0\nREVISION hardware_viability/thermal/thermal_margin 1.0.0 1.0.1 8d4bb314092e45d180e6b73dcda93a059064365be18bc6060ba1b3f149af7dd5\nCHECKED thermal_margin.py\ntime_to_thermal_violation.py\ntime_to_thermal_violation.py\n  compute_time_to_thermal_violation = 50.0\n  compute_time_to_thermal_violation = 50.0\nREVISION hardware_viability/thermal/time_to_thermal_violation 1.0.0 1.0.1 aefed2dafedc0c2dd9ef52b38d75d4a4a8e6b17a0a74234f7b4bba40f7397de7\nCHECKED time_to_thermal_violation.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\time_to_thermal_violation_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\time_to_thermal_violation_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\time_to_thermal_violation_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "hardware_viability/thermal/thermal_truth",
+      "exit": 0,
+      "stdout": "cycle_energy_reserve_margin.py\ncycle_energy_reserve_margin.py\n  compute_duty_cycle_energy_reserve_margin = -0.40000000000000013\n  compute_duty_cycle_energy_reserve_margin = -0.40000000000000013\nREVISION hardware_viability/thermal/thermal_truth/cycle_energy_reserve_margin 1.0.0 1.0.1 34f117d9c1e4e953d641fa1c5c0aaa1c84d524dc218f40ca149664c0617f79be\nCHECKED cycle_energy_reserve_margin.py\nthermal_timing_derate_margin.py\nthermal_timing_derate_margin.py\n  compute_thermal_timing_derate_margin = -0.09999999999999998\n  compute_thermal_timing_derate_margin = -0.09999999999999998\nREVISION hardware_viability/thermal/thermal_truth/thermal_timing_derate_margin 1.0.0 1.0.1 2ca49fe4cd1bd9768aa96d8bddbcb7b21cc253b6b580394ee1e872be5c9117c7\nCHECKED thermal_timing_derate_margin.py\ntwo_layer_thermal_distortion.py\ntwo_layer_thermal_distortion.py\n  compute_two_layer_thermal_dynamics = {\"core_temp_dot\": 0.9999999999999999, \"surface_temp_dot\": -0.010101010101010104, \"thermal_distortion_index\": 0.09999999999999998}\n  compute_two_layer_thermal_dynamics = {\"core_temp_dot\": 0.9999999999999999, \"surface_temp_dot\": -0.010101010101010104, \"thermal_distortion_index\": 0.09999999999999998}\nREVISION hardware_viability/thermal/thermal_truth/two_layer_thermal_distortion 1.0.0 1.0.1 6c6bb9c0d5df0a821d9adfe5b01dbd56a734e4772c8b1d7adb730c6d13ce21fd\nCHECKED two_layer_thermal_distortion.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\cycle_energy_reserve_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\cycle_energy_reserve_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\cycle_energy_reserve_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_timing_derate_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_timing_derate_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_timing_derate_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\two_layer_thermal_distortion_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\two_layer_thermal_distortion_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\two_layer_thermal_distortion_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/power_thermal_coupling",
+      "exit": 0,
+      "stdout": "conversion_loss_temperature_margin.py\nconversion_loss_temperature_margin.py\n  compute_conversion_loss_temperature_margin = 45.0\n  lambdified = 18.200000000000003\n  compute_conversion_loss_temperature_margin = 45.0\n  lambdified = 18.200000000000003\nREVISION hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/power_thermal_coupling/conversion_loss_temperature_margin 1.0.0 1.0.1 3f3111cf7c2e1dba4f88f1be45f3b26a775ff0427ca5a0acbe2c3df6fb48fc55\nCHECKED conversion_loss_temperature_margin.py\nduty_cycle_temperature_margin.py\nduty_cycle_temperature_margin.py\n  compute_duty_cycle_temperature_margin = 35.0\n  lambdified = -21.0\n  compute_duty_cycle_temperature_margin = 35.0\n  lambdified = -21.0\nREVISION hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/power_thermal_coupling/duty_cycle_temperature_margin 1.0.0 1.0.1 f7868896550e8c70dec289cff853122491a4bce02b51e515e6ac49e98b95ddd7\nCHECKED duty_cycle_temperature_margin.py\neffective_duty_cycle_power.py\neffective_duty_cycle_power.py\n  compute_effective_duty_cycle_power = 15.0\n  lambdified_2term = 44.0\n  compute_effective_duty_cycle_power = 15.0\n  lambdified_2term = 44.0\nREVISION hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/power_thermal_coupling/effective_duty_cycle_power 1.0.0 1.0.1 3ec9739916ce807d9f38052d4e8e0858844e9361b744bbcb3eb570e7834a6388\nCHECKED effective_duty_cycle_power.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\power_thermal_coupling\\conversion_loss_temperature_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\power_thermal_coupling\\conversion_loss_temperature_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\power_thermal_coupling\\conversion_loss_temperature_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\power_thermal_coupling\\duty_cycle_temperature_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\power_thermal_coupling\\duty_cycle_temperature_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\power_thermal_coupling\\duty_cycle_temperature_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\power_thermal_coupling\\effective_duty_cycle_power_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\power_thermal_coupling\\effective_duty_cycle_power_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\power_thermal_coupling\\effective_duty_cycle_power_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_environment_validity",
+      "exit": 0,
+      "stdout": "cooling_assumption_mismatch_margin.py\ncooling_assumption_mismatch_margin.py\n  compute_cooling_assumption_mismatch_margin = 0.5\n  lambdified = 1.0\n  compute_cooling_assumption_mismatch_margin = 0.5\n  lambdified = 1.0\nREVISION hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_environment_validity/cooling_assumption_mismatch_margin 1.0.0 1.0.1 19c522b5adafaba5b61d9db4a5d9b4abbc56b05320082793308272cd471e3fc6\nCHECKED cooling_assumption_mismatch_margin.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_environment_validity\\cooling_assumption_mismatch_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_environment_validity\\cooling_assumption_mismatch_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_environment_validity\\cooling_assumption_mismatch_margin_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_rc_envelope",
+      "exit": 0,
+      "stdout": "cooldown_time_to_rearm.py\ncooldown_time_to_rearm.py\n  compute_cooldown_time_to_rearm = 78.84573603642701\n  lambdified = 78.84573603642701\n  compute_cooldown_time_to_rearm = 78.84573603642701\n  lambdified = 78.84573603642701\nREVISION hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_rc_envelope/cooldown_time_to_rearm 1.0.1 1.0.2 418074ed051cfb59f342c6e9531ea50a8bba09f1e4aeea1c8df0cabb80ac6edb\nCHECKED cooldown_time_to_rearm.py\nequilibrium_temperature_under_load.py\nequilibrium_temperature_under_load.py\n  compute_equilibrium_temperature_under_load = 45.0\n  lambdified = 14.0\n  compute_equilibrium_temperature_under_load = 45.0\n  lambdified = 14.0\nREVISION hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_rc_envelope/equilibrium_temperature_under_load 1.0.0 1.0.1 120fc707659505134861c7efa5bd6147631f7a4dd40caa85128d0767be1f0a9f\nCHECKED equilibrium_temperature_under_load.py\ntime_to_temperature_threshold.py\ntime_to_temperature_threshold.py\n  compute_time_to_temperature_threshold = 87.54687373538998\n  lambdified = 87.54687373538998\n  compute_time_to_temperature_threshold = Infinity\n  compute_time_to_temperature_threshold = 87.54687373538998\n  lambdified = 87.54687373538998\n  compute_time_to_temperature_threshold = Infinity\nREVISION hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_rc_envelope/time_to_temperature_threshold 1.0.1 1.0.2 650b50be29fde473cba4e55fdbe224e63e13ee5c8f413d39c3c9d78134f9b349\nCHECKED time_to_temperature_threshold.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_rc_envelope\\cooldown_time_to_rearm_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_rc_envelope\\cooldown_time_to_rearm_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_rc_envelope\\cooldown_time_to_rearm_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_rc_envelope\\equilibrium_temperature_under_load_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_rc_envelope\\equilibrium_temperature_under_load_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_rc_envelope\\equilibrium_temperature_under_load_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_rc_envelope\\time_to_temperature_threshold_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_rc_envelope\\time_to_temperature_threshold_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_rc_envelope\\time_to_temperature_threshold_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_telemetry_governance",
+      "exit": 0,
+      "stdout": "freshness_at_use_margin.py\nfreshness_at_use_margin.py\n  compute_freshness_at_use_margin = 3.0\n  lambdified = 5.0\n  compute_freshness_at_use_margin = 3.0\n  lambdified = 5.0\nREVISION hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_telemetry_governance/freshness_at_use_margin 1.0.0 1.0.1 a88081c1113d7b9320869fa5905581ede8b1f677c29d87b9e70742b1b557a9e1\nCHECKED freshness_at_use_margin.py\nmultisensor_consistency_margin.py\nmultisensor_consistency_margin.py\n  compute_multisensor_consistency_margin = 2.0\n  lambdified = -1.0\n  compute_multisensor_consistency_margin = 2.0\n  lambdified = -1.0\nREVISION hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_telemetry_governance/multisensor_consistency_margin 1.0.0 1.0.1 96502528d99c88120dd80ea67cd61ece001f3849764b5ea79b1a9f8da8001df3\nCHECKED multisensor_consistency_margin.py\nsampling_observability_margin.py\nsampling_observability_margin.py\n  compute_sampling_observability_margin = 5.0\n  lambdified = -2.5\n  compute_sampling_observability_margin = 5.0\n  lambdified = -2.5\nREVISION hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_telemetry_governance/sampling_observability_margin 1.0.0 1.0.1 b32d91726f65e2bad2aa660d805a1d6e1639eb316765e9f084308195caed257b\nCHECKED sampling_observability_margin.py\nslew_rate_plausibility_margin.py\nslew_rate_plausibility_margin.py\n  compute_slew_rate_plausibility_margin = 1.0\n  lambdified = 4.75\n  compute_slew_rate_plausibility_margin = 1.0\n  lambdified = 4.75\nREVISION hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_telemetry_governance/slew_rate_plausibility_margin 1.0.0 1.0.1 c303558a57d939b51b502830880960748fefb2a3755afd83e97f8978a76c9e4b\nCHECKED slew_rate_plausibility_margin.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_telemetry_governance\\freshness_at_use_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_telemetry_governance\\freshness_at_use_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_telemetry_governance\\freshness_at_use_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_telemetry_governance\\multisensor_consistency_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_telemetry_governance\\multisensor_consistency_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_telemetry_governance\\multisensor_consistency_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_telemetry_governance\\sampling_observability_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_telemetry_governance\\sampling_observability_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_telemetry_governance\\sampling_observability_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_telemetry_governance\\slew_rate_plausibility_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_telemetry_governance\\slew_rate_plausibility_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_telemetry_governance\\slew_rate_plausibility_margin_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_timing_authority",
+      "exit": 0,
+      "stdout": "clock_derate_fraction.py\nclock_derate_fraction.py\n  compute_clock_derate_fraction = 0.75\n  lambdified_unclipped = 6.0\n  compute_clock_derate_fraction = 0.75\n  lambdified_unclipped = 6.0\nREVISION hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_timing_authority/clock_derate_fraction 1.0.0 1.0.1 1243af93b4a7fb96d16da30f20844700b6affa12439ff324f3fbedee7f3b5614\nCHECKED clock_derate_fraction.py\ndeadline_margin_under_derate.py\ndeadline_margin_under_derate.py\n  compute_deadline_margin_under_derate = 0.0\n  lambdified = 1.25\n  compute_deadline_margin_under_derate = 0.0\n  lambdified = 1.25\nREVISION hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_timing_authority/deadline_margin_under_derate 1.0.0 1.0.1 f4ca4d1f43cc60d00b27466267ccf090bea2bc4a732518d45ca76b8b1024ce00\nCHECKED deadline_margin_under_derate.py\nrecovery_hysteresis_margin.py\nrecovery_hysteresis_margin.py\n  compute_recovery_hysteresis_margin = 5.0\n  lambdified = 1.0\n  compute_recovery_hysteresis_margin = 5.0\n  lambdified = 1.0\nREVISION hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_timing_authority/recovery_hysteresis_margin 1.0.0 1.0.1 8826f6da2435874482fbaee31cb0f75264438fecc852a7ee1023df0d08e50289\nCHECKED recovery_hysteresis_margin.py\nthermal_authority_scale.py\nthermal_authority_scale.py\n  compute_thermal_authority_scale = 0.2\n  compute_thermal_authority_scale = 0.2\nREVISION hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_timing_authority/thermal_authority_scale 1.0.0 1.0.1 c7945f65507a3693f9dbc38a406ae822918468bf54e76792c14836e3669b78cb\nCHECKED thermal_authority_scale.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_timing_authority\\clock_derate_fraction_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_timing_authority\\clock_derate_fraction_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_timing_authority\\clock_derate_fraction_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_timing_authority\\deadline_margin_under_derate_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_timing_authority\\deadline_margin_under_derate_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_timing_authority\\deadline_margin_under_derate_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_timing_authority\\recovery_hysteresis_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_timing_authority\\recovery_hysteresis_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_timing_authority\\recovery_hysteresis_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_timing_authority\\thermal_authority_scale_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_timing_authority\\thermal_authority_scale_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_cross_domain_models\\thermal_timing_authority\\thermal_authority_scale_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "hardware_viability/thermal/thermal_truth/thermal_distortion",
+      "exit": 0,
+      "stdout": "thermal_distortion_index.py\nthermal_distortion_index.py\n  compute_thermal_distortion_index = 1.0\n  compute_thermal_distortion_index = 1.0\nREVISION hardware_viability/thermal/thermal_truth/thermal_distortion/thermal_distortion_index 1.0.0 1.0.1 de9f82cc76eca94d69b986147a27875bcc77873cd13e86297c7aa2bf896a0c39\nCHECKED thermal_distortion_index.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_distortion\\thermal_distortion_index_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_distortion\\thermal_distortion_index_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_distortion\\thermal_distortion_index_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "hardware_viability/thermal/thermal_truth/thermal_qualification",
+      "exit": 0,
+      "stdout": "darkness_hold_margin_hours.py\ndarkness_hold_margin_hours.py\n  compute_darkness_hold_margin_hours = 7.0\n  compute_darkness_hold_margin_hours = 7.0\nREVISION hardware_viability/thermal/thermal_truth/thermal_qualification/darkness_hold_margin_hours 1.0.0 1.0.1 1baaafb31abf6f187cd61a6fe72255d0d8ae4e909f742e8ca1fc71a1589fd297\nCHECKED darkness_hold_margin_hours.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_qualification\\darkness_hold_margin_hours_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_qualification\\darkness_hold_margin_hours_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_qualification\\darkness_hold_margin_hours_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "hardware_viability/thermal/thermal_truth/thermal_two_layer",
+      "exit": 0,
+      "stdout": "surface_radiative_forcing_density.py\nsurface_radiative_forcing_density.py\n  compute_surface_radiative_forcing_density = 200.0\n  compute_surface_radiative_forcing_density = 200.0\nREVISION hardware_viability/thermal/thermal_truth/thermal_two_layer/surface_radiative_forcing_density 1.0.0 1.0.1 2032984b2695a5dd2e2cda53399b217b91df27245c3c1e08a308691ed2b823cc\nCHECKED surface_radiative_forcing_density.py\ntwo_layer_temperature_step.py\ntwo_layer_temperature_step.py\n  compute_two_layer_temperature_step = [19.0, 10.5]\n  compute_two_layer_temperature_step = [19.0, 10.5]\nREVISION hardware_viability/thermal/thermal_truth/thermal_two_layer/two_layer_temperature_step 1.0.0 1.0.1 871c0bc306cded071a7495cd2d2cddde52b2a0ab2d432aba5af60dcaa807de0a\nCHECKED two_layer_temperature_step.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_two_layer\\surface_radiative_forcing_density_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_two_layer\\surface_radiative_forcing_density_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_two_layer\\surface_radiative_forcing_density_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_two_layer\\two_layer_temperature_step_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_two_layer\\two_layer_temperature_step_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\thermal\\thermal_truth\\thermal_two_layer\\two_layer_temperature_step_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "hardware_viability/time_control_enforcement",
+      "exit": 0,
+      "stdout": "dead_mans_switch.py\ndead_mans_switch.py\n  verify_dead_mans_switch_trace = {\"passed\": true, \"violations\": []}\n  lambdified_margin = -1.0\n  verify_dead_mans_switch_trace = {\"passed\": true, \"violations\": []}\n  lambdified_margin = -1.0\nREVISION hardware_viability/time_control_enforcement/dead_mans_switch 1.0.0 1.0.1 3a443322e5d639beb634d6981c3b02a708f27e9a6b5fefc52e5cdc3ed5e8cf25\nCHECKED dead_mans_switch.py\nmonte_carlo_failure_predictor.py\nmonte_carlo_failure_predictor.py\n  failure_probability = 0.3333333333333333\n  failed_indices = [1]\n  IID standard_error = 0.2721655269759087\n  lambdified ratio = 0.3333333333333333\n  symbolic_expression = \"failures / N\"\n  LHS and Sobol standard errors = [null, null]\n  Sobol validity warning count = 2\n  signed campaign deltas = {\"LHS_minus_Sobol\": -0.3333333333333333, \"MC_minus_LHS\": 0.3333333333333333, \"MC_minus_Sobol\": 0.0}\n  inclusive gate = true\n  terminal pocket gate = false\n  failure_probability = 0.3333333333333333\n  failed_indices = [1]\n  IID standard_error = 0.2721655269759087\n  lambdified ratio = 0.3333333333333333\n  symbolic_expression = \"failures / N\"\n  LHS and Sobol standard errors = [null, null]\n  Sobol validity warning count = 2\n  signed campaign deltas = {\"LHS_minus_Sobol\": -0.3333333333333333, \"MC_minus_LHS\": 0.3333333333333333, \"MC_minus_Sobol\": 0.0}\n  inclusive gate = true\n  terminal pocket gate = false\nREVISION hardware_viability/time_control_enforcement/monte_carlo_failure_predictor 1.0.0 1.0.1 2a1f9680d0888e7ea610b8b6bde5551bbbca825b1db9524c3ab93f3362fe8205\nCHECKED monte_carlo_failure_predictor.py\npavlovian_reflex_state_machine.py\npavlovian_reflex_state_machine.py\n  compute_reflex_gate = false\n  compute_next_state = \"ALTERNATE\"\n  lambdified_gate_margin = -1.0\n  compute_reflex_gate = false\n  compute_next_state = \"ALTERNATE\"\n  lambdified_gate_margin = -1.0\nREVISION hardware_viability/time_control_enforcement/pavlovian_reflex_state_machine 1.0.0 1.0.1 f29c86bf2fc52258a83fcb29ee60d08391b3f0d6a161b8e728f764aa90063e6a\nCHECKED pavlovian_reflex_state_machine.py\npid_control.py\npid_control.py\n  compute_pid_control = 7.5\n  lambdified = 56.0\n  compute_pid_control = 7.5\n  lambdified = 56.0\nREVISION hardware_viability/time_control_enforcement/pid_control 1.0.0 1.0.1 9456d33b19899de798d0bc26313e213a16be2cc306d9120a9069a3edb6334e5c\nCHECKED pid_control.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\dead_mans_switch_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\dead_mans_switch_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\dead_mans_switch_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\monte_carlo_failure_predictor_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\monte_carlo_failure_predictor_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\monte_carlo_failure_predictor_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\pavlovian_reflex_state_machine_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\pavlovian_reflex_state_machine_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\pavlovian_reflex_state_machine_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\pid_control_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\pid_control_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\pid_control_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "hardware_viability/time_control_enforcement/timing_validity",
+      "exit": 0,
+      "stdout": "age_of_information.py\nage_of_information.py\n  compute_age_of_information_margin = 0.5\n  compute_age_of_information_margin = 0.5\nREVISION hardware_viability/time_control_enforcement/timing_validity/age_of_information 1.0.0 1.0.1 dda5c7754d6e2af4bf8b0c1f676c3665a85da8d117a8e7343e3839baf11c6981\nCHECKED age_of_information.py\nephemeris_horizon_coherence_margin.py\nephemeris_horizon_coherence_margin.py\n  compute_ephemeris_horizon_coherence_margin = 0.30000000000000004\n  compute_ephemeris_horizon_coherence_margin = 0.30000000000000004\nREVISION hardware_viability/time_control_enforcement/timing_validity/ephemeris_horizon_coherence_margin 1.0.0 1.0.1 75c8f9c2397bf6b095657262814297da1ff7cbf935002574b20e86b9cb5c28ba\nCHECKED ephemeris_horizon_coherence_margin.py\nmixed_stream_temporal_coherence.py\nmixed_stream_temporal_coherence.py\n  compute_mixed_stream_temporal_coherence_score = 0.19999999999999996\n  compute_mixed_stream_temporal_coherence_score = 0.19999999999999996\nREVISION hardware_viability/time_control_enforcement/timing_validity/mixed_stream_temporal_coherence 1.0.0 1.0.1 27dbdce075567265cd9040e9c874e810834af2b324d1c8a7c71761ad12318453\nCHECKED mixed_stream_temporal_coherence.py\nsequence_replay_integrity.py\nsequence_replay_integrity.py\n  compute_sequence_replay_integrity_score = 0\n  compute_sequence_replay_integrity_score = 0\nREVISION hardware_viability/time_control_enforcement/timing_validity/sequence_replay_integrity 1.0.0 1.0.1 55bebd79575012b55ef418787b45b8a641f02396974c8aa3b9c7584452fc7f4b\nCHECKED sequence_replay_integrity.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\timing_validity\\age_of_information_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\timing_validity\\age_of_information_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\timing_validity\\age_of_information_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\timing_validity\\ephemeris_horizon_coherence_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\timing_validity\\ephemeris_horizon_coherence_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\timing_validity\\ephemeris_horizon_coherence_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\timing_validity\\mixed_stream_temporal_coherence_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\timing_validity\\mixed_stream_temporal_coherence_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\timing_validity\\mixed_stream_temporal_coherence_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\timing_validity\\sequence_replay_integrity_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\timing_validity\\sequence_replay_integrity_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\hardware_viability\\time_control_enforcement\\timing_validity\\sequence_replay_integrity_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "network-and-compute/compute_queueing_limits",
+      "exit": 0,
+      "stdout": "amdahl_cluster_limit.py\namdahl_cluster_limit.py\n  compute_amdahl_speedup = 2.0\n  lambdified = -2.9999999999999996\n  compute_amdahl_speedup = 2.0\n  lambdified = -2.9999999999999996\nREVISION network-and-compute/compute_queueing_limits/amdahl_cluster_limit 1.0.0 1.0.1 c76b26bb88428e3d3f5854c467d1d834cc763e4851ecdca7d9629e17aa7fd47d\nCHECKED amdahl_cluster_limit.py\nlittles_law_queue.py\nlittles_law_queue.py\n  compute_little_law_queue_length = 5.0\n  compute_queue_margin = 3.0\n  should_throttle = true\n  lambdified = 6.0\n  compute_little_law_queue_length = 5.0\n  compute_queue_margin = 3.0\n  should_throttle = true\n  lambdified = 6.0\nREVISION network-and-compute/compute_queueing_limits/littles_law_queue 1.0.0 1.0.1 3051cbe15582abb7f0b3d989ca41385a29c313e7c8e63f01551315ed8da81a15\nCHECKED littles_law_queue.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\network-and-compute\\compute_queueing_limits\\amdahl_cluster_limit_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\network-and-compute\\compute_queueing_limits\\amdahl_cluster_limit_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\network-and-compute\\compute_queueing_limits\\amdahl_cluster_limit_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\network-and-compute\\compute_queueing_limits\\littles_law_queue_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\network-and-compute\\compute_queueing_limits\\littles_law_queue_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\network-and-compute\\compute_queueing_limits\\littles_law_queue_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "network-and-compute/network_execution_bounds",
+      "exit": 0,
+      "stdout": "doda_latency_bound.py\ndoda_latency_bound.py\n  compute_latency_budget_margin = 0.4\n  within_latency_budget = true\n  lambdified_margin = -1.0\n  compute_latency_budget_margin = 0.4\n  within_latency_budget = true\n  lambdified_margin = -1.0\nREVISION network-and-compute/network_execution_bounds/doda_latency_bound 1.0.0 1.0.1 9a0fc14e98a88270413ee30abef121f10d7d3b23529d5420eb486a8216e39aa7\nCHECKED doda_latency_bound.py\nk_connectivity_survival.py\nk_connectivity_survival.py\n  has_two_independent_paths = true\n  lambdified_margin = 0.0\n  has_two_independent_paths = true\n  lambdified_margin = 0.0\nREVISION network-and-compute/network_execution_bounds/k_connectivity_survival 1.0.0 1.0.1 466f6ee36a59ff6ea6d350c12a26027d50c8a6372a779237f2d83beb44a836cb\nCHECKED k_connectivity_survival.py\nquarantine_blast_radius.py\nquarantine_blast_radius.py\n  shortest_hop_distances = {\"a\": 0, \"b\": 1, \"c\": 2}\n  compute_blast_radius = 2\n  lambdified_distance_identity = 2.0\n  shortest_hop_distances = {\"a\": 0, \"b\": 1, \"c\": 2}\n  compute_blast_radius = 2\n  lambdified_distance_identity = 2.0\nREVISION network-and-compute/network_execution_bounds/quarantine_blast_radius 1.0.0 1.0.1 8e2650e6169e57bfd09e43a1e1385eb4ad7f2d97f4428699e2c8c317d066e266\nCHECKED quarantine_blast_radius.py\nshannon_hartley_capacity.py\nshannon_hartley_capacity.py\n  compute_channel_capacity_bps = 200.0\n  lambdified = 1.6147098441152081\n  compute_channel_capacity_bps = 200.0\n  lambdified = 1.6147098441152081\nREVISION network-and-compute/network_execution_bounds/shannon_hartley_capacity 1.0.0 1.0.1 00c53d1662d6c81e80aa375f3416d8154caeab2ffaeb94effc6198d1b0923d4f\nCHECKED shannon_hartley_capacity.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\network-and-compute\\network_execution_bounds\\doda_latency_bound_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\network-and-compute\\network_execution_bounds\\doda_latency_bound_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\network-and-compute\\network_execution_bounds\\doda_latency_bound_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\network-and-compute\\network_execution_bounds\\k_connectivity_survival_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\network-and-compute\\network_execution_bounds\\k_connectivity_survival_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\network-and-compute\\network_execution_bounds\\k_connectivity_survival_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\network-and-compute\\network_execution_bounds\\quarantine_blast_radius_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\network-and-compute\\network_execution_bounds\\quarantine_blast_radius_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\network-and-compute\\network_execution_bounds\\quarantine_blast_radius_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\network-and-compute\\network_execution_bounds\\shannon_hartley_capacity_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\network-and-compute\\network_execution_bounds\\shannon_hartley_capacity_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\network-and-compute\\network_execution_bounds\\shannon_hartley_capacity_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "plant_fidelity",
+      "exit": 0,
+      "stdout": "Control-allocation-residual.py\nControl-allocation-residual.py\n  compute_control_allocation_residual = 2.23606797749979\n  compute_control_allocation_residual = 2.23606797749979\n  compute_control_allocation_residual = 2.23606797749979\n  compute_control_allocation_residual = 2.23606797749979\nREVISION plant_fidelity/Control-allocation-residual 1.0.0 1.0.1 2195772d7353da67ca587359a3e5e1d4ac0ba3d8549ff571b21caa75d83e142b\nCHECKED Control-allocation-residual.py\nCoupled rigid-body 6-DOF propagation.py\nCoupled rigid-body 6-DOF propagation.py\n  compute_rigid_body_6dof_step = {\"angular_acceleration\": [-0.029999999999999985, 0.35333333333333333, -0.005000000000000001], \"linear_acceleration\": [1.0, 0.0, 0.0], \"omega\": [0.097, 0.23533333333333334, 0.2995], \"position\": [1.0, 2.1, 3.0], \"quaternion\": [0.9998250459241057, 0.004999125229620529, 0.009998250459241059, 0.014997375688861584], \"velocity\": [0.1, 1.0, 0.0]}\n  compute_rigid_body_6dof_step = {\"angular_acceleration\": [-0.029999999999999985, 0.35333333333333333, -0.005000000000000001], \"linear_acceleration\": [1.0, 0.0, 0.0], \"omega\": [0.097, 0.23533333333333334, 0.2995], \"position\": [1.0, 2.1, 3.0], \"quaternion\": [0.9998250459241057, 0.004999125229620529, 0.009998250459241059, 0.014997375688861584], \"velocity\": [0.1, 1.0, 0.0]}\nREVISION plant_fidelity/Coupled rigid-body 6-DOF propagation 1.0.0 1.0.1 94feea293dbb70703de468cae6bc8f5aba87e8c1b1001e2f4cc8c81f1cd3738a\nCHECKED Coupled rigid-body 6-DOF propagation.py\nTruth-conditioned-safe-velocity-margin.py\nTruth-conditioned-safe-velocity-margin.py\n  compute_truth_conditioned_safe_velocity_margin = -0.5\n  compute_truth_conditioned_safe_velocity_margin = -0.5\nREVISION plant_fidelity/Truth-conditioned-safe-velocity-margin 1.0.0 1.0.1 48151533ece0dee08fe8a22e1a322e9ed3d3b6172bf29f15b29cc05ec53725b6\nCHECKED Truth-conditioned-safe-velocity-margin.py\ncurvature_feasibility_margin.py\ncurvature_feasibility_margin.py\n  compute_curvature_feasibility_margin = 3.249999999999999\n  compute_curvature_feasibility_margin = 3.249999999999999\nREVISION plant_fidelity/curvature_feasibility_margin 1.0.0 1.0.1 af6d81e9cb832c83bc5543b23e75805401ccad10e9563ff19b2243cb2e94b1d8\nCHECKED curvature_feasibility_margin.py\nnewton_euler_translational.py\nnewton_euler_translational.py\n  compute_translational_acceleration = 1.209\n  compute_translational_acceleration = 1.209\nREVISION plant_fidelity/newton_euler_translational 1.0.0 1.0.1 09437dc37964cd916a9efff10b67efd2b4f8a3d9b9ee3399c766df0f33a9bfd5\nCHECKED newton_euler_translational.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\plant_fidelity\\Control-allocation-residual_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\plant_fidelity\\Control-allocation-residual_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\plant_fidelity\\Control-allocation-residual_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\plant_fidelity\\Coupled rigid-body 6-DOF propagation_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\plant_fidelity\\Coupled rigid-body 6-DOF propagation_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\plant_fidelity\\Coupled rigid-body 6-DOF propagation_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\plant_fidelity\\Truth-conditioned-safe-velocity-margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\plant_fidelity\\Truth-conditioned-safe-velocity-margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\plant_fidelity\\Truth-conditioned-safe-velocity-margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\plant_fidelity\\curvature_feasibility_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\plant_fidelity\\curvature_feasibility_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\plant_fidelity\\curvature_feasibility_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\plant_fidelity\\newton_euler_translational_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\plant_fidelity\\newton_euler_translational_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\plant_fidelity\\newton_euler_translational_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "plant_fidelity/contact_dynamics",
+      "exit": 0,
+      "stdout": "contact_energy_margin.py\ncontact_energy_margin.py\n  compute_contact_energy_margin = 7.053669999999999\n  compute_contact_energy_margin = 7.053669999999999\nREVISION plant_fidelity/contact_dynamics/contact_energy_margin 1.0.0 1.0.1 b8350891d24a71768941a4dec4094e24b8de5d235b3c8ed6dd2d9ff6a58a562c\nCHECKED contact_energy_margin.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\plant_fidelity\\contact_dynamics\\contact_energy_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\plant_fidelity\\contact_dynamics\\contact_energy_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\plant_fidelity\\contact_dynamics\\contact_energy_margin_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "plant_fidelity/plant_abortability",
+      "exit": 0,
+      "stdout": "waveoff_closure_margin.py\nwaveoff_closure_margin.py\n  compute_waveoff_closure_margin = 2.5\n  compute_waveoff_closure_margin = 2.5\nREVISION plant_fidelity/plant_abortability/waveoff_closure_margin 1.0.0 1.0.1 2796152ec78db1dc57990444acf1dbb9c42a51c1922f16dde302bfe9b81900ca\nCHECKED waveoff_closure_margin.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\plant_fidelity\\plant_abortability\\waveoff_closure_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\plant_fidelity\\plant_abortability\\waveoff_closure_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\plant_fidelity\\plant_abortability\\waveoff_closure_margin_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "provenance_governance",
+      "exit": 0,
+      "stdout": "lineage_completeness_margin.py\nlineage_completeness_margin.py\n  compute_lineage_completeness_margin = 0\n  compute_lineage_completeness_margin = 0\nREVISION provenance_governance/lineage_completeness_margin 1.0.0 1.0.1 7f6e9a66b7ef1700a2094b7d9c246adf0b831d7fe49474ed1443ab30812a885e\nCHECKED lineage_completeness_margin.py\nprovenance_completeness_margin.py\nprovenance_completeness_margin.py\n  compute_provenance_completeness_margin = -1\n  compute_provenance_completeness_margin = -1\nREVISION provenance_governance/provenance_completeness_margin 1.0.0 1.0.1 2e8313e0621cbdfe80e558a19852960916dfac09138886d4d12dee574121299c\nCHECKED provenance_completeness_margin.py\nprovenance_truth_ceiling.py\nprovenance_truth_ceiling.py\n  compute_provenance_truth_ceiling = 0.4\n  compute_provenance_truth_ceiling = 0.4\nREVISION provenance_governance/provenance_truth_ceiling 1.0.0 1.0.1 bbfe784786446885f145413808c9b88fc336fa5045006a3f9fd31aac49c506a0\nCHECKED provenance_truth_ceiling.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\provenance_governance\\lineage_completeness_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\provenance_governance\\lineage_completeness_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\provenance_governance\\lineage_completeness_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\provenance_governance\\provenance_completeness_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\provenance_governance\\provenance_completeness_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\provenance_governance\\provenance_completeness_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\provenance_governance\\provenance_truth_ceiling_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\provenance_governance\\provenance_truth_ceiling_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\provenance_governance\\provenance_truth_ceiling_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "safety_pace",
+      "exit": 0,
+      "stdout": "margin_to_death.py\nmargin_to_death.py\n  compute_margin_to_death = 0.19999999999999996\n  compute_margin_to_death = 0.19999999999999996\nREVISION safety_pace/margin_to_death 1.0.0 1.0.1 2ff200709413953d3d8cf28282946d60612fbf6ae5f5eaf47289ecbfa007aedd\nCHECKED margin_to_death.py\npace_transition_guards.py\npace_transition_guards.py\n  compute_pace_transition = \"A\"\n  compute_pace_transition = \"A\"\n  compute_pace_transition = \"A\"\n  compute_pace_transition = \"A\"\nREVISION safety_pace/pace_transition_guards 1.0.0 1.0.1 ad95a4e88e2017576b7bc48727fddaaa8383618bf728e8dc2650c8305c2d8545\nCHECKED pace_transition_guards.py\nsafe_operational_space.py\nsafe_operational_space.py\n  compute_safe_operational_space = true\n  compute_safe_operational_space = true\nREVISION safety_pace/safe_operational_space 1.0.0 1.0.1 7eaa7004f4072bc105f4e9024fb9f97e13526af919fba371d6665483754f4673\nCHECKED safe_operational_space.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\safety_pace\\margin_to_death_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\safety_pace\\margin_to_death_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\safety_pace\\margin_to_death_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\safety_pace\\pace_transition_guards_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\safety_pace\\pace_transition_guards_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\safety_pace\\pace_transition_guards_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\safety_pace\\safe_operational_space_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\safety_pace\\safe_operational_space_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\safety_pace\\safe_operational_space_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "sampling_based_reachability_search",
+      "exit": 0,
+      "stdout": "sampling_based_reachability.py\nsampling_based_reachability.py\n  SamplingReachabilitySearch = \"REACHABILITY_WITNESS_FOUND\"\n  SamplingReachabilitySearch = \"COLLAPSE_PRESSURE_DOMINANT\"\n  SamplingReachabilitySearch = \"REACHABILITY_WITNESS_FOUND\"\n  SamplingReachabilitySearch = \"COLLAPSE_PRESSURE_DOMINANT\"\nREVISION sampling_based_reachability_search/sampling_based_reachability 1.0.0 1.0.1 015fb4f8eca28ae126b015d01abebba6bb6dc1ea8efed7340d5913248cdd0f53\nCHECKED sampling_based_reachability.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\sampling_based_reachability_search\\sampling_based_reachability_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\sampling_based_reachability_search\\sampling_based_reachability_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\sampling_based_reachability_search\\sampling_based_reachability_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "space-and-comms",
+      "exit": 0,
+      "stdout": "authority_lease_closure_margin.py\nauthority_lease_closure_margin.py\n  compute_authority_lease_closure_margin = -5.199999999999999\n  compute_authority_lease_closure_margin = -5.199999999999999\nREVISION space-and-comms/authority_lease_closure_margin 1.0.0 1.0.1 eeb45c579e21eac567c03aa3e6d8cea36a1c5e342df328bce31f12c9f00de55d\nCHECKED authority_lease_closure_margin.py\ncovariance_weighted_fusion.py\ncovariance_weighted_fusion.py\n  fuse_estimates = [[[1.1990995497748875, 0.015007503751875937], [0.015007503751875938, 0.7498749374687343]], [1.7843921960980489, 1.2601300650325162]]\n  fuse_estimates = [[[1.1990995497748875, 0.015007503751875937], [0.015007503751875938, 0.7498749374687343]], [1.7843921960980489, 1.2601300650325162]]\nREVISION space-and-comms/covariance_weighted_fusion 1.0.0 1.0.1 e87d561744f909e6c8dfbf68b99378d65ee60890dae642e7995109de03c65118\nCHECKED covariance_weighted_fusion.py\nhandoff_survival.py\nhandoff_survival.py\n  check_handoff_survival = true\n  check_handoff_survival = true\nREVISION space-and-comms/handoff_survival 1.0.0 1.0.1 e11be857e5614e73932c9d19ee4cf7c405268d9a9ecc1abc78b279935cc31e7d\nCHECKED handoff_survival.py\norbital_dynamics.py\norbital_dynamics.py\n  compute_mean_motion = 1.7888543819998317\n  compute_j2_nodal_precession = -0.15355984614182427\n  compute_mean_motion = 1.7888543819998317\n  compute_j2_nodal_precession = -0.15355984614182427\nREVISION space-and-comms/orbital_dynamics 1.0.0 1.0.1 251f4202e1b573da31d04829662ef7bf9717c8666a6099a5ca1ea9e57dc951e1\nCHECKED orbital_dynamics.py\nsensor_actuator_delay_budget.py\nsensor_actuator_delay_budget.py\n  compute_sensor_to_actuator_delay_budget_margin = -5.199999999999999\n  compute_sensor_to_actuator_delay_budget_margin = -5.199999999999999\nREVISION space-and-comms/sensor_actuator_delay_budget 1.0.0 1.0.1 27c12557c53e058ae300d42978a3fb6c708d92503e4f57958991465679905b01\nCHECKED sensor_actuator_delay_budget.py\nvolley_successor.py\nvolley_successor.py\n  update_volley_successor = 0.30000000000000004\n  update_volley_successor = 0.30000000000000004\nREVISION space-and-comms/volley_successor 1.0.0 1.0.1 1efc567b5768e6ae786c51e8cae71e3c230e5f6be1c30812cc8004c286732215\nCHECKED volley_successor.py\n",
+      "stderr": "Active policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\space-and-comms\\authority_lease_closure_margin_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\space-and-comms\\authority_lease_closure_margin_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\space-and-comms\\authority_lease_closure_margin_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\space-and-comms\\covariance_weighted_fusion_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\space-and-comms\\covariance_weighted_fusion_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\space-and-comms\\covariance_weighted_fusion_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\space-and-comms\\handoff_survival_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\space-and-comms\\handoff_survival_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\space-and-comms\\handoff_survival_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\space-and-comms\\orbital_dynamics_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\space-and-comms\\orbital_dynamics_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\space-and-comms\\orbital_dynamics_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\space-and-comms\\sensor_actuator_delay_budget_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\space-and-comms\\sensor_actuator_delay_budget_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\space-and-comms\\sensor_actuator_delay_budget_policy.toml.manifest.json).\nActive policy load failed for C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\space-and-comms\\volley_successor_policy.toml: Missing policy (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\space-and-comms\\volley_successor_policy.toml) or manifest (C:\\Users\\charl\\AppData\\Local\\Temp\\tmpyc2vvhq6\\empty\\active\\space-and-comms\\volley_successor_policy.toml.manifest.json).\n"
+    },
+    {
+      "scope": "ai_governance/genai_governance/tests/test_genai_governance.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_documented_exports (test_genai_governance.TestGenaiGovernance.test_documented_exports) ... ok\ntest_genai_governance_primitives (test_genai_governance.TestGenaiGovernance.test_genai_governance_primitives) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.036s\n\nOK\n"
+    },
+    {
+      "scope": "ai_governance/genai_safety_governance/tests/test_genai_safety_governance.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_documented_exports (test_genai_safety_governance.TestGenaiSafetyGovernance.test_documented_exports) ... ok\ntest_heuristic_rejection_gate (test_genai_safety_governance.TestGenaiSafetyGovernance.test_heuristic_rejection_gate) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.033s\n\nOK\n"
+    },
+    {
+      "scope": "ai_governance/genai_trust_governance/tests/test_genai_trust_governance.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_context_saturation_index (test_genai_trust_governance.TestGenaiTrustGovernance.test_context_saturation_index) ... ok\ntest_documented_exports (test_genai_trust_governance.TestGenaiTrustGovernance.test_documented_exports) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.034s\n\nOK\n"
+    },
+    {
+      "scope": "ai_governance/genai_truth_governance/tests/test_genai_truth_governance.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_documented_exports (test_genai_truth_governance.TestGenaiTruthGovernance.test_documented_exports) ... ok\ntest_generative_divergence_margin (test_genai_truth_governance.TestGenaiTruthGovernance.test_generative_divergence_margin) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.031s\n\nOK\n"
+    },
+    {
+      "scope": "environment_geometry/horizon_geometry/tests/test_horizon_geometry.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_documented_exports (test_horizon_geometry.TestHorizonGeometry.test_documented_exports) ... ok\ntest_horizon_geometry_margins (test_horizon_geometry.TestHorizonGeometry.test_horizon_geometry_margins) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.032s\n\nOK\n"
+    },
+    {
+      "scope": "environment_geometry/terrain_truth/tests/test_terrain_truth.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_documented_exports (test_terrain_truth.TestTerrainTruth.test_documented_exports) ... ok\ntest_terrain_truth_margins_and_gates (test_terrain_truth.TestTerrainTruth.test_terrain_truth_margins_and_gates) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.041s\n\nOK\n"
+    },
+    {
+      "scope": "estimation_detection/truth_sensor_fusion/test_truth_sensor_fusion.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_bayes (test_truth_sensor_fusion.TruthFusionTests.test_bayes) ... ok\ntest_scalar_kalman_update (test_truth_sensor_fusion.TruthFusionTests.test_scalar_kalman_update) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.008s\n\nOK\n"
+    },
+    {
+      "scope": "hardware_viability/actuator/test_lawful_actuation_clf_cbf_qp.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_source_and_portable_solver_results (test_lawful_actuation_clf_cbf_qp.LawfulActuationTests.test_source_and_portable_solver_results) ... ok\ntest_validation (test_lawful_actuation_clf_cbf_qp.LawfulActuationTests.test_validation) ... ok\ntest_vector_hazard_and_explicit_optional_reference (test_lawful_actuation_clf_cbf_qp.LawfulActuationTests.test_vector_hazard_and_explicit_optional_reference) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.285s\n\nOK\n"
+    },
+    {
+      "scope": "hardware_viability/electrical/tests/test_power_survivability.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_documented_exports (test_power_survivability.TestPowerSurvivability.test_documented_exports) ... ok\ntest_power_survivability_margins (test_power_survivability.TestPowerSurvivability.test_power_survivability_margins) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.032s\n\nOK\n"
+    },
+    {
+      "scope": "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/power_thermal_coupling/test_power_thermal_coupling.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_conversion_margin (test_power_thermal_coupling.PowerThermalCouplingTests.test_conversion_margin) ... ok\ntest_duty_temp_margin (test_power_thermal_coupling.PowerThermalCouplingTests.test_duty_temp_margin) ... ok\ntest_effective_power (test_power_thermal_coupling.PowerThermalCouplingTests.test_effective_power) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.004s\n\nOK\n"
+    },
+    {
+      "scope": "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_environment_validity/test_thermal_environment_validity.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_margin (test_thermal_environment_validity.ThermalEnvironmentValidityTests.test_margin) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.002s\n\nOK\n"
+    },
+    {
+      "scope": "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_rc_envelope/test_thermal_rc_envelope.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_cooldown (test_thermal_rc_envelope.ThermalRCEnvelopeTests.test_cooldown) ... ok\ntest_equilibrium (test_thermal_rc_envelope.ThermalRCEnvelopeTests.test_equilibrium) ... ok\ntest_time_to_threshold (test_thermal_rc_envelope.ThermalRCEnvelopeTests.test_time_to_threshold) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.004s\n\nOK\n"
+    },
+    {
+      "scope": "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_telemetry_governance/test_thermal_telemetry_governance.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_consistency (test_thermal_telemetry_governance.ThermalTelemetryGovernanceTests.test_consistency) ... ok\ntest_freshness (test_thermal_telemetry_governance.ThermalTelemetryGovernanceTests.test_freshness) ... ok\ntest_observability (test_thermal_telemetry_governance.ThermalTelemetryGovernanceTests.test_observability) ... ok\ntest_slew (test_thermal_telemetry_governance.ThermalTelemetryGovernanceTests.test_slew) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.006s\n\nOK\n"
+    },
+    {
+      "scope": "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_timing_authority/test_thermal_timing_authority.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_authority_scale (test_thermal_timing_authority.ThermalTimingAuthorityTests.test_authority_scale) ... ok\ntest_clock_derate (test_thermal_timing_authority.ThermalTimingAuthorityTests.test_clock_derate) ... ok\ntest_deadline_margin (test_thermal_timing_authority.ThermalTimingAuthorityTests.test_deadline_margin) ... ok\ntest_hysteresis (test_thermal_timing_authority.ThermalTimingAuthorityTests.test_hysteresis) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.006s\n\nOK\n"
+    },
+    {
+      "scope": "hardware_viability/thermal/thermal_truth/thermal_distortion/tests/test_thermal_distortion.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_documented_exports (test_thermal_distortion.TestThermalDistortion.test_documented_exports) ... ok\ntest_thermal_distortion_index (test_thermal_distortion.TestThermalDistortion.test_thermal_distortion_index) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.031s\n\nOK\n"
+    },
+    {
+      "scope": "hardware_viability/thermal/thermal_truth/thermal_qualification/tests/test_thermal_qualification.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_darkness_hold_margin_hours (test_thermal_qualification.TestThermalQualification.test_darkness_hold_margin_hours) ... ok\ntest_documented_exports (test_thermal_qualification.TestThermalQualification.test_documented_exports) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.030s\n\nOK\n"
+    },
+    {
+      "scope": "hardware_viability/thermal/thermal_truth/thermal_two_layer/tests/test_thermal_two_layer.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_documented_exports (test_thermal_two_layer.TestThermalTwoLayer.test_documented_exports) ... ok\ntest_thermal_two_layer (test_thermal_two_layer.TestThermalTwoLayer.test_thermal_two_layer) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.031s\n\nOK\n"
+    },
+    {
+      "scope": "hardware_viability/time_control_enforcement/test_time_control_enforcement.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_dead_mans_switch (test_time_control_enforcement.TimeControlTests.test_dead_mans_switch) ... ok\ntest_degraded_inverse_kinematics_identity (test_time_control_enforcement.TimeControlTests.test_degraded_inverse_kinematics_identity) ... skipped 'PCC-13 turret aiming model excluded from validation'\ntest_monte_carlo_failure (test_time_control_enforcement.TimeControlTests.test_monte_carlo_failure) ... ok\ntest_pavlovian_state_machine (test_time_control_enforcement.TimeControlTests.test_pavlovian_state_machine) ... ok\ntest_pid (test_time_control_enforcement.TimeControlTests.test_pid) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.016s\n\nOK (skipped=1)\n"
+    },
+    {
+      "scope": "network-and-compute/compute_queueing_limits/test_compute_queueing_limits.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_amdahl (test_compute_queueing_limits.ComputeQueueingTests.test_amdahl) ... ok\ntest_little (test_compute_queueing_limits.ComputeQueueingTests.test_little) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.009s\n\nOK\n"
+    },
+    {
+      "scope": "network-and-compute/network_execution_bounds/test_network_execution_bounds.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_blast_radius (test_network_execution_bounds.NetworkExecutionTests.test_blast_radius) ... ok\ntest_capacity (test_network_execution_bounds.NetworkExecutionTests.test_capacity) ... ok\ntest_k_connectivity (test_network_execution_bounds.NetworkExecutionTests.test_k_connectivity) ... ok\ntest_latency_bound (test_network_execution_bounds.NetworkExecutionTests.test_latency_bound) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.017s\n\nOK\n"
+    },
+    {
+      "scope": "plant_fidelity/plant_abortability/tests/test_plant_abortability.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_documented_exports (test_plant_abortability.TestPlantAbortability.test_documented_exports) ... ok\ntest_waveoff_closure_margin (test_plant_abortability.TestPlantAbortability.test_waveoff_closure_margin) ... ok\n\n----------------------------------------------------------------------\nRan 2 tests in 0.037s\n\nOK\n"
+    },
+    {
+      "scope": "provenance_governance/tests/test_provenance_governance.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_documented_exports (test_provenance_governance.TestProvenanceGovernance.test_documented_exports) ... ok\ntest_provenance_governance (test_provenance_governance.TestProvenanceGovernance.test_provenance_governance) ... ok\ntest_source_claim_ceiling_gate (test_provenance_governance.TestProvenanceGovernance.test_source_claim_ceiling_gate) ... skipped 'Source-claim ceiling gate implementation absent from the supplied archive'\n\n----------------------------------------------------------------------\nRan 3 tests in 0.032s\n\nOK (skipped=1)\n"
+    },
+    {
+      "scope": "sampling_based_reachability_search/Tests/test_sampling_reachability_model.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "test_blocked_path_collapse (test_sampling_reachability_model.ReachabilityModelTests.test_blocked_path_collapse) ... ok\ntest_campaign (test_sampling_reachability_model.ReachabilityModelTests.test_campaign) ... ok\ntest_clear_path_reaches_goal (test_sampling_reachability_model.ReachabilityModelTests.test_clear_path_reaches_goal) ... ok\ntest_distance_and_step (test_sampling_reachability_model.ReachabilityModelTests.test_distance_and_step) ... ok\ntest_obstacle_margin (test_sampling_reachability_model.ReachabilityModelTests.test_obstacle_margin) ... ok\ntest_time_margin (test_sampling_reachability_model.ReachabilityModelTests.test_time_margin) ... ok\ntest_validation_rejects_bad_bounds (test_sampling_reachability_model.ReachabilityModelTests.test_validation_rejects_bad_bounds) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.205s\n\nOK\n"
+    }
+  ]
+}

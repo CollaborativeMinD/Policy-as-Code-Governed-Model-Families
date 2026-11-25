@@ -1,0 +1,139 @@
+version = "1.0.0"
+model_id = "hardware_viability/actuator/mechatronics_power_roundup"
+records = ["GateResult"]
+
+[settings]
+
+[calls."GateResult"]
+value = { "annotation" = "float" }
+passed = { "annotation" = "bool" }
+
+[calls."clamp"]
+value = { "annotation" = "float" }
+low = { "annotation" = "float" }
+high = { "annotation" = "float" }
+
+[calls."pbr001_min_hold_up_time_closure"]
+c_eff_f = { "annotation" = "float" }
+v_start_v = { "annotation" = "float" }
+v_bor_v = { "annotation" = "float" }
+p_crit_w = { "annotation" = "float", "gt" = 0 }
+t_inhibit_s = { "annotation" = "float" }
+t_log_s = { "annotation" = "float" }
+t_reset_s = { "annotation" = "float" }
+
+[calls."pbr002_brownout_entry_guard"]
+v_bus_v = { "annotation" = "float" }
+v_fall_v = { "annotation" = "float" }
+dt_below_s = { "annotation" = "float" }
+tau_confirm_s = { "annotation" = "float" }
+dv_bus_dt_v_per_s = { "annotation" = "float" }
+gamma_drop_v_per_s = { "annotation" = "float" }
+
+[calls."pbr003_stable_restart_gate"]
+v_bus_v = { "annotation" = "float" }
+v_rise_v = { "annotation" = "float" }
+sigma_v = { "annotation" = "float" }
+sigma_max = { "annotation" = "float" }
+dv_bus_dt_v_per_s = { "annotation" = "float" }
+gamma_settle_v_per_s = { "annotation" = "float" }
+dt_above_s = { "annotation" = "float" }
+tau_stable_s = { "annotation" = "float" }
+
+[calls."pbr004_rail_coherence_index"]
+voltages_v = { "annotation" = "Sequence[float]" }
+v_nom_v = { "annotation" = "float", "gt" = 0 }
+rho_max = { "annotation" = "float" }
+
+[calls."ptt001_tau_valid"]
+dv_bus_dt_abs_v_per_s = { "annotation" = "float" }
+tau_base_s = { "annotation" = "float", "gt" = 0 }
+k_dv_s2_per_v = { "annotation" = "float" }
+state_factor = { "annotation" = "float", "gt" = 0 }
+
+[calls."ptt001_power_telemetry_freshness_at_use_gate"]
+t_use_s = { "annotation" = "float" }
+t_stamp_s = { "annotation" = "float" }
+dv_bus_dt_abs_v_per_s = { "annotation" = "float" }
+tau_base_s = { "annotation" = "float" }
+k_dv_s2_per_v = { "annotation" = "float" }
+state_factor = { "annotation" = "float" }
+
+[calls."paa001_actuation_enable_authority_gate"]
+power_valid = { "annotation" = "bool" }
+actuator_bus_valid = { "annotation" = "bool" }
+thermal_valid = { "annotation" = "bool" }
+state_valid = { "annotation" = "bool" }
+fault_latched = { "annotation" = "bool" }
+valid_for_use = { "annotation" = "bool" }
+
+[calls."paa002_actuator_induced_bus_sag_closure"]
+i_step_a = { "annotation" = "float" }
+r_eq_ohm = { "annotation" = "float" }
+l_eq_h = { "annotation" = "float" }
+di_dt_a_per_s = { "annotation" = "float" }
+v_pre_v = { "annotation" = "float" }
+v_hold_v = { "annotation" = "float" }
+
+[calls."paa003_thermal_voltage_derated_actuator_envelope"]
+u_nom = { "annotation" = "float" }
+t_core_c = { "annotation" = "float" }
+t_warn_c = { "annotation" = "float" }
+t_crit_c = { "annotation" = "float" }
+v_bus_v = { "annotation" = "float" }
+v_min_v = { "annotation" = "float" }
+v_nom_v = { "annotation" = "float" }
+
+[calls."paa004_safe_reenable_delay"]
+t_sensor_settle_s = { "annotation" = "float" }
+t_estimator_lock_s = { "annotation" = "float" }
+t_bus_stable_s = { "annotation" = "float" }
+t_clock_sync_s = { "annotation" = "float" }
+t_fault_clear_s = { "annotation" = "float" }
+
+[calls."tpd001_two_node_thermal_rc_step"]
+t_core_c = { "annotation" = "float" }
+t_sink_c = { "annotation" = "float" }
+t_amb_c = { "annotation" = "float" }
+p_loss_w = { "annotation" = "float" }
+c_core_j_per_c = { "annotation" = "float" }
+c_sink_j_per_c = { "annotation" = "float" }
+r_cs_c_per_w = { "annotation" = "float" }
+r_sa_c_per_w = { "annotation" = "float" }
+dt_s = { "annotation" = "float" }
+
+[calls."tpd002_thermal_timing_derate"]
+wcet_nom_s = { "annotation" = "float" }
+t_core_c = { "annotation" = "float" }
+t_ref_c = { "annotation" = "float" }
+k_t_per_c = { "annotation" = "float" }
+t_budget_s = { "annotation" = "float" }
+
+[calls."tpd003_thermal_distortion_confidence_ceiling"]
+conf_nom = { "annotation" = "float" }
+k_conf_per_c = { "annotation" = "float" }
+t_core_c = { "annotation" = "float" }
+t_cal_c = { "annotation" = "float" }
+
+[calls."ecl001_energy_continuity_margin"]
+e_avail = { "annotation" = "float" }
+eta_gen = { "annotation" = "float" }
+p_gen_profile_w = { "annotation" = "Sequence[float]" }
+p_load_profile_w = { "annotation" = "Sequence[float]" }
+dt_s = { "annotation" = "float", "gt" = 0 }
+e_reserve = { "annotation" = "float" }
+e_req = { "annotation" = "float", "gt" = 0 }
+
+[calls."ecl002_regulation_chain_delivery_margin"]
+p_src_w = { "annotation" = "float" }
+eta_stages = { "annotation" = "Sequence[float]" }
+p_parasitic_w = { "annotation" = "float" }
+p_demand_w = { "annotation" = "float", "gt" = 0 }
+
+[calls."ecl003_priority_load_shed_optimization"]
+utilities = { "annotation" = "Sequence[float]" }
+powers_w = { "annotation" = "Sequence[float]" }
+p_avail_w = { "annotation" = "float" }
+p_reserve_w = { "annotation" = "float" }
+critical_indices = { "annotation" = "Sequence[int]", "default" = [], "tuple_default" = true }
+prohibited_indices = { "annotation" = "Sequence[int]", "default" = [], "tuple_default" = true }

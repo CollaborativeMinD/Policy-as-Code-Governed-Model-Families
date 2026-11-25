@@ -1,0 +1,14 @@
+version = "1.0.0"
+model_id = "hardware_viability/actuator/control_allocation_residual"
+records = []
+
+[settings]
+singular_tolerance = { "annotation" = "float", "default" = 1e-15, "gt" = 0 }
+min_sweeps = { "annotation" = "int", "default" = 30, "ge" = 1 }
+sweeps_per_column = { "annotation" = "int", "default" = 5, "ge" = 1 }
+
+[calls."compute_control_allocation_residual"]
+effectiveness_matrix = { "annotation" = "Sequence[Sequence[float]]" }
+desired_wrench = { "annotation" = "Sequence[float]" }
+actuator_min = { "annotation" = "Sequence[float]" }
+actuator_max = { "annotation" = "Sequence[float]" }

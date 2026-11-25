@@ -1,0 +1,9 @@
+version = "1.0.0"
+model_id = "environment_geometry/terrain_truth/terrain_vertical_uncertainty_margin"
+records = []
+
+[settings]
+
+[calls."compute_terrain_vertical_uncertainty_margin"]
+z_uncert_limit_m = { "annotation" = "float" }
+terrain_vertical_uncertainty_m = { "annotation" = "float" }

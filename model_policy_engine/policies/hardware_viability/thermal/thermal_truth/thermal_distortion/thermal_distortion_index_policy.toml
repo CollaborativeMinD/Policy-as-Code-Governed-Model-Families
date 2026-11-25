@@ -1,0 +1,16 @@
+version = "1.0.0"
+model_id = "hardware_viability/thermal/thermal_truth/thermal_distortion/thermal_distortion_index"
+records = []
+
+[settings]
+denominator_floor = { "annotation" = "float", "default" = 1e-09, "gt" = 0 }
+
+[calls."compute_thermal_distortion_index"]
+temp_c = { "annotation" = "float" }
+warning_high_c = { "annotation" = "float" }
+critical_high_c = { "annotation" = "float" }
+latency_baseline_ms = { "annotation" = "float" }
+latency_current_ms = { "annotation" = "float" }
+throughput_baseline_hz = { "annotation" = "float" }
+throughput_current_hz = { "annotation" = "float" }
+clock_fraction = { "annotation" = "float" }

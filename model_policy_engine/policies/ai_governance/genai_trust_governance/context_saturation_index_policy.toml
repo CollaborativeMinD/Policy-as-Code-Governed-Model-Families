@@ -1,0 +1,16 @@
+version = "1.0.0"
+model_id = "ai_governance/genai_trust_governance/context_saturation_index"
+records = []
+
+[settings]
+component_weights = { annotation = "tuple[float, float, float]", default = [0.5, 0.3, 0.2], items_ge = 0, sum_eq = 1 }
+
+[calls."clamp01"]
+value = { "annotation" = "float" }
+
+[calls."compute_context_saturation_index"]
+token_pressure_ratio = { "annotation" = "float" }
+conflict_count = { "annotation" = "int" }
+source_count = { "annotation" = "int" }
+safe_conflict_budget = { "annotation" = "int", "default" = 3, "gt" = 0 }
+safe_source_budget = { "annotation" = "int", "default" = 4, "gt" = 0 }

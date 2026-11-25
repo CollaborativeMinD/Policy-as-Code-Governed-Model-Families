@@ -1,0 +1,12 @@
+version = "1.0.0"
+model_id = "provenance_governance/provenance_truth_ceiling"
+records = []
+
+[settings]
+
+[calls."compute_provenance_truth_ceiling"]
+source_ceiling = { "annotation" = "float" }
+lineage_completeness = { "annotation" = "float" }
+contract_validity = { "annotation" = "float" }
+temporal_validity = { "annotation" = "float" }
+semantic_alignment = { "annotation" = "float" }

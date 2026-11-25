@@ -1,0 +1,10 @@
+version = "1.0.0"
+model_id = "hardware_viability/queue/time_to_queue_violation"
+records = []
+
+[settings]
+
+[calls."compute_time_to_queue_violation"]
+queue_backlog_items = { "annotation" = "int" }
+queue_crit_items = { "annotation" = "int" }
+dQ_dt_items_per_s = { "annotation" = "float" }

@@ -1,0 +1,13 @@
+version = "1.0.0"
+model_id = "hardware_viability/actuator/attainable_wrench_residual"
+records = []
+
+[settings]
+
+[calls."compute_attainable_wrench_residual"]
+allocation_matrix = { "annotation" = "list[list[float]]" }
+commanded_actuator = { "annotation" = "list[float]" }
+u_min = { "annotation" = "list[float]" }
+u_max = { "annotation" = "list[float]" }
+commanded_wrench = { "annotation" = "list[float]" }
+weight_matrix = { "annotation" = "list[list[float]] | None", "none" = true }

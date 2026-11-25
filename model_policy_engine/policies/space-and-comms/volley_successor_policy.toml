@@ -1,0 +1,10 @@
+version = "1.0.0"
+model_id = "space-and-comms/volley_successor"
+records = []
+
+[settings]
+
+[calls."update_volley_successor"]
+afb_k = { "annotation" = "float" }
+delta_k = { "annotation" = "float" }
+v_term_k = { "annotation" = "float" }

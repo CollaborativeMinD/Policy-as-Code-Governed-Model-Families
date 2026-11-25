@@ -1,0 +1,12 @@
+version = "1.0.0"
+model_id = "environment_geometry/horizon_geometry/solar_disk_clearance_margin"
+records = []
+
+[settings]
+
+[calls."compute_solar_disk_guarded_clearance_margin"]
+alpha_sun_center_deg = { "annotation" = "float" }
+alpha_horizon_deg = { "annotation" = "float" }
+alpha_sun_half_deg = { "annotation" = "float", "default" = 0.266, "ge" = 0 }
+alpha_pointing_err_deg = { "annotation" = "float", "default" = 0.0, "ge" = 0 }
+alpha_horizon_unc_deg = { "annotation" = "float", "default" = 0.0, "ge" = 0 }

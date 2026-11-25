@@ -1,0 +1,10 @@
+version = "1.0.0"
+model_id = "hardware_viability/time_control_enforcement/timing_validity/mixed_stream_temporal_coherence"
+records = []
+
+[settings]
+
+[calls."compute_mixed_stream_temporal_coherence_score"]
+timestamps = { "annotation" = "Sequence[float]" }
+max_skew = { "annotation" = "float", "gt" = 0 }
+sequence_gap_penalty = { "annotation" = "float", "default" = 0.0 }

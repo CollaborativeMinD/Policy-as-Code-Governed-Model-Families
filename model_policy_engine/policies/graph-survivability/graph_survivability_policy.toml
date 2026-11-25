@@ -1,0 +1,12 @@
+version = "1.0.0"
+model_id = "graph-survivability/graph_survivability"
+records = []
+
+[settings]
+
+[calls."compute_vertex_connectivity"]
+graph = { "annotation" = "Mapping[Hashable, Iterable[Hashable]]" }
+
+[calls."is_graph_survivable"]
+graph = { "annotation" = "Mapping[Hashable, Iterable[Hashable]]" }
+threshold = { "annotation" = "int", "default" = 2 }

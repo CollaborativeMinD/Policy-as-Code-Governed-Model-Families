@@ -1,0 +1,11 @@
+version = "1.0.0"
+model_id = "estimation_detection/streaming_deviation"
+records = []
+
+[settings]
+
+[calls."update_streaming_deviation"]
+x_t = { "annotation" = "float" }
+mu_prev = { "annotation" = "float" }
+M2_prev = { "annotation" = "float" }
+t = { "annotation" = "int", "ge" = 1 }

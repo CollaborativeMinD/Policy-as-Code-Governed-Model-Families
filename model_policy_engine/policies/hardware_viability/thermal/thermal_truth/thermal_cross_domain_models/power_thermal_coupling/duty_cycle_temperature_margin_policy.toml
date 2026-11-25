@@ -1,0 +1,21 @@
+version = "1.0.0"
+model_id = "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/power_thermal_coupling/duty_cycle_temperature_margin"
+records = []
+
+[settings]
+
+[calls."symbolic_expression"]
+
+[calls."lambdified"]
+
+[calls."compute_duty_cycle_temperature_margin"]
+warning_temp_c = { "annotation" = "float" }
+ambient_temp_c = { "annotation" = "float" }
+effective_power_w = { "annotation" = "float" }
+thermal_resistance_c_per_w = { "annotation" = "float", "gt" = 0 }
+
+[calls."lambdified.evaluate"]
+Twarn = { annotation = "float" }
+Tamb = { annotation = "float" }
+Peff = { annotation = "float" }
+Rth = { annotation = "float" }

@@ -1,0 +1,60 @@
+version = "1.0.0"
+model_id = "hardware_viability/time_control_enforcement/monte_carlo_failure_predictor"
+records = ["CampaignFailureResult", "CampaignFailureGateResult"]
+
+relations = [
+  { call = "settings", left = "monte_carlo_aliases", op = "disjoint", right = "latin_hypercube_aliases" },
+  { call = "settings", left = "monte_carlo_aliases", op = "disjoint", right = "sobol_qmc_aliases" },
+  { call = "settings", left = "latin_hypercube_aliases", op = "disjoint", right = "sobol_qmc_aliases" },
+]
+
+[settings]
+monte_carlo_aliases = { "annotation" = "list[str]", "default" = ["iid_monte_carlo", "mc", "monte_carlo"], "min_items" = 1 }
+latin_hypercube_aliases = { "annotation" = "list[str]", "default" = ["latin_hypercube", "latin_hypercube_sampling", "lhs"], "min_items" = 1 }
+sobol_qmc_aliases = { "annotation" = "list[str]", "default" = ["qmc", "scrambled_sobol", "sobol", "sobol_qmc"], "min_items" = 1 }
+
+[calls."CampaignFailureResult"]
+campaign_type = { "annotation" = "str" }
+failure_probability = { "annotation" = "float" }
+failed_count = { "annotation" = "int" }
+total_count = { "annotation" = "int" }
+failed_indices = { "annotation" = "list[int]" }
+standard_error = { "annotation" = "float | None" }
+estimator_note = { "annotation" = "str" }
+campaign_validity_warnings = { "annotation" = "list[str]" }
+
+[calls."CampaignFailureResult.to_dict"]
+
+[calls."CampaignFailureGateResult"]
+pass_gate = { "annotation" = "bool" }
+failure_probability_threshold = { "annotation" = "float" }
+campaign_delta_threshold = { "annotation" = "float | None" }
+campaign_status = { "annotation" = "dict[str, bool]" }
+delta_status = { "annotation" = "dict[str, bool]" }
+unmodeled_terminal_pocket_detected = { "annotation" = "bool" }
+gate_notes = { "annotation" = "list[str]" }
+
+[calls."CampaignFailureGateResult.to_dict"]
+
+[calls."symbolic_expression"]
+
+[calls."lambdified"]
+
+[calls."compute_failure_probability"]
+trajectories = { "annotation" = "Sequence[Sequence[object]]" }
+safe_predicate = { "annotation" = "Callable[[object], bool]" }
+campaign_type = { "annotation" = "str", "default" = "unspecified" }
+
+[calls."compute_campaign_failure_report"]
+campaigns = { "annotation" = "Mapping[str, Sequence[Sequence[object]]]" }
+safe_predicate = { "annotation" = "Callable[[object], bool]" }
+
+[calls."evaluate_campaign_failure_gate"]
+campaign_report = { "annotation" = "Mapping[str, Any]" }
+failure_probability_threshold = { "annotation" = "float", "ge" = 0.0, "le" = 1.0 }
+campaign_delta_threshold = { "annotation" = "float | None", "none" = true }
+unmodeled_terminal_pocket_detected = { "annotation" = "bool", "default" = false }
+
+[calls."lambdified.evaluate"]
+failures = { annotation = "float" }
+N = { annotation = "float" }

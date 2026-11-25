@@ -1,0 +1,39 @@
+[PolicyManifest]
+key_id = { type = "str", min_length = 1, max_length = 64 }
+target_file = { type = "str" }
+policy_version = { type = "str", pattern = "^\\d+\\.\\d+\\.\\d+$" }
+issued_at_epoch = { type = "int", gt = 0 }
+sha256 = { type = "str", pattern = "^[a-fA-F0-9]{64}$" }
+hmac_sha256 = { type = "str", pattern = "^[a-fA-F0-9]{64}$" }
+
+[RollbackOverrideToken]
+token_id = { type = "str", min_length = 8, max_length = 128 }
+key_id = { type = "str", min_length = 1, max_length = 64 }
+operator_id = { type = "str", min_length = 1, max_length = 128 }
+reason = { type = "str", min_length = 4, max_length = 512 }
+target_file = { type = "str" }
+approved_version = { type = "str", pattern = "^\\d+\\.\\d+\\.\\d+$" }
+approved_sha256 = { type = "str", pattern = "^[a-fA-F0-9]{64}$" }
+expires_at_epoch = { type = "int", gt = 0 }
+hmac_sha256 = { type = "str", pattern = "^[a-fA-F0-9]{64}$" }
+
+[PersistedLKGEnvelope]
+key_id = { type = "str", min_length = 1, max_length = 64 }
+target_path = { type = "str" }
+policy_version = { type = "str", pattern = "^\\d+\\.\\d+\\.\\d+$" }
+issued_at_epoch = { type = "int", gt = 0 }
+sha256 = { type = "str", pattern = "^[a-fA-F0-9]{64}$" }
+policy_b64 = { type = "str" }
+persisted_at_utc = { type = "str" }
+envelope_hmac_sha256 = { type = "str", pattern = "^[a-fA-F0-9]{64}$" }
+
+[ConsumedTokensLedger]
+key_id = { type = "str" }
+consumed_token_ids = { type = "tuple[str, ...]" }
+ledger_hmac_sha256 = { type = "str", pattern = "^[a-fA-F0-9]{64}$" }
+
+[GoverningPolicy]
+version = { type = "str", pattern = "^\\d+\\.\\d+\\.\\d+$" }
+strict_mode = { type = "bool", default = true }
+allowed_actions = { type = "tuple[str, ...]", min_length = 1 }
+max_retries = { type = "int", default = 3, ge = 0, le = 10 }

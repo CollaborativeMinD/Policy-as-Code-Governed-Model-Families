@@ -1,0 +1,9 @@
+version = "1.0.0"
+model_id = "consensus_coordination/Partitioned quorum survival"
+records = []
+
+[settings]
+
+[calls."compute_partitioned_quorum_survival"]
+partition_authority_weights = { "annotation" = "Sequence[float]" }
+quorum_threshold_weight = { "annotation" = "float", "gt" = 0.0 }

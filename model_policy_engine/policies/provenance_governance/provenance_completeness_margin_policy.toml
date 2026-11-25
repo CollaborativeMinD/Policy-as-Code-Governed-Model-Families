@@ -1,0 +1,9 @@
+version = "1.0.0"
+model_id = "provenance_governance/provenance_completeness_margin"
+records = []
+
+[settings]
+
+[calls."compute_provenance_completeness_margin"]
+required_fields = { "annotation" = "list[str]" }
+payload = { "annotation" = "dict[str, object]" }

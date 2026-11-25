@@ -1,0 +1,27 @@
+version = "1.0.0"
+model_id = "network-and-compute/compute_queueing_limits/littles_law_queue"
+records = []
+
+[settings]
+
+[calls."symbolic_expression"]
+
+[calls."lambdified"]
+
+[calls."compute_little_law_queue_length"]
+arrival_rate_per_s = { "annotation" = "float", "ge" = 0.0 }
+processing_time_s = { "annotation" = "float", "ge" = 0.0 }
+
+[calls."compute_queue_margin"]
+arrival_rate_per_s = { "annotation" = "float" }
+processing_time_s = { "annotation" = "float" }
+queue_limit = { "annotation" = "float", "ge" = 0.0 }
+
+[calls."should_throttle"]
+arrival_rate_per_s = { "annotation" = "float" }
+processing_time_s = { "annotation" = "float" }
+queue_limit = { "annotation" = "float" }
+
+[calls."lambdified.evaluate"]
+lam = { annotation = "float" }
+W = { annotation = "float" }

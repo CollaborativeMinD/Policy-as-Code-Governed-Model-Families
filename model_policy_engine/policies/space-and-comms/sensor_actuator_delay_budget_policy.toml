@@ -1,0 +1,15 @@
+version = "1.0.0"
+model_id = "space-and-comms/sensor_actuator_delay_budget"
+records = []
+
+[settings]
+
+[calls."compute_sensor_to_actuator_delay_budget_margin"]
+t_budget = { "annotation" = "float" }
+t_sample_hold = { "annotation" = "float" }
+t_transport = { "annotation" = "float" }
+t_queue = { "annotation" = "float" }
+t_compute = { "annotation" = "float" }
+t_driver = { "annotation" = "float" }
+t_actuate = { "annotation" = "float" }
+j_total = { "annotation" = "float" }

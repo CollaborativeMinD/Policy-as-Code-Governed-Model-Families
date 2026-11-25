@@ -1,0 +1,10 @@
+version = "1.0.0"
+model_id = "graph-survivability/consensus_dynamics"
+records = []
+
+[settings]
+
+[calls."compute_consensus_update"]
+x = { "annotation" = "Sequence[float]" }
+L = { "annotation" = "Sequence[Sequence[float]]" }
+alpha = { "annotation" = "float", "gt" = 0 }

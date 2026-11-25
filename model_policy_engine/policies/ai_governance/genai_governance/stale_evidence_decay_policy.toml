@@ -1,0 +1,10 @@
+version = "1.0.0"
+model_id = "ai_governance/genai_governance/stale_evidence_decay"
+records = []
+
+[settings]
+
+[calls."compute_stale_evidence_decay"]
+age_s = { "annotation" = "float" }
+freshness_margin_s = { "annotation" = "float", "gt" = 0 }
+decay_power = { "annotation" = "float", "default" = 1.0, "gt" = 0 }

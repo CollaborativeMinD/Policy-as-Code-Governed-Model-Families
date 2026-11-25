@@ -1,0 +1,10 @@
+version = "1.0.0"
+model_id = "estimation_detection/mahalanobis"
+records = []
+
+[settings]
+
+[calls."compute_mahalanobis_distance"]
+x = { "annotation" = "Sequence[float]" }
+mu = { "annotation" = "Sequence[float]" }
+Sigma = { "annotation" = "Sequence[Sequence[float]]" }

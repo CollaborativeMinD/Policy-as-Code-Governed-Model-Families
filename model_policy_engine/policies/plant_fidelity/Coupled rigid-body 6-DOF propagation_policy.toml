@@ -1,0 +1,19 @@
+version = "1.0.0"
+model_id = "plant_fidelity/Coupled rigid-body 6-DOF propagation"
+records = []
+
+[settings]
+
+[calls."compute_rigid_body_6dof_step"]
+position = { "annotation" = "Sequence[float]" }
+velocity = { "annotation" = "Sequence[float]" }
+quaternion = { "annotation" = "Sequence[float]" }
+omega = { "annotation" = "Sequence[float]" }
+mass = { "annotation" = "float", "gt" = 0.0 }
+inertia = { "annotation" = "Sequence[Sequence[float]]" }
+body_force = { "annotation" = "Sequence[float]" }
+body_torque = { "annotation" = "Sequence[float]" }
+dt = { "annotation" = "float", "gt" = 0.0 }
+env_force = { "annotation" = "Optional[Sequence[float]]", "none" = true }
+env_torque = { "annotation" = "Optional[Sequence[float]]", "none" = true }
+gravity = { "annotation" = "Optional[Sequence[float]]", "none" = true }

@@ -1,0 +1,29 @@
+COMMAND: python test_reachability_model.py
+
+STDOUT:
+
+STDERR:
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.vJDWZqkmKn/artifact_tool_v2-2.6.11/presentation_artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.vJDWZqkmKn/artifact_tool_v2-2.6.11/presentation_artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.vJDWZqkmKn/artifact_tool_v2-2.6.11/presentation_artifact_tool/spreadsheet_warmup.py", line 720, in _warm_feature_flows
+  File "/tmp/tmp.vJDWZqkmKn/artifact_tool_v2-2.6.11/presentation_artifact_tool/spreadsheet_warmup.py", line 704, in _warm_collaboration_flows
+  File "/tmp/tmp.vJDWZqkmKn/artifact_tool_v2-2.6.11/presentation_artifact_tool/generated/interface/models.py", line 35986, in hydrate_crdt_from_proto
+  File "/tmp/tmp.vJDWZqkmKn/artifact_tool_v2-2.6.11/presentation_artifact_tool/rpc/remote.py", line 747, in __call__
+  File "/tmp/tmp.vJDWZqkmKn/artifact_tool_v2-2.6.11/presentation_artifact_tool/rpc/client.py", line 150, in call
+presentation_artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.
+test_blocked_path_collapse (__main__.ReachabilityModelTests.test_blocked_path_collapse) ... ok
+test_campaign (__main__.ReachabilityModelTests.test_campaign) ... ok
+test_clear_path_reaches_goal (__main__.ReachabilityModelTests.test_clear_path_reaches_goal) ... ok
+test_distance_and_step (__main__.ReachabilityModelTests.test_distance_and_step) ... ok
+test_obstacle_margin (__main__.ReachabilityModelTests.test_obstacle_margin) ... ok
+test_time_margin (__main__.ReachabilityModelTests.test_time_margin) ... ok
+test_validation_rejects_bad_bounds (__main__.ReachabilityModelTests.test_validation_rejects_bad_bounds) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.015s
+
+OK
+
+RETURN_CODE: 0

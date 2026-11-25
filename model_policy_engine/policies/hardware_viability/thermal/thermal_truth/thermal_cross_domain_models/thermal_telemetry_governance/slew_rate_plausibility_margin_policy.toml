@@ -1,0 +1,21 @@
+version = "1.0.0"
+model_id = "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_telemetry_governance/slew_rate_plausibility_margin"
+records = []
+
+[settings]
+
+[calls."symbolic_expression"]
+
+[calls."lambdified"]
+
+[calls."compute_slew_rate_plausibility_margin"]
+temp_prev_c = { "annotation" = "float" }
+temp_curr_c = { "annotation" = "float" }
+dt_s = { "annotation" = "float", "gt" = 0 }
+max_allowed_slew_c_per_s = { "annotation" = "float", "gt" = 0 }
+
+[calls."lambdified.evaluate"]
+Tprev = { annotation = "float" }
+Tcurr = { annotation = "float" }
+dt = { annotation = "float" }
+smax = { annotation = "float" }

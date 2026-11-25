@@ -1,0 +1,16 @@
+version = "1.0.0"
+model_id = "space-and-comms/orbital_dynamics"
+records = []
+
+[settings]
+
+[calls."compute_mean_motion"]
+mu = { "annotation" = "float" }
+a = { "annotation" = "float", "gt" = 0 }
+
+[calls."compute_j2_nodal_precession"]
+J2 = { "annotation" = "float" }
+n = { "annotation" = "float" }
+R_E = { "annotation" = "float", "gt" = 0 }
+p = { "annotation" = "float", "gt" = 0 }
+i = { "annotation" = "float" }

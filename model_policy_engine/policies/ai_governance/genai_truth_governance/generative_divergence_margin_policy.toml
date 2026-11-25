@@ -1,0 +1,16 @@
+version = "1.0.0"
+model_id = "ai_governance/genai_truth_governance/generative_divergence_margin"
+records = []
+
+[settings]
+
+[calls."weighted_quadratic_norm"]
+a = { "annotation" = "Sequence[float]" }
+b = { "annotation" = "Sequence[float]" }
+weights = { "annotation" = "Sequence[Sequence[float]]" }
+
+[calls."compute_generative_divergence_margin"]
+suggestion_vector = { "annotation" = "Sequence[float]" }
+baseline_vector = { "annotation" = "Sequence[float]" }
+allowed_bound = { "annotation" = "float", "gt" = 0 }
+weights = { "annotation" = "Sequence[Sequence[float]] | None", "none" = true }

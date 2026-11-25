@@ -1,0 +1,19 @@
+version = "1.0.0"
+model_id = "estimation_detection/truth_sensor_fusion/intelligence_update"
+records = []
+
+[settings]
+
+[calls."symbolic_expression"]
+
+[calls."lambdified"]
+
+[calls."compute_bayes_posterior"]
+p_b_given_a = { "annotation" = "float" }
+p_a = { "annotation" = "float" }
+p_b = { "annotation" = "float", "gt" = 0.0 }
+
+[calls."lambdified.evaluate"]
+p_b_given_a = { annotation = "float" }
+p_a = { annotation = "float" }
+p_b = { annotation = "float" }

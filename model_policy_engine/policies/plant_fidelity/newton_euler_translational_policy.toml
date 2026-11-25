@@ -1,0 +1,15 @@
+version = "1.0.0"
+model_id = "plant_fidelity/newton_euler_translational"
+records = []
+
+[settings]
+
+[calls."compute_translational_acceleration"]
+mass = { "annotation" = "float", "gt" = 0 }
+thrust = { "annotation" = "float" }
+disturbance = { "annotation" = "float" }
+velocity = { "annotation" = "float" }
+rho = { "annotation" = "float" }
+C_d = { "annotation" = "float" }
+area = { "annotation" = "float" }
+g = { "annotation" = "float" }

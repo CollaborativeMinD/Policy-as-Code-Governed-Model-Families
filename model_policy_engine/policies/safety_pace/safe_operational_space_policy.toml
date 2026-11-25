@@ -1,0 +1,9 @@
+version = "1.0.0"
+model_id = "safety_pace/safe_operational_space"
+records = []
+
+[settings]
+
+[calls."compute_safe_operational_space"]
+phi_values = { "annotation" = "Sequence[float]" }
+c_max = { "annotation" = "Sequence[float]" }

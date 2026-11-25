@@ -1,0 +1,10 @@
+{
+  "catalog_entries": 132,
+  "before": 0.5,
+  "after": 0.125,
+  "explicit_conflict": "rejected",
+  "model_id": "ai_governance/genai_governance/stale_evidence_decay",
+  "wheel": "model_policy_engine-1.1.0-py3-none-any.whl",
+  "verified_files": 142,
+  "sha256": "6cb512041b87c66f9d9fa395b2ea3668d8d96e80d510f9060506118d377fa033"
+}

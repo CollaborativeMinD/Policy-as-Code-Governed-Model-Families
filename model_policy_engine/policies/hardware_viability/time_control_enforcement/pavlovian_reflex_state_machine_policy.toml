@@ -1,0 +1,24 @@
+version = "1.0.0"
+model_id = "hardware_viability/time_control_enforcement/pavlovian_reflex_state_machine"
+records = []
+
+[settings]
+
+[calls."symbolic_gate_expression"]
+
+[calls."lambdified_gate_margin"]
+
+[calls."compute_reflex_gate"]
+guard_value = { "annotation" = "float" }
+threshold = { "annotation" = "float" }
+
+[calls."compute_next_state"]
+current_state = { "annotation" = "str" }
+guard_value = { "annotation" = "float" }
+threshold = { "annotation" = "float" }
+event = { "annotation" = "str" }
+transitions = { "annotation" = "Mapping[tuple[str, str], str]" }
+
+[calls."lambdified_gate_margin.evaluate"]
+g = { annotation = "float" }
+theta = { annotation = "float" }

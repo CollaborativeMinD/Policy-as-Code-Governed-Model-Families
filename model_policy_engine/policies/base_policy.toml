@@ -1,0 +1,31 @@
+version = "1.0.0"
+model_id = "base"
+records = ["FormulaMetadata"]
+
+[enums.RuntimeClass]
+RUNTIME_SAFE = "runtime_safe"
+OFFLINE_ONLY = "offline_only"
+HELPER = "helper"
+
+[enums.DeploymentClass]
+PROTOTYPE = "prototype"
+DEPLOYMENT = "deployment"
+NOTE = "note"
+
+[settings]
+
+[calls."FormulaMetadata"]
+formula_id = { "annotation" = "str" }
+name = { "annotation" = "str" }
+symbolic_form = { "annotation" = "str" }
+typed_inputs = { "annotation" = "Dict[str, str]" }
+units = { "annotation" = "Dict[str, str]" }
+assumptions = { "annotation" = "str" }
+runtime_class = { "annotation" = "RuntimeClass" }
+deployment_class = { "annotation" = "DeploymentClass" }
+tests = { "annotation" = "str" }
+evidence_hooks = { "annotation" = "Optional[str]", "none" = true }
+rtm_link = { "annotation" = "Optional[str]", "none" = true }
+ssot_gate = { "annotation" = "Optional[str]", "none" = true }
+
+[calls."FormulaMetadata.to_dict"]

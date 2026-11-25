@@ -1,0 +1,12 @@
+version = "1.0.0"
+model_id = "ai_governance/penalized_prompt"
+records = []
+
+[settings]
+
+[calls."compute_penalized_objective"]
+U_p = { "annotation" = "float" }
+E_halluc = { "annotation" = "float" }
+E_phys = { "annotation" = "float" }
+E_schema = { "annotation" = "float" }
+lambdas = { "annotation" = "Tuple[float, float, float]" }

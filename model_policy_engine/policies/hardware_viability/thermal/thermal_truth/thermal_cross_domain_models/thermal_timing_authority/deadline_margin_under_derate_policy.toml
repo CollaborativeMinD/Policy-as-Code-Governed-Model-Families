@@ -1,0 +1,19 @@
+version = "1.0.0"
+model_id = "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_timing_authority/deadline_margin_under_derate"
+records = []
+
+[settings]
+
+[calls."symbolic_expression"]
+
+[calls."lambdified"]
+
+[calls."compute_deadline_margin_under_derate"]
+deadline_budget_ms = { "annotation" = "float", "gt" = 0 }
+nominal_latency_ms = { "annotation" = "float", "gt" = 0 }
+clock_derate_fraction = { "annotation" = "float", "gt" = 0.0, "le" = 1.0 }
+
+[calls."lambdified.evaluate"]
+deadline = { annotation = "float" }
+nominal = { annotation = "float" }
+phi = { annotation = "float" }

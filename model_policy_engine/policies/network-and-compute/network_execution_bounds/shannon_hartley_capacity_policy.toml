@@ -1,0 +1,19 @@
+version = "1.0.0"
+model_id = "network-and-compute/network_execution_bounds/shannon_hartley_capacity"
+records = []
+
+[settings]
+
+[calls."symbolic_expression"]
+
+[calls."lambdified"]
+
+[calls."compute_channel_capacity_bps"]
+bandwidth_hz = { "annotation" = "float", "gt" = 0.0 }
+signal_power_w = { "annotation" = "float", "ge" = 0.0 }
+noise_power_w = { "annotation" = "float", "gt" = 0.0 }
+
+[calls."lambdified.evaluate"]
+B = { annotation = "float" }
+S = { annotation = "float" }
+N = { annotation = "float" }

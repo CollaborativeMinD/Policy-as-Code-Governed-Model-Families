@@ -1,0 +1,10 @@
+version = "1.0.0"
+model_id = "hardware_viability/actuator/actuator_saturation"
+records = []
+
+[settings]
+
+[calls."compute_actuator_saturation"]
+u_cmd = { "annotation" = "float" }
+u_min = { "annotation" = "float" }
+u_max = { "annotation" = "float" }

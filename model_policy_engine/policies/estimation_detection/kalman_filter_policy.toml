@@ -1,0 +1,16 @@
+version = "1.0.0"
+model_id = "estimation_detection/kalman_filter"
+records = []
+
+[settings]
+
+[calls."kalman_predict_update"]
+A = { "annotation" = "Sequence[Sequence[float]]" }
+B = { "annotation" = "Sequence[Sequence[float]]" }
+H = { "annotation" = "Sequence[Sequence[float]]" }
+x_prev = { "annotation" = "Sequence[float]" }
+P_prev = { "annotation" = "Sequence[Sequence[float]]" }
+u_prev = { "annotation" = "Sequence[float]" }
+z_k = { "annotation" = "Sequence[float]" }
+Q = { "annotation" = "Sequence[Sequence[float]]" }
+R = { "annotation" = "Sequence[Sequence[float]]" }

@@ -1,0 +1,19 @@
+version = "1.0.0"
+model_id = "hardware_viability/thermal/thermal_truth/thermal_cross_domain_models/thermal_rc_envelope/equilibrium_temperature_under_load"
+records = []
+
+[settings]
+
+[calls."symbolic_expression"]
+
+[calls."lambdified"]
+
+[calls."compute_equilibrium_temperature_under_load"]
+ambient_temp_c = { "annotation" = "float" }
+effective_power_w = { "annotation" = "float" }
+thermal_resistance_c_per_w = { "annotation" = "float", "gt" = 0 }
+
+[calls."lambdified.evaluate"]
+Tamb = { annotation = "float" }
+Peff = { annotation = "float" }
+Rth = { annotation = "float" }

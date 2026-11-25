@@ -1,0 +1,15 @@
+version = "1.0.0"
+model_id = "environment_geometry/terrain_truth/terrain_truth_disagreement"
+records = []
+
+[settings]
+denominator_floor = { "annotation" = "float", "default" = 1e-09, "gt" = 0 }
+
+[calls."compute_terrain_truth_disagreement_index"]
+elevation_delta_rms = { "annotation" = "float" }
+slope_delta_rms = { "annotation" = "float" }
+hazard_probability_delta = { "annotation" = "float" }
+lineage_completeness = { "annotation" = "float" }
+elevation_ref = { "annotation" = "float" }
+slope_ref = { "annotation" = "float" }
+weights = { "annotation" = "tuple[float, float, float, float]", "default" = [0.35, 0.25, 0.25, 0.15], "tuple_default" = true }

@@ -1,0 +1,13 @@
+version = "1.0.0"
+model_id = "plant_fidelity/plant_abortability/waveoff_closure_margin"
+records = []
+
+[settings]
+
+[calls."compute_waveoff_closure_margin"]
+t_available_for_waveoff_s = { "annotation" = "float" }
+t_engine_start_s = { "annotation" = "float" }
+t_attitude_settle_s = { "annotation" = "float" }
+t_vertical_escape_s = { "annotation" = "float" }
+t_lateral_clearance_s = { "annotation" = "float" }
+t_guard_s = { "annotation" = "float", "default" = 0.0 }

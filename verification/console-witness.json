@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "inventory": 132,
+  "transport": "stateless loopback HTTP",
+  "verified": [
+    "read-only poll leaves file bytes and mtimes intact",
+    "filter follows selected model",
+    "live polling observes publication",
+    "invalid and stale edits rejected",
+    "role separation on wire and in TUI",
+    "tampered policy withheld",
+    "stale and unlisted tasks rejected",
+    "terminal effect matches persisted receipt"
+  ],
+  "effect": {
+    "id": "148f6d592c144e4fb3dfe04abd8a3b61",
+    "at": "2026-11-25T19:49:35.405449+00:00",
+    "task": "evidence_decay",
+    "model": "ai_governance/genai_governance/stale_evidence_decay",
+    "operation": "compute_stale_evidence_decay",
+    "revision": "1795636175/99f7f67b81cb65f6b66db02a215b6f7aabe6d2f84a82750fcd42ad232d18b89f",
+    "model_sha256": "76ba097afa8ece488bb141d581e9bfe558db1b18c246e4212fff23aa019a5ffb",
+    "inputs": {
+      "age_s": 5.0,
+      "freshness_margin_s": 10.0
+    },
+    "result": 0.125,
+    "disposition": "executed"
+  }
+}

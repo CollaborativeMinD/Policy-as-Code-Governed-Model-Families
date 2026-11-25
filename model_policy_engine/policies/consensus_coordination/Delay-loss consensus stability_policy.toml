@@ -1,0 +1,13 @@
+version = "1.0.0"
+model_id = "consensus_coordination/Delay-loss consensus stability"
+records = []
+
+[settings]
+
+[calls."compute_delay_loss_consensus_stability"]
+algebraic_connectivity = { "annotation" = "float" }
+network_delay_s = { "annotation" = "float" }
+consensus_time_constant_s = { "annotation" = "float", "gt" = 0.0 }
+loss_probability = { "annotation" = "float" }
+network_jitter_s = { "annotation" = "float" }
+jitter_budget_s = { "annotation" = "float", "gt" = 0.0 }

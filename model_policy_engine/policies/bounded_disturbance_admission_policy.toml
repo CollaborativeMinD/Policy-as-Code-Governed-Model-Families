@@ -1,0 +1,14 @@
+version = "1.0.0"
+model_id = "bounded_disturbance_admission"
+records = []
+
+[settings]
+
+[calls."compute_bounded_disturbance"]
+A = { "annotation" = "Sequence[Sequence[float]]" }
+B = { "annotation" = "Sequence[Sequence[float]]" }
+G = { "annotation" = "Sequence[Sequence[float]]" }
+x = { "annotation" = "Sequence[float]" }
+u = { "annotation" = "Sequence[float]" }
+w = { "annotation" = "Sequence[float]" }
+w_max = { "annotation" = "float" }

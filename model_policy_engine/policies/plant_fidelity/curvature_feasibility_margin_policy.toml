@@ -1,0 +1,10 @@
+version = "1.0.0"
+model_id = "plant_fidelity/curvature_feasibility_margin"
+records = []
+
+[settings]
+
+[calls."compute_curvature_feasibility_margin"]
+speed_m_s = { "annotation" = "float" }
+required_curvature_inv_m = { "annotation" = "float" }
+available_lateral_accel_m_s2 = { "annotation" = "float" }

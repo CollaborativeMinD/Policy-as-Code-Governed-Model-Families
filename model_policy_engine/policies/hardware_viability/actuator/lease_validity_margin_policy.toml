@@ -1,0 +1,11 @@
+version = "1.0.0"
+model_id = "hardware_viability/actuator/lease_validity_margin"
+records = []
+
+[settings]
+
+[calls."compute_authority_lease_validity_margin"]
+lease_expiry_time = { "annotation" = "float" }
+predicted_execution_time = { "annotation" = "float" }
+clock_uncertainty = { "annotation" = "float", "ge" = 0.0 }
+guard_band = { "annotation" = "float", "ge" = 0.0 }

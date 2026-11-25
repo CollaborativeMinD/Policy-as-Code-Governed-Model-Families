@@ -1,0 +1,11 @@
+version = "1.0.0"
+model_id = "hardware_viability/actuator/actuator_slew_rate"
+records = []
+
+[settings]
+
+[calls."compute_slew_limited_command"]
+u_prev = { "annotation" = "float" }
+u_cmd = { "annotation" = "float" }
+dt = { "annotation" = "float", "gt" = 0 }
+u_dot_max = { "annotation" = "float", "ge" = 0 }

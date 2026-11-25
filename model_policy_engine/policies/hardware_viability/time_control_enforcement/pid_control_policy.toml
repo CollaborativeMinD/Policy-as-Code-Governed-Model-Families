@@ -1,0 +1,25 @@
+version = "1.0.0"
+model_id = "hardware_viability/time_control_enforcement/pid_control"
+records = []
+
+[settings]
+
+[calls."symbolic_expression"]
+
+[calls."lambdified"]
+
+[calls."compute_pid_control"]
+error = { "annotation" = "float" }
+integral_error = { "annotation" = "float" }
+derivative_error = { "annotation" = "float" }
+kp = { "annotation" = "float" }
+ki = { "annotation" = "float" }
+kd = { "annotation" = "float" }
+
+[calls."lambdified.evaluate"]
+e = { annotation = "float" }
+integral_e = { annotation = "float" }
+derivative_e = { annotation = "float" }
+kp = { annotation = "float" }
+ki = { annotation = "float" }
+kd = { annotation = "float" }

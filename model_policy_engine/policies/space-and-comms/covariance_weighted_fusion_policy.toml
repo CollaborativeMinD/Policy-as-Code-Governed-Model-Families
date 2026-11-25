@@ -1,0 +1,11 @@
+version = "1.0.0"
+model_id = "space-and-comms/covariance_weighted_fusion"
+records = []
+
+[settings]
+
+[calls."fuse_estimates"]
+P1 = { "annotation" = "Sequence[Sequence[float]]" }
+P2 = { "annotation" = "Sequence[Sequence[float]]" }
+x_hat1 = { "annotation" = "Sequence[float]" }
+x_hat2 = { "annotation" = "Sequence[float]" }

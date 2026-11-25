@@ -1,0 +1,27 @@
+version = "1.0.0"
+model_id = "hardware_viability/predictive_hardware_viability_state"
+records = ["HardwareViabilityState"]
+
+[settings]
+
+[calls."HardwareViabilityState"]
+status = { "annotation" = "str" }
+dominant_driver = { "annotation" = "Optional[str]" }
+minimum_terminal_horizon_s = { "annotation" = "float" }
+thermal_margin_c = { "annotation" = "float" }
+memory_margin_pct = { "annotation" = "float" }
+queue_margin_items = { "annotation" = "float" }
+converging_terminal_pressure = { "annotation" = "float" }
+
+[calls."compute_predictive_hardware_viability_state"]
+thermal_margin_c = { "annotation" = "float" }
+memory_margin_pct = { "annotation" = "float" }
+queue_margin_items = { "annotation" = "float" }
+minimum_terminal_horizon_s = { "annotation" = "float" }
+converging_terminal_pressure = { "annotation" = "float" }
+dominant_driver = { "annotation" = "Optional[str]" }
+critical_horizon_s = { "annotation" = "float", "default" = 3.0 }
+degraded_thermal_margin_c = { "annotation" = "float", "default" = 7.0 }
+degraded_memory_margin_pct = { "annotation" = "float", "default" = 10.0 }
+degraded_queue_margin_items = { "annotation" = "float", "default" = 200.0 }
+degraded_pressure_floor = { "annotation" = "float", "default" = 0.45 }

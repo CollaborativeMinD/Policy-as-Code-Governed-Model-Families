@@ -1,0 +1,11 @@
+version = "1.0.0"
+model_id = "hardware_viability/resonance/Base-excitation-transmissibility"
+records = []
+
+[settings]
+
+[calls."compute_base_excitation_transmissibility"]
+forcing_frequency_hz = { "annotation" = "float", "gt" = 0.0 }
+natural_frequency_hz = { "annotation" = "float", "gt" = 0.0 }
+damping_ratio = { "annotation" = "float", "ge" = 0.0 }
+base_acceleration = { "annotation" = "float" }

@@ -1,0 +1,17 @@
+version = "1.0.0"
+model_id = "estimation_detection/chi_squared_reality_gap_monitor"
+records = []
+
+[settings]
+
+[calls."symbolic_expression"]
+
+[calls."lambdified"]
+
+[calls."compute_chi_squared_gap"]
+observed = { "annotation" = "Sequence[float]" }
+expected = { "annotation" = "Sequence[float]" }
+
+[calls."lambdified.evaluate"]
+O = { annotation = "float" }
+E = { annotation = "float" }

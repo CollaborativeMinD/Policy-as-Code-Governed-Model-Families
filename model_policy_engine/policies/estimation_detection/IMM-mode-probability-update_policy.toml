@@ -1,0 +1,12 @@
+version = "1.0.0"
+model_id = "estimation_detection/IMM-mode-probability-update"
+records = []
+
+[settings]
+denominator_floor = { "annotation" = "float", "default" = 1e-12, "gt" = 0 }
+row_sum_tolerance = { "annotation" = "float", "default" = 1.001e-05, "gt" = 0 }
+
+[calls."compute_imm_mode_probability_update"]
+mode_probabilities = { "annotation" = "Iterable[float]" }
+transition_matrix = { "annotation" = "Iterable[Iterable[float]]" }
+likelihoods = { "annotation" = "Iterable[float]" }

@@ -1,0 +1,12 @@
+version = "1.0.0"
+model_id = "environment_geometry/terrain_truth/multiscale_disagreement_margin"
+records = []
+
+[settings]
+feature_weights = { annotation = "list[float]", default = [0.7, 0.8, 1.0, 0.4, 0.5, 0.6], items_ge = 0 }
+additional_feature_weight = { annotation = "float", default = 1.0, ge = 0 }
+
+[calls."compute_multiscale_disagreement_margin"]
+f_local = { "annotation" = "Sequence[float]" }
+f_regional = { "annotation" = "Sequence[float]" }
+tau_ms = { "annotation" = "float", "default" = 6.0 }

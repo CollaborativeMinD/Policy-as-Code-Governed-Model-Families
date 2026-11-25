@@ -1,0 +1,12 @@
+version = "1.0.0"
+model_id = "hardware_viability/actuator/abort_closure_margin"
+records = []
+
+[settings]
+
+[calls."compute_abort_closure_margin"]
+corridor_distance = { "annotation" = "float", "ge" = 0.0 }
+current_speed = { "annotation" = "float", "ge" = 0.0 }
+effective_deceleration = { "annotation" = "float", "gt" = 0.0 }
+decision_latency = { "annotation" = "float", "ge" = 0.0 }
+reserve_distance = { "annotation" = "float", "ge" = 0.0 }

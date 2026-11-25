@@ -1,0 +1,10 @@
+version = "1.0.0"
+model_id = "hardware_viability/electrical/regulation_chain_disparity_margin"
+records = []
+
+[settings]
+
+[calls."compute_regulation_chain_disparity_margin"]
+v_upstream_pu = { "annotation" = "float" }
+v_downstream_pu = { "annotation" = "float" }
+delta_limit_pu = { "annotation" = "float" }

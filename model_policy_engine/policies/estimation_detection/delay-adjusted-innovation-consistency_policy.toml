@@ -1,0 +1,16 @@
+version = "1.0.0"
+model_id = "estimation_detection/delay-adjusted-innovation-consistency"
+records = []
+
+[settings]
+
+[calls."compute_delay_adjusted_innovation_consistency"]
+residual = { "annotation" = "Iterable[float]" }
+innovation_covariance = { "annotation" = "Iterable[Iterable[float]]" }
+measurement_age_s = { "annotation" = "float", "ge" = 0 }
+cadence_s = { "annotation" = "float", "gt" = 0 }
+sequence_gap = { "annotation" = "int", "default" = 0 }
+dynamic_staleness = { "annotation" = "float", "default" = 0.0, "ge" = 0 }
+lambda_age = { "annotation" = "float", "default" = 1.0 }
+lambda_seq = { "annotation" = "float", "default" = 0.5 }
+lambda_dyn = { "annotation" = "float", "default" = 1.0 }

@@ -1,0 +1,9 @@
+version = "1.0.0"
+model_id = "graph-survivability/blast_radius"
+records = []
+
+[settings]
+
+[calls."compute_blast_radius"]
+graph = { "annotation" = "Dict[str, Sequence[str]]" }
+v = { "annotation" = "str" }

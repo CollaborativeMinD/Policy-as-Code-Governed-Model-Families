@@ -1,0 +1,30 @@
+version = "1.0.0"
+model_id = "estimation_detection/chi_hardware_coefficient"
+records = []
+
+[settings]
+
+[calls."compute_sigmoid"]
+value = { "annotation" = "float" }
+
+[calls."symbolic_expression"]
+
+[calls."lambdified"]
+
+[calls."compute_hardware_coefficient"]
+cpu_temp = { "annotation" = "float" }
+cpu_temp_max = { "annotation" = "float" }
+cpu_load = { "annotation" = "float" }
+cpu_load_max = { "annotation" = "float" }
+memory_used = { "annotation" = "float" }
+memory_max = { "annotation" = "float" }
+anomaly_z = { "annotation" = "float" }
+
+[calls."lambdified.evaluate"]
+T = { annotation = "float" }
+Tmax = { annotation = "float" }
+L = { annotation = "float" }
+Lmax = { annotation = "float" }
+M = { annotation = "float" }
+Mmax = { annotation = "float" }
+Z = { annotation = "float" }

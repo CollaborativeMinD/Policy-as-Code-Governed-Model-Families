@@ -1,0 +1,16 @@
+version = "1.0.0"
+model_id = "hardware_viability/resonance/Fastener-preload-retention-margin"
+records = []
+
+[settings]
+
+[calls."compute_fastener_preload_retention_margin"]
+initial_preload = { "annotation" = "float" }
+joint_stiffness = { "annotation" = "float", "gt" = 0.0 }
+alpha_joint = { "annotation" = "float" }
+alpha_clamped = { "annotation" = "float" }
+grip_length = { "annotation" = "float", "ge" = 0.0 }
+delta_temperature = { "annotation" = "float" }
+external_separating_load = { "annotation" = "float" }
+load_loss_factor = { "annotation" = "float", "ge" = 0.0 }
+minimum_retained_preload = { "annotation" = "float", "gt" = 0.0 }

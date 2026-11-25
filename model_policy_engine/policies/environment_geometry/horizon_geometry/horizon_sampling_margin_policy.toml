@@ -1,0 +1,10 @@
+version = "1.0.0"
+model_id = "environment_geometry/horizon_geometry/horizon_sampling_margin"
+records = []
+
+[settings]
+
+[calls."compute_horizon_sampling_margin"]
+alpha_tol_deg = { "annotation" = "float" }
+terrain_resolution_m = { "annotation" = "float", "gt" = 0 }
+observer_height_m = { "annotation" = "float", "gt" = 0 }

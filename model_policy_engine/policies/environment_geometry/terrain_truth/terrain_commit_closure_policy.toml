@@ -1,0 +1,21 @@
+version = "1.0.0"
+model_id = "environment_geometry/terrain_truth/terrain_commit_closure"
+records = []
+
+relations = [
+  { call = "settings", left = "required_status", op = "member", right = "status_order" },
+]
+
+[settings]
+status_order = { "annotation" = "dict[str, int]", "default" = { "REGION_NAMED" = 0, "REGION_PROXY" = 1, "PAD_TILE_INGESTED" = 2, "SITE_CERTIFIED" = 3 } }
+required_status = { "annotation" = "str", "default" = "PAD_TILE_INGESTED" }
+
+[calls."geospatial_status_ceiling_gate"]
+claimed_status = { "annotation" = "str" }
+status_ceiling = { "annotation" = "str" }
+
+[calls."compute_terrain_commit_closure_gate"]
+local_hazard_closed = { "annotation" = "bool" }
+geospatial_status = { "annotation" = "str" }
+provenance_complete = { "annotation" = "bool" }
+region_proxy_alias_used = { "annotation" = "bool" }

@@ -1,0 +1,28 @@
+version = "1.0.0"
+model_id = "hardware_viability/thermal/thermal_truth/thermal_two_layer/two_layer_temperature_step"
+records = []
+
+[settings]
+
+[calls."compute_surface_radiative_forcing_density"]
+alpha = { "annotation" = "float" }
+area_m2 = { "annotation" = "float" }
+insolation_w_m2 = { "annotation" = "float" }
+epsilon = { "annotation" = "float" }
+T_skin_c = { "annotation" = "float" }
+T_env_c = { "annotation" = "float" }
+
+[calls."compute_two_layer_temperature_step"]
+skin_temp_c = { "annotation" = "float" }
+substrate_temp_c = { "annotation" = "float" }
+env_temp_c = { "annotation" = "float" }
+insolation_w_m2 = { "annotation" = "float" }
+alpha = { "annotation" = "float" }
+epsilon = { "annotation" = "float" }
+area_m2 = { "annotation" = "float" }
+skin_heat_capacity_j_per_c = { "annotation" = "float" }
+substrate_heat_capacity_j_per_c = { "annotation" = "float" }
+conduction_w_per_c = { "annotation" = "float" }
+internal_power_w = { "annotation" = "float" }
+heater_power_w = { "annotation" = "float" }
+dt_s = { "annotation" = "float" }

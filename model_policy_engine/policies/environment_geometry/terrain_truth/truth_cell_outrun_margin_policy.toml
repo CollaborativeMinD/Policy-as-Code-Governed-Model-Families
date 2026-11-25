@@ -1,0 +1,10 @@
+version = "1.0.0"
+model_id = "environment_geometry/terrain_truth/truth_cell_outrun_margin"
+records = []
+
+[settings]
+
+[calls."compute_truth_cell_outrun_margin"]
+truth_cell_scale_m = { "annotation" = "float" }
+relative_speed_m_s = { "annotation" = "float" }
+total_age_s = { "annotation" = "float" }
