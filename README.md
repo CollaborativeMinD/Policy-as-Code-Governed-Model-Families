@@ -17,3 +17,12 @@ Start with the local setup and three-mode walkthrough. [Runbook](Runbook.md) · 
 The publication contains 131 computational models plus the base metadata contract. The original review covered a larger archive. The archived turret implementation and wargame harness are outside this release. [Model families](model_families/README.md) · [Policy engine](model_policy_engine/README.md) · [Original numerical review](verification/Review.md)
 
 Local Forgejo qualifies the exact candidate on a repository-scoped Linux runner. It runs the catalog and admission tests, replays the reviewed fixtures, installs the release wheel offline, and drives three headless Textual sessions against a real MCP server. [Workflow](.forgejo/workflows/qualification.yml) · [Workstation console receipt](verification/console-witness.json)
+
+## From policy change to release
+
+Start with [console.toml](console.toml) for this component. Write down the requested effect and one case that must be denied. Change the TOML first.
+
+1. Apply the candidate to disposable state. An unknown field or unbound operation must fail admission before an effect. Keep that denial.
+2. For supported behavior, continue with the existing runtime. For new behavior, implement the missing typed field and the method that enforces it. Run the same candidate again.
+3. Run `python -B verification/replay.py` in the project environment. Exercise the normal entry point and the denial. Review the ordinary model result, reference tolerance and admitted revision. Reconcile discrepancies and repeat.
+4. Qualify the exact commit on local Forgejo. Review the package, image, security scan and receipt for each release target. Ship the reviewed artifacts and record their digests.

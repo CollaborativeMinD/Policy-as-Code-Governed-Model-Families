@@ -4,6 +4,8 @@ from pathlib import Path
 import re
 import tomllib
 
+from .runtime_policy import RuntimePolicy
+
 from model_policy_engine.schema import admit, catalog, TEMPLATES
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -24,8 +26,9 @@ def read_config(path, pin):
     if digest(raw) != pin:
         raise ValueError("Console policy digest mismatch")
     config = tomllib.loads(raw.decode())
-    if (set(config) != {"version", "host", "port", "protocol", "poll_seconds", "roles", "tasks"}
-            or type(config["version"]) is not int or config["version"] != 1
+    limits = RuntimePolicy.read(config)
+    if ((set(config) - {"runtime"}) != {"version", "host", "port", "protocol", "poll_seconds", "roles", "tasks"}
+            or type(config["version"]) is not int or config["version"] not in (1, 2)
             or config["host"] != "127.0.0.1" or config["protocol"] != "2026-07-28"
             or type(config["port"]) is not int or not 0 < config["port"] < 65536
             or type(config["poll_seconds"]) not in (int, float) or not 0.25 <= config["poll_seconds"] <= 300):
@@ -52,4 +55,5 @@ def read_config(path, pin):
         if any("default" not in field and not field.get("none") for field in fields.values()):
             raise ValueError("Incomplete task inputs")
         admit(task["model"], source)
+    config["runtime"] = limits
     return config

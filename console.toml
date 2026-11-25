@@ -1,8 +1,16 @@
-version = 1
+version = 2
 host = "127.0.0.1"
 port = 8766
 protocol = "2026-07-28"
 poll_seconds = 3
+
+
+[runtime]
+request_bytes = 131072
+max_inflight = 24
+connect_seconds = 5
+read_seconds = 25
+execute_seconds = 25
 
 [roles]
 viewer = ["inventory.read"]

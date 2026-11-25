@@ -43,6 +43,14 @@ async def witness(tmp):
     config.write_text((ROOT / "console.toml").read_text().replace("port = 8766", f"port = {port}")
                       .replace("poll_seconds = 3", "poll_seconds = 0.5"))
     pin = digest(config.read_bytes())
+    invalid = tmp / "invalid-budget.toml"
+    invalid.write_bytes(config.read_bytes().replace(b"max_inflight = 24", b"max_inflight = 0"))
+    try:
+        read_config(invalid, digest(invalid.read_bytes()))
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("Invalid runtime budget was admitted")
     settings = read_config(config, pin)
     assert settings["port"] == port
     keys = tmp / "credentials"
