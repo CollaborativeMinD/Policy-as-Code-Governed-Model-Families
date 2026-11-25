@@ -66,7 +66,7 @@ The version 2 `[runtime]` table in `console.toml` sets request size, concurrency
 Review [release/policy.toml](release/policy.toml) and the hash-locked dependency closure. Local Forgejo builds the Linux wheel, source distribution and exact-source ZIP. On the trusted Windows workstation set `PAC_CHECKOUT` to the clean checkout, `PAC_OUTPUT` to a fresh release directory, `PAC_BUILD_PYTHON` to a Python 3.13 environment with `release/build.lock`, and `PAC_SCANNER` to the pinned Trivy executable. Run this from the checkout.
 
 ```powershell
-forgejo-runner exec --workflows release/workstation.yml --job workstation --image=-self-hosted --detect-event --env PAC_CHECKOUT --env PAC_OUTPUT --env PAC_BUILD_PYTHON --env PAC_SCANNER
+forgejo-runner exec --workflows release/workstation.yml --job workstation --image=-self-hosted --detect-event --env "PAC_CHECKOUT=$env:PAC_CHECKOUT" --env "PAC_OUTPUT=$env:PAC_OUTPUT" --env "PAC_BUILD_PYTHON=$env:PAC_BUILD_PYTHON" --env "PAC_SCANNER=$env:PAC_SCANNER"
 ```
 
 The job builds and reinstalls the Windows wheel, checks the target machine and UID, exercises the native console effect in hardened Compose, scans the image, exports it and checks the restored image ID. For a package installation, install the release lock followed by the wheel with `--no-deps`. Use the command named by the release policy with `unpack NEW_DIRECTORY` to install the exact component tree. Follow its native runbook from there.
