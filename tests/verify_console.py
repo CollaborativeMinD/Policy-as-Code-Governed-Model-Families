@@ -1,4 +1,5 @@
 """Exercise three real terminal sessions against a local MCP server and disposable state."""
+from contextlib import closing
 import asyncio
 import json
 import os
@@ -40,7 +41,7 @@ async def witness(tmp):
         sock.bind(("127.0.0.1", 0))
         port = sock.getsockname()[1]
     config = tmp / "console.toml"
-    config.write_text((ROOT / "console.toml").read_text().replace("port = 8766", f"port = {port}")
+    config.write_text((ROOT / "console.toml").read_text().replace("request_bytes = 131072", "request_bytes = 49152").replace("port = 8766", f"port = {port}")
                       .replace("poll_seconds = 3", "poll_seconds = 0.5"))
     pin = digest(config.read_bytes())
     invalid = tmp / "invalid-budget.toml"
@@ -149,6 +150,17 @@ async def witness(tmp):
             assert actor.rows[MODEL]["state"] == "unverified" and actor.query_one("#run").disabled
             await denied(agent, "task.execute", name="evidence_decay", inputs=receipt["inputs"], revision=new_revision)
         (keys / "bad.token").write_text("invalid")
+        # Change the TOML body limit in this fixture and observe the HTTP enforcement.
+        import http.client
+        with closing(http.client.HTTPConnection("127.0.0.1", port, timeout=5)) as connection:
+            token = (keys / "viewer.token").read_text().strip()
+            connection.request("POST", "/mcp", body=b" " * 49153, headers={
+                "Authorization": "Bearer " + token, "Content-Type": "application/json",
+                "Mcp-Protocol-Version": "2026-07-28", "Accept": "application/json, text/event-stream",
+                "Mcp-Method": "tools/list"})
+            response = connection.getresponse()
+            assert response.status == 413, response.status
+            response.read()
         await denied(Remote(port, keys / "bad.token"), "inventory.read")
         return {"status": "PASS", "inventory": len(catalog()), "transport": "stateless loopback HTTP",
                 "verified": ["read-only poll leaves file bytes and mtimes intact", "filter follows selected model",
